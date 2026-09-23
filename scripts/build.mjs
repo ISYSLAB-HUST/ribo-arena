@@ -8,14 +8,23 @@ const datasetDir = join(root, "cdhit100_full");
 const targetDir = join(datasetDir, "targets");
 const outDir = join(root, "dist");
 const dataOut = join(outDir, "data");
+const excludedMethodIds = new Set([
+  "protenix_base_20250630_v1.0.0-c96150b5b002d197",
+]);
 
 await rm(outDir, { recursive: true, force: true });
 await mkdir(dataOut, { recursive: true });
 await cp(sourceDir, outDir, { recursive: true });
 
-for (const filename of ["leaderboard.json", "methods.json", "provenance.json"]) {
-  await cp(join(datasetDir, filename), join(dataOut, filename));
-}
+const leaderboard = JSON.parse(await readFile(join(datasetDir, "leaderboard.json"), "utf8"));
+leaderboard.methods = leaderboard.methods.filter((method) => !excludedMethodIds.has(method.method_variant_id));
+await writeFile(join(dataOut, "leaderboard.json"), `${JSON.stringify(leaderboard)}\n`);
+
+const methods = JSON.parse(await readFile(join(datasetDir, "methods.json"), "utf8"));
+methods.methods = methods.methods.filter((method) => !excludedMethodIds.has(method.method_variant_id));
+await writeFile(join(dataOut, "methods.json"), `${JSON.stringify(methods)}\n`);
+
+await cp(join(datasetDir, "provenance.json"), join(dataOut, "provenance.json"));
 
 const targetFiles = (await readdir(targetDir)).filter((name) => name.endsWith(".json")).sort();
 const targets = [];
@@ -29,7 +38,7 @@ for (const filename of targetFiles) {
     release_date: target.release_date,
     eligible: target.eligible,
     input_issue: target.input_issue,
-    methods: target.methods.map((method) => ({
+    methods: target.methods.filter((method) => !excludedMethodIds.has(method.method_variant_id)).map((method) => ({
       method_variant_id: method.method_variant_id,
       status: method.status,
       counts: method.counts,
@@ -44,5 +53,4 @@ await writeFile(
 );
 await writeFile(join(outDir, ".nojekyll"), "");
 
-const totalMethods = JSON.parse(await readFile(join(datasetDir, "leaderboard.json"), "utf8")).methods.length;
-console.log(`Built dist/ with ${totalMethods} methods and ${targets.length} target summaries.`);
+console.log(`Built dist/ with ${leaderboard.methods.length} methods and ${targets.length} target summaries.`);

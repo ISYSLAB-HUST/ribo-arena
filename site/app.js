@@ -439,7 +439,7 @@ function bindInteractions() {
   $("#method-search").addEventListener("input", (event) => { state.methodQuery = event.target.value.trim(); renderChart(); renderTable(); });
   $("#target-search").addEventListener("input", (event) => { state.targetQuery = event.target.value.trim(); renderMatrix(); });
   $("#theme-toggle").addEventListener("click", () => {
-    const current = document.documentElement.dataset.theme;
+    const current = document.documentElement.dataset.theme || "light";
     const next = current === "light" ? "dark" : "light";
     document.documentElement.dataset.theme = next;
     localStorage.setItem("rna-board-theme", next);
