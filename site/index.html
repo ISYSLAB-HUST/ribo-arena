@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="RNA 三维结构预测方法的公开评测排行榜，比较 C3′ RMSD、RNA TM-score、全重原子 lDDT 与 clashscore。"
+    />
+    <meta name="color-scheme" content="dark light" />
+    <title>RNA Structure Leaderboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script>
+      (() => {
+        const saved = localStorage.getItem("rna-board-theme");
+        if (saved) document.documentElement.dataset.theme = saved;
+        const language = localStorage.getItem("rna-board-language");
+        if (language) document.documentElement.lang = language === "en" ? "en" : "zh-CN";
+      })();
+    </script>
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="RNA Structure Leaderboard 首页" data-i18n-aria="brandAria">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M8 5c12 4 4 18 16 22M24 5C12 9 20 23 8 27" />
+            <path d="M10.5 9.5h11M9.5 15h13M9.5 21h13" />
+          </svg>
+          <span>RNA<span class="brand-dim">/BENCH</span></span>
+        </a>
+
+        <nav class="main-tabs" aria-label="主导航" data-i18n-aria="mainNavAria">
+          <button class="nav-tab is-active" data-panel="leaderboard" aria-selected="true" data-i18n="navLeaderboard">总榜</button>
+          <button class="nav-tab" data-panel="matrix" aria-selected="false" data-i18n="navMatrix">目标矩阵</button>
+          <button class="nav-tab" data-panel="protocol" aria-selected="false" data-i18n="navProtocol">评测说明</button>
+        </nav>
+
+        <div class="top-actions">
+          <div class="language-switch" aria-label="语言 / Language">
+            <button data-lang="zh" aria-pressed="true">中文</button>
+            <button data-lang="en" aria-pressed="false">EN</button>
+          </div>
+          <a class="icon-button download-link" href="./data/leaderboard.json" download title="下载原始排行榜 JSON" aria-label="下载排行榜 JSON" data-i18n-title="downloadTitle" data-i18n-aria="downloadAria">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 19h14" /></svg>
+          </a>
+          <button class="icon-button" id="theme-toggle" title="切换明暗主题" aria-label="切换明暗主题" data-i18n-title="themeTitle" data-i18n-aria="themeAria">
+            <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.6 5.6 7 7m10 10 1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4" /><circle cx="12" cy="12" r="4" /></svg>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-intro">
+          <div>
+            <p class="eyebrow" data-i18n="eyebrow">CD-HIT 100 · 单链 RNA</p>
+            <h1 data-i18n="title">RNA 三维结构预测排行榜</h1>
+            <p class="intro-copy" data-i18n="intro">在统一评测协议下，对比不同方法的结构精度、局部几何质量与原子冲突。</p>
+          </div>
+          <div class="updated-block">
+            <span data-i18n="snapshot">数据快照</span>
+            <time id="generated-at">—</time>
+          </div>
+        </section>
+
+        <section class="summary-grid" aria-label="数据集摘要" data-i18n-aria="summaryAria">
+          <article class="summary-card accent-card">
+            <span class="summary-label" data-i18n="methods">参评方法</span>
+            <strong id="method-count">—</strong>
+            <span class="summary-note" data-i18n="modelsVersions">模型与版本</span>
+          </article>
+          <article class="summary-card">
+            <span class="summary-label" data-i18n="eligibleTargets">有效目标</span>
+            <strong id="target-count">—</strong>
+            <span class="summary-note" id="target-note">—</span>
+          </article>
+          <article class="summary-card">
+            <span class="summary-label" data-i18n="evaluatedStructures">已评估结构</span>
+            <strong id="candidate-count">—</strong>
+            <span class="summary-note" data-i18n="allCandidates">全部候选构象</span>
+          </article>
+          <article class="summary-card">
+            <span class="summary-label" data-i18n="releaseRange">发布日期范围</span>
+            <strong class="date-range" id="release-range">—</strong>
+            <span class="summary-note">PDB release date</span>
+          </article>
+        </section>
+
+        <section class="workspace" id="leaderboard-panel" data-panel-content="leaderboard">
+          <div class="control-row">
+            <div class="segmented" aria-label="统计视图" data-i18n-aria="statsViewAria">
+              <button data-view="mean" aria-pressed="true" data-i18n="meanPerformance">平均表现</button>
+              <button data-view="best" aria-pressed="false" data-i18n="bestCandidate">最佳候选</button>
+            </div>
+            <div class="metric-tabs" id="metric-tabs" aria-label="排序指标" data-i18n-aria="sortingMetricsAria"></div>
+            <label class="search-field">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6" /><path d="m16 16 4 4" /></svg>
+              <span class="sr-only" data-i18n="searchMethods">搜索方法</span>
+              <input id="method-search" type="search" placeholder="搜索方法" data-i18n-placeholder="searchMethods" autocomplete="off" />
+            </label>
+          </div>
+
+          <div class="leader-grid">
+            <section class="panel ranking-panel">
+              <header class="panel-heading">
+                <div>
+                  <p class="panel-kicker">RANKING</p>
+                  <h2 id="chart-title">RNA TM-score 排名</h2>
+                </div>
+                <div class="direction-note"><span class="direction-arrow">↑</span><span id="direction-label">越高越好</span></div>
+              </header>
+              <div class="bar-chart" id="bar-chart" role="img" aria-label="方法指标排名条形图" data-i18n-aria="barChartAria"></div>
+            </section>
+
+            <aside class="panel metric-panel">
+              <header class="panel-heading compact-heading">
+                <div>
+                  <p class="panel-kicker">METRIC</p>
+                  <h2 id="metric-name">RNA TM-score</h2>
+                </div>
+              </header>
+              <div class="metric-explainer">
+                <div class="metric-gauge" id="metric-gauge" aria-hidden="true"><span></span></div>
+                <p id="metric-definition">—</p>
+                <dl>
+                  <div><dt data-i18n="direction">方向</dt><dd id="metric-direction">—</dd></div>
+                  <div><dt data-i18n="range">范围</dt><dd id="metric-range">—</dd></div>
+                  <div><dt data-i18n="unit">单位</dt><dd id="metric-unit">—</dd></div>
+                </dl>
+              </div>
+            </aside>
+          </div>
+
+          <section class="panel table-panel">
+            <header class="panel-heading table-heading">
+              <div>
+                <p class="panel-kicker">FULL RESULTS</p>
+                <h2 data-i18n="methodLeaderboard">方法总榜</h2>
+              </div>
+              <span class="table-status" id="table-status" data-i18n="loading">加载中…</span>
+            </header>
+            <div class="table-scroll">
+              <table class="board-table">
+                <thead>
+                  <tr>
+                    <th class="rank-cell" data-i18n="rank">排名</th>
+                    <th class="method-cell" data-i18n="method">方法</th>
+                    <th><button class="metric-sort" data-metric="c3_rmsd">C3′ RMSD</button></th>
+                    <th><button class="metric-sort" data-metric="rna_tm_score">TM-score</button></th>
+                    <th><button class="metric-sort" data-metric="heavy_atom_lddt">lDDT</button></th>
+                    <th><button class="metric-sort" data-metric="clashscore">Clashscore</button></th>
+                    <th data-i18n="inputs">输入</th>
+                    <th data-i18n="coverage">覆盖</th>
+                  </tr>
+                </thead>
+                <tbody id="leaderboard-body"></tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <section class="workspace is-hidden" id="matrix-panel" data-panel-content="matrix">
+          <div class="control-row matrix-controls">
+            <div class="segmented" aria-label="矩阵统计视图" data-i18n-aria="matrixStatsAria">
+              <button data-view="mean" aria-pressed="true" data-i18n="meanPerformance">平均表现</button>
+              <button data-view="best" aria-pressed="false" data-i18n="bestCandidate">最佳候选</button>
+            </div>
+            <div class="metric-tabs matrix-metric-tabs" aria-label="矩阵指标" data-i18n-aria="matrixMetricsAria"></div>
+            <label class="search-field">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6" /><path d="m16 16 4 4" /></svg>
+              <span class="sr-only" data-i18n="searchTargets">搜索目标</span>
+              <input id="target-search" type="search" placeholder="搜索 PDB / 目标" data-i18n-placeholder="searchTargetsPlaceholder" autocomplete="off" />
+            </label>
+          </div>
+
+          <section class="panel matrix-panel-card">
+            <header class="panel-heading table-heading">
+              <div>
+                <p class="panel-kicker">TARGET × METHOD</p>
+                <h2 data-i18n="targetMatrix">逐目标表现矩阵</h2>
+              </div>
+              <div class="matrix-legend"><span data-i18n="weaker">较弱</span><i></i><i></i><i></i><i></i><span data-i18n="better">较优</span></div>
+            </header>
+            <div class="matrix-scroll" id="matrix-wrap">
+              <div class="loading-state" data-i18n="loadingTargets">正在汇总目标数据…</div>
+            </div>
+          </section>
+        </section>
+
+        <section class="workspace is-hidden" id="protocol-panel" data-panel-content="protocol">
+          <div class="protocol-grid">
+            <section class="panel protocol-card protocol-lead">
+              <p class="panel-kicker">EVALUATION</p>
+              <h2 data-i18n="protocolTitle">统一协议，四个互补指标</h2>
+              <p data-i18n="protocolLead">排行榜同时报告全局拓扑、坐标偏差、局部原子环境和几何冲突。默认使用“平均表现”，避免只看最优采样造成的偏差。</p>
+              <div class="protocol-stamp"><span>SCHEMA</span><code id="schema-version">—</code></div>
+            </section>
+            <section class="panel protocol-card">
+              <span class="protocol-index">01</span>
+              <h3 data-i18n="statsDefinitionTitle">统计口径</h3>
+              <p data-i18n-html="statsDefinition"><b>平均表现</b>对每个目标的候选先取均值，再跨目标汇总；<b>最佳候选</b>允许每项指标选择该目标上表现最佳的候选。</p>
+            </section>
+            <section class="panel protocol-card">
+              <span class="protocol-index">02</span>
+              <h3 data-i18n="comparableTitle">可比目标</h3>
+              <p data-i18n="comparableText">总榜展示 available 口径。当前数据中各方法覆盖相同的有效目标，目标矩阵保留未评估位置并以斜纹显示。</p>
+            </section>
+            <section class="panel protocol-card">
+              <span class="protocol-index">03</span>
+              <h3 data-i18n="inputTransparencyTitle">输入透明度</h3>
+              <p data-i18n="inputTransparencyText">MSA、二级结构和模板的使用状态来自发布数据；逐目标证据、版本与文件指纹保留在原始 JSON 中。</p>
+            </section>
+          </div>
+          <section class="panel definitions-panel">
+            <header class="panel-heading"><div><p class="panel-kicker">DEFINITIONS</p><h2 data-i18n="metricDefinitions">指标定义</h2></div></header>
+            <div class="definition-list" id="definition-list"></div>
+          </section>
+        </section>
+      </main>
+
+      <footer>
+        <div><span class="status-dot"></span><span data-i18n="generatedBy">数据由评测发布流程生成</span></div>
+        <p data-i18n="footerNote">CD-HIT 100 RNA structure prediction benchmark · 静态页面不修改源数据</p>
+      </footer>
+    </div>
+
+    <dialog id="cell-dialog">
+      <button class="dialog-close" aria-label="关闭详情" data-i18n-aria="closeDetails">×</button>
+      <div id="dialog-content"></div>
+    </dialog>
+
+    <div class="fatal-error is-hidden" id="fatal-error" role="alert">
+      <strong data-i18n="loadFailed">数据加载失败</strong>
+      <p data-i18n="loadFailedHelp">请确认页面通过 HTTP 服务打开，并且构建产物包含 data 目录。</p>
+    </div>
+  </body>
+</html>

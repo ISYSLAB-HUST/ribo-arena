@@ -1,0 +1,750 @@
+{
+  "schema_version": "rna-leaderboard/3.0",
+  "target_id": "9r7w_1_1_A",
+  "pdb_id": "9r7w",
+  "length": 552,
+  "release_date": "2026-02-25",
+  "eligible": false,
+  "input_issue": "non_ACGU:X",
+  "assembly": {
+    "assembly_id": "1",
+    "assembly_label": "monomeric",
+    "assembly_oligomeric_count": "1",
+    "assembly_note": "Original mmCIF declaration only; biological assembly not reconstructed or finally classified",
+    "label_asym_id": "A",
+    "source_rna_chain_count": "1",
+    "source_rna_entity_count": "1"
+  },
+  "sequence": "GGGXAXUUAXXXUUUAGUGXGAAGGUUUXGAXXUUXGAUXXAUUUGUUXGXAAAUGGGAUGAUXUUXGGAUXAUXXGXGUAGUXUGUUXAGUXGUUUXGAXGAXUGGXXXXAXUUXGGUGGGGXXAXGGUAXUUAGAAGUGAAXAXUAAGUGUXGUGAAXAXXAUUUGGUUAAXUGXUXAAAXUAAAUGGUGAUGAGGGAAGGAAUGAXXXUXAUXGGAXUAXGXGAUXXGAGUGAUGGGAAUGGXUGAXXXAUXGXUXGGXAXUGGAGGGUGAGUGXXXXUXAUUXGXAUAAGGGXXGAXXXAGAXAAXAGXXAAGUUUGGGUXGGAGAUGXGAAXAUUXXAXGXAUXUGAAXGGUUGAGAAXUUAXAAGGGXAAGAGXAGAGUXXUUGUAAGGGXUUUAXAXGUXAAGUUXAXAGAXGUGUAAGGXXXGUXGXXXUUXGGGGXGAXGUUXAXGGXAUUUXGAUGXXGUGXAGXXUGUUXGXAGGXUGXUUGAXXGUUXXXXUGXXXUUUXGAGGGXAGAXUAXUXUUXGGAGUAGUXUUAUGUGAAUGAG",
+  "sequence_sha256": "b911dd39722cd7b10bcfec27c406dcf303f6d14119b391f1b8c1d0cdffcc2106",
+  "reference": {
+    "sha256": "453c7d7feba7d9ba83c39bf83662643a3c7017b30a967dc0db1aa6347686dba8",
+    "format": "mmcif",
+    "pdb_id": "9r7w"
+  },
+  "methods": [
+    {
+      "method_variant_id": "MetaFold-RNA3d-f9502d0f3063f74c",
+      "status": "not_run",
+      "inputs": {
+        "msa": {
+          "supported": true,
+          "provided": false,
+          "evidence": "configured",
+          "protocol": "shared_msa_v3",
+          "protocol_sha256": "9eda4a8750445c088cfaca007b27676e6042f0225a7a9bd832e44da1c2047ee2",
+          "input_rows": null,
+          "rows_include_query": true,
+          "canonical_sha256": null,
+          "supplied_files": [],
+          "sampled_rows": null,
+          "sampled_rows_evidence": "unknown"
+        },
+        "secondary_structure": [
+          {
+            "origin": "external",
+            "method": "historical_secondary_structure_constraints",
+            "version": null,
+            "role": "direct_model_input",
+            "source_type": "unknown",
+            "provided": false,
+            "evidence": "configured",
+            "sha256": null
+          }
+        ],
+        "templates": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        },
+        "constraints": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        },
+        "extra_molecules": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        }
+      },
+      "counts": {
+        "requested_count": 5,
+        "generated_count": 0,
+        "evaluated_count": 0
+      },
+      "candidates": [],
+      "statistics": {
+        "mean": {
+          "values": {
+            "c3_rmsd": null,
+            "rna_tm_score": null,
+            "heavy_atom_lddt": null,
+            "clashscore": null
+          },
+          "candidate_count": 0
+        },
+        "best": {
+          "values": {
+            "c3_rmsd": null,
+            "rna_tm_score": null,
+            "heavy_atom_lddt": null,
+            "clashscore": null
+          },
+          "candidate_count": 0,
+          "candidate_ids": {
+            "c3_rmsd": [],
+            "rna_tm_score": [],
+            "heavy_atom_lddt": [],
+            "clashscore": []
+          },
+          "interpretation": "post_hoc_per_metric; different metrics may select different candidates"
+        }
+      },
+      "timing": null
+    },
+    {
+      "method_variant_id": "alphafold3-00c532b2579a69c6",
+      "status": "not_run",
+      "inputs": {
+        "msa": {
+          "supported": true,
+          "provided": false,
+          "evidence": "configured",
+          "protocol": "shared_msa_v3",
+          "protocol_sha256": "9eda4a8750445c088cfaca007b27676e6042f0225a7a9bd832e44da1c2047ee2",
+          "input_rows": null,
+          "rows_include_query": true,
+          "canonical_sha256": null,
+          "supplied_files": [],
+          "sampled_rows": null,
+          "sampled_rows_evidence": "unknown"
+        },
+        "secondary_structure": [],
+        "templates": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        },
+        "constraints": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        },
+        "extra_molecules": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        }
+      },
+      "counts": {
+        "requested_count": 5,
+        "generated_count": 0,
+        "evaluated_count": 0
+      },
+      "candidates": [],
+      "statistics": {
+        "mean": {
+          "values": {
+            "c3_rmsd": null,
+            "rna_tm_score": null,
+            "heavy_atom_lddt": null,
+            "clashscore": null
+          },
+          "candidate_count": 0
+        },
+        "best": {
+          "values": {
+            "c3_rmsd": null,
+            "rna_tm_score": null,
+            "heavy_atom_lddt": null,
+            "clashscore": null
+          },
+          "candidate_count": 0,
+          "candidate_ids": {
+            "c3_rmsd": [],
+            "rna_tm_score": [],
+            "heavy_atom_lddt": [],
+            "clashscore": []
+          },
+          "interpretation": "post_hoc_per_metric; different metrics may select different candidates"
+        }
+      },
+      "timing": null
+    },
+    {
+      "method_variant_id": "boltz2-c8670f153759885f",
+      "status": "not_run",
+      "inputs": {
+        "msa": {
+          "supported": false,
+          "provided": false,
+          "evidence": "unknown",
+          "protocol": null,
+          "protocol_sha256": null,
+          "input_rows": null,
+          "rows_include_query": true,
+          "canonical_sha256": null,
+          "supplied_files": [],
+          "sampled_rows": null,
+          "sampled_rows_evidence": "unknown"
+        },
+        "secondary_structure": [],
+        "templates": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        },
+        "constraints": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        },
+        "extra_molecules": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        }
+      },
+      "counts": {
+        "requested_count": 5,
+        "generated_count": 0,
+        "evaluated_count": 0
+      },
+      "candidates": [],
+      "statistics": {
+        "mean": {
+          "values": {
+            "c3_rmsd": null,
+            "rna_tm_score": null,
+            "heavy_atom_lddt": null,
+            "clashscore": null
+          },
+          "candidate_count": 0
+        },
+        "best": {
+          "values": {
+            "c3_rmsd": null,
+            "rna_tm_score": null,
+            "heavy_atom_lddt": null,
+            "clashscore": null
+          },
+          "candidate_count": 0,
+          "candidate_ids": {
+            "c3_rmsd": [],
+            "rna_tm_score": [],
+            "heavy_atom_lddt": [],
+            "clashscore": []
+          },
+          "interpretation": "post_hoc_per_metric; different metrics may select different candidates"
+        }
+      },
+      "timing": null
+    },
+    {
+      "method_variant_id": "nufold-5abb24a4c8712363",
+      "status": "not_run",
+      "inputs": {
+        "msa": {
+          "supported": true,
+          "provided": false,
+          "evidence": "configured",
+          "protocol": "shared_msa_v3",
+          "protocol_sha256": "9eda4a8750445c088cfaca007b27676e6042f0225a7a9bd832e44da1c2047ee2",
+          "input_rows": null,
+          "rows_include_query": true,
+          "canonical_sha256": null,
+          "supplied_files": [],
+          "sampled_rows": null,
+          "sampled_rows_evidence": "unknown"
+        },
+        "secondary_structure": [
+          {
+            "origin": "pipeline_generated",
+            "method": "IPknot",
+            "version": "1.1.0",
+            "role": "direct_model_input",
+            "source_type": "predicted",
+            "provided": false,
+            "evidence": "configured",
+            "sha256": null
+          }
+        ],
+        "templates": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        },
+        "constraints": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        },
+        "extra_molecules": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        }
+      },
+      "counts": {
+        "requested_count": 5,
+        "generated_count": 0,
+        "evaluated_count": 0
+      },
+      "candidates": [],
+      "statistics": {
+        "mean": {
+          "values": {
+            "c3_rmsd": null,
+            "rna_tm_score": null,
+            "heavy_atom_lddt": null,
+            "clashscore": null
+          },
+          "candidate_count": 0
+        },
+        "best": {
+          "values": {
+            "c3_rmsd": null,
+            "rna_tm_score": null,
+            "heavy_atom_lddt": null,
+            "clashscore": null
+          },
+          "candidate_count": 0,
+          "candidate_ids": {
+            "c3_rmsd": [],
+            "rna_tm_score": [],
+            "heavy_atom_lddt": [],
+            "clashscore": []
+          },
+          "interpretation": "post_hoc_per_metric; different metrics may select different candidates"
+        }
+      },
+      "timing": null
+    },
+    {
+      "method_variant_id": "protenix-v2-2ad8361a352a1db1",
+      "status": "not_run",
+      "inputs": {
+        "msa": {
+          "supported": true,
+          "provided": false,
+          "evidence": "configured",
+          "protocol": "shared_msa_v3",
+          "protocol_sha256": "9eda4a8750445c088cfaca007b27676e6042f0225a7a9bd832e44da1c2047ee2",
+          "input_rows": null,
+          "rows_include_query": true,
+          "canonical_sha256": null,
+          "supplied_files": [],
+          "sampled_rows": null,
+          "sampled_rows_evidence": "unknown"
+        },
+        "secondary_structure": [],
+        "templates": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        },
+        "constraints": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        },
+        "extra_molecules": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        }
+      },
+      "counts": {
+        "requested_count": 5,
+        "generated_count": 0,
+        "evaluated_count": 0
+      },
+      "candidates": [],
+      "statistics": {
+        "mean": {
+          "values": {
+            "c3_rmsd": null,
+            "rna_tm_score": null,
+            "heavy_atom_lddt": null,
+            "clashscore": null
+          },
+          "candidate_count": 0
+        },
+        "best": {
+          "values": {
+            "c3_rmsd": null,
+            "rna_tm_score": null,
+            "heavy_atom_lddt": null,
+            "clashscore": null
+          },
+          "candidate_count": 0,
+          "candidate_ids": {
+            "c3_rmsd": [],
+            "rna_tm_score": [],
+            "heavy_atom_lddt": [],
+            "clashscore": []
+          },
+          "interpretation": "post_hoc_per_metric; different metrics may select different candidates"
+        }
+      },
+      "timing": null
+    },
+    {
+      "method_variant_id": "protenix_base_20250630_v1.0.0-c96150b5b002d197",
+      "status": "not_run",
+      "inputs": {
+        "msa": {
+          "supported": true,
+          "provided": false,
+          "evidence": "configured",
+          "protocol": "shared_msa_v3",
+          "protocol_sha256": "9eda4a8750445c088cfaca007b27676e6042f0225a7a9bd832e44da1c2047ee2",
+          "input_rows": null,
+          "rows_include_query": true,
+          "canonical_sha256": null,
+          "supplied_files": [],
+          "sampled_rows": null,
+          "sampled_rows_evidence": "unknown"
+        },
+        "secondary_structure": [],
+        "templates": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        },
+        "constraints": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        },
+        "extra_molecules": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        }
+      },
+      "counts": {
+        "requested_count": 5,
+        "generated_count": 0,
+        "evaluated_count": 0
+      },
+      "candidates": [],
+      "statistics": {
+        "mean": {
+          "values": {
+            "c3_rmsd": null,
+            "rna_tm_score": null,
+            "heavy_atom_lddt": null,
+            "clashscore": null
+          },
+          "candidate_count": 0
+        },
+        "best": {
+          "values": {
+            "c3_rmsd": null,
+            "rna_tm_score": null,
+            "heavy_atom_lddt": null,
+            "clashscore": null
+          },
+          "candidate_count": 0,
+          "candidate_ids": {
+            "c3_rmsd": [],
+            "rna_tm_score": [],
+            "heavy_atom_lddt": [],
+            "clashscore": []
+          },
+          "interpretation": "post_hoc_per_metric; different metrics may select different candidates"
+        }
+      },
+      "timing": null
+    },
+    {
+      "method_variant_id": "protenix_base_default_v1.0.0-2b2a84e6ab2ad84f",
+      "status": "not_run",
+      "inputs": {
+        "msa": {
+          "supported": true,
+          "provided": false,
+          "evidence": "configured",
+          "protocol": "shared_msa_v3",
+          "protocol_sha256": "9eda4a8750445c088cfaca007b27676e6042f0225a7a9bd832e44da1c2047ee2",
+          "input_rows": null,
+          "rows_include_query": true,
+          "canonical_sha256": null,
+          "supplied_files": [],
+          "sampled_rows": null,
+          "sampled_rows_evidence": "unknown"
+        },
+        "secondary_structure": [],
+        "templates": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        },
+        "constraints": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        },
+        "extra_molecules": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        }
+      },
+      "counts": {
+        "requested_count": 5,
+        "generated_count": 0,
+        "evaluated_count": 0
+      },
+      "candidates": [],
+      "statistics": {
+        "mean": {
+          "values": {
+            "c3_rmsd": null,
+            "rna_tm_score": null,
+            "heavy_atom_lddt": null,
+            "clashscore": null
+          },
+          "candidate_count": 0
+        },
+        "best": {
+          "values": {
+            "c3_rmsd": null,
+            "rna_tm_score": null,
+            "heavy_atom_lddt": null,
+            "clashscore": null
+          },
+          "candidate_count": 0,
+          "candidate_ids": {
+            "c3_rmsd": [],
+            "rna_tm_score": [],
+            "heavy_atom_lddt": [],
+            "clashscore": []
+          },
+          "interpretation": "post_hoc_per_metric; different metrics may select different candidates"
+        }
+      },
+      "timing": null
+    },
+    {
+      "method_variant_id": "rhofoldplus-8b0b62c918834ef3",
+      "status": "not_run",
+      "inputs": {
+        "msa": {
+          "supported": true,
+          "provided": false,
+          "evidence": "configured",
+          "protocol": "shared_msa_v3",
+          "protocol_sha256": "9eda4a8750445c088cfaca007b27676e6042f0225a7a9bd832e44da1c2047ee2",
+          "input_rows": null,
+          "rows_include_query": true,
+          "canonical_sha256": null,
+          "supplied_files": [],
+          "sampled_rows": null,
+          "sampled_rows_evidence": "unknown"
+        },
+        "secondary_structure": [],
+        "templates": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        },
+        "constraints": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        },
+        "extra_molecules": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        }
+      },
+      "counts": {
+        "requested_count": 5,
+        "generated_count": 0,
+        "evaluated_count": 0
+      },
+      "candidates": [],
+      "statistics": {
+        "mean": {
+          "values": {
+            "c3_rmsd": null,
+            "rna_tm_score": null,
+            "heavy_atom_lddt": null,
+            "clashscore": null
+          },
+          "candidate_count": 0
+        },
+        "best": {
+          "values": {
+            "c3_rmsd": null,
+            "rna_tm_score": null,
+            "heavy_atom_lddt": null,
+            "clashscore": null
+          },
+          "candidate_count": 0,
+          "candidate_ids": {
+            "c3_rmsd": [],
+            "rna_tm_score": [],
+            "heavy_atom_lddt": [],
+            "clashscore": []
+          },
+          "interpretation": "post_hoc_per_metric; different metrics may select different candidates"
+        }
+      },
+      "timing": null
+    },
+    {
+      "method_variant_id": "rosettafold3-db97e04c47b20091",
+      "status": "not_run",
+      "inputs": {
+        "msa": {
+          "supported": true,
+          "provided": false,
+          "evidence": "configured",
+          "protocol": "shared_msa_v3",
+          "protocol_sha256": "9eda4a8750445c088cfaca007b27676e6042f0225a7a9bd832e44da1c2047ee2",
+          "input_rows": null,
+          "rows_include_query": true,
+          "canonical_sha256": null,
+          "supplied_files": [],
+          "sampled_rows": null,
+          "sampled_rows_evidence": "unknown"
+        },
+        "secondary_structure": [],
+        "templates": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        },
+        "constraints": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        },
+        "extra_molecules": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        }
+      },
+      "counts": {
+        "requested_count": 5,
+        "generated_count": 0,
+        "evaluated_count": 0
+      },
+      "candidates": [],
+      "statistics": {
+        "mean": {
+          "values": {
+            "c3_rmsd": null,
+            "rna_tm_score": null,
+            "heavy_atom_lddt": null,
+            "clashscore": null
+          },
+          "candidate_count": 0
+        },
+        "best": {
+          "values": {
+            "c3_rmsd": null,
+            "rna_tm_score": null,
+            "heavy_atom_lddt": null,
+            "clashscore": null
+          },
+          "candidate_count": 0,
+          "candidate_ids": {
+            "c3_rmsd": [],
+            "rna_tm_score": [],
+            "heavy_atom_lddt": [],
+            "clashscore": []
+          },
+          "interpretation": "post_hoc_per_metric; different metrics may select different candidates"
+        }
+      },
+      "timing": null
+    },
+    {
+      "method_variant_id": "trrosettarna2-18a7024f1db66c56",
+      "status": "not_run",
+      "inputs": {
+        "msa": {
+          "supported": true,
+          "provided": false,
+          "evidence": "configured",
+          "protocol": "shared_msa_v3",
+          "protocol_sha256": "9eda4a8750445c088cfaca007b27676e6042f0225a7a9bd832e44da1c2047ee2",
+          "input_rows": null,
+          "rows_include_query": true,
+          "canonical_sha256": null,
+          "supplied_files": [],
+          "sampled_rows": null,
+          "sampled_rows_evidence": "unknown"
+        },
+        "secondary_structure": [
+          {
+            "origin": "model_internal",
+            "method": "trRNA2-SS",
+            "version": null,
+            "role": "derived_feature",
+            "source_type": "predicted",
+            "provided": false,
+            "evidence": "configured",
+            "sha256": null
+          }
+        ],
+        "templates": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        },
+        "constraints": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        },
+        "extra_molecules": {
+          "provided": false,
+          "evidence": "configured",
+          "sources": []
+        }
+      },
+      "counts": {
+        "requested_count": 5,
+        "generated_count": 0,
+        "evaluated_count": 0
+      },
+      "candidates": [],
+      "statistics": {
+        "mean": {
+          "values": {
+            "c3_rmsd": null,
+            "rna_tm_score": null,
+            "heavy_atom_lddt": null,
+            "clashscore": null
+          },
+          "candidate_count": 0
+        },
+        "best": {
+          "values": {
+            "c3_rmsd": null,
+            "rna_tm_score": null,
+            "heavy_atom_lddt": null,
+            "clashscore": null
+          },
+          "candidate_count": 0,
+          "candidate_ids": {
+            "c3_rmsd": [],
+            "rna_tm_score": [],
+            "heavy_atom_lddt": [],
+            "clashscore": []
+          },
+          "interpretation": "post_hoc_per_metric; different metrics may select different candidates"
+        }
+      },
+      "timing": null
+    }
+  ]
+}

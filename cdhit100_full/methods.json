@@ -1,0 +1,588 @@
+{
+  "schema_version": "rna-leaderboard/3.0",
+  "generated_at": "2026-09-23T07:05:29.122021+00:00",
+  "dataset_id": "cdhit100_full",
+  "methods": [
+    {
+      "tool_id": "MetaFold-RNA3d",
+      "version": "historical_source_unverified",
+      "checkpoint": {
+        "id": "protenix_base_20250630_v1.0.0.pt",
+        "sha256": null,
+        "evidence": "unknown"
+      },
+      "inference_parameters": {
+        "registered_model": "protenix_base_20250630_v1.0.0",
+        "cycle": 10,
+        "step": 200,
+        "samples": 5,
+        "dtype": "bf16",
+        "model_size": "base",
+        "with_feature": "20250630",
+        "model_version_reported": "v1.0.0",
+        "strict_checkpoint_load_reported": false
+      },
+      "inference_template_sha256": "460ef211bc6046e472d46d983d27d4056dfa158c191422cab8edd348b61b02b3",
+      "adapter_sha256": null,
+      "input_preparation_signature": "d1756c58e775b010515fc221d47a9a15030ec43026fc814c8ea7da6359c8046b",
+      "execution_parameters": {
+        "cpu": null,
+        "threads": null
+      },
+      "runtime_configuration": {
+        "import_mode": "historical_native_artifact_audit",
+        "source_code_provenance": "unknown",
+        "weight_provenance": "unknown"
+      },
+      "input_protocol": {
+        "msa": "9eda4a8750445c088cfaca007b27676e6042f0225a7a9bd832e44da1c2047ee2",
+        "secondary_structure": [
+          {
+            "origin": "external",
+            "method": "historical_secondary_structure_constraints",
+            "version": null,
+            "role": "direct_model_input",
+            "source_type": "unknown"
+          }
+        ],
+        "templates": "historical_optional_templates",
+        "additional_conditions": [
+          "historical_optional_contact_constraints"
+        ]
+      },
+      "adapter_revision": "historical-protenix-import-v1",
+      "historical_provenance": {
+        "status": "source_and_weight_hashes_unknown",
+        "current_source_hash_is_not_historical_evidence": true
+      },
+      "method_variant_id": "MetaFold-RNA3d-f9502d0f3063f74c",
+      "display_name": "MetaFold-RNA3d",
+      "input_summary": {
+        "msa": "使用",
+        "secondary_structure": "使用",
+        "templates": "使用"
+      },
+      "counts": {
+        "requested_count": 265,
+        "generated_count": 235,
+        "evaluated_count": 235
+      },
+      "actual_target_count": 47,
+      "target_count": 53,
+      "evaluated_candidate_count_distribution": {
+        "0": 6,
+        "5": 47
+      }
+    },
+    {
+      "method_variant_id": "alphafold3-00c532b2579a69c6",
+      "tool_id": "alphafold3",
+      "version": "c0f97eda2f1f482fd94d3a38bece18c7069b4a5c",
+      "checkpoint": {
+        "id": "alphafold3-installed",
+        "sha256": "74d0258616917cd122f5eab6d076afe4a8930e96823851e65e4f777dfb1f33ff"
+      },
+      "inference_parameters": {
+        "diffusion_samples": 5
+      },
+      "inference_template_sha256": "0e8f6623103fa8001da06abc93345e2bdd94a34fc258b61adcd9546e0676bab4",
+      "adapter_sha256": "c6028fdcf9922c5f7c049d10f022ee3c0fe451e1a366b40bf27846db14958d2a",
+      "input_preparation_signature": "9e589844072a33cdaff6ef2f65bfef5ae8ade76bb05fdab0c8fc8ff2d23ab3ba",
+      "execution_parameters": {
+        "cpu": 4,
+        "threads": 4
+      },
+      "runtime_configuration": {
+        "import_mode": "installed",
+        "extra_python_dependencies": {}
+      },
+      "input_protocol": {
+        "msa": "9eda4a8750445c088cfaca007b27676e6042f0225a7a9bd832e44da1c2047ee2",
+        "secondary_structure": [],
+        "templates": "disabled",
+        "additional_conditions": []
+      },
+      "adapter_revision": "native-adapters-1",
+      "display_name": "AlphaFold3",
+      "input_summary": {
+        "msa": "使用",
+        "secondary_structure": "未使用",
+        "templates": "未使用"
+      },
+      "counts": {
+        "requested_count": 265,
+        "generated_count": 235,
+        "evaluated_count": 235
+      },
+      "actual_target_count": 47,
+      "target_count": 53,
+      "evaluated_candidate_count_distribution": {
+        "0": 6,
+        "5": 47
+      }
+    },
+    {
+      "method_variant_id": "boltz2-c8670f153759885f",
+      "tool_id": "boltz2",
+      "version": "b1ebfc46ecf57f5414e0d1a6f9027bbb122c53bc",
+      "checkpoint": {
+        "id": "boltz2_conf.ckpt@55fa4a7",
+        "sha256": "090e82ac8c92f5e943fa1b39e7410a44027bea7243c0bbb3caa67a77fc1428e1"
+      },
+      "inference_parameters": {
+        "diffusion_samples": 5
+      },
+      "inference_template_sha256": "218d1a7423256abfcad960162ebd9fcf684c0d9154cc796b7a5689143438161c",
+      "adapter_sha256": "c6028fdcf9922c5f7c049d10f022ee3c0fe451e1a366b40bf27846db14958d2a",
+      "input_preparation_signature": "7b9d0d1368833b6995ac59039b042c424e1ca1c7a6d83f5306e28b9f55684f66",
+      "execution_parameters": {
+        "cpu": 4,
+        "threads": 4
+      },
+      "runtime_configuration": {
+        "import_mode": "source",
+        "extra_python_dependencies": {}
+      },
+      "input_protocol": {
+        "msa": null,
+        "secondary_structure": [],
+        "templates": "disabled",
+        "additional_conditions": []
+      },
+      "adapter_revision": "native-adapters-1",
+      "display_name": "Boltz-2",
+      "input_summary": {
+        "msa": "未使用",
+        "secondary_structure": "未使用",
+        "templates": "未使用"
+      },
+      "counts": {
+        "requested_count": 265,
+        "generated_count": 235,
+        "evaluated_count": 235
+      },
+      "actual_target_count": 47,
+      "target_count": 53,
+      "evaluated_candidate_count_distribution": {
+        "0": 6,
+        "5": 47
+      }
+    },
+    {
+      "method_variant_id": "nufold-5abb24a4c8712363",
+      "tool_id": "nufold",
+      "version": "f77d34af97c1d0f88b47dd2f3c038004fe2ebe13",
+      "checkpoint": {
+        "id": "global_step145245.pt",
+        "sha256": "7e473b98e727c9ae3a88fecd917262fe115f53a9f9c098db965baebe597cfbdb"
+      },
+      "inference_parameters": {
+        "repeat": 5,
+        "recycle": 3,
+        "config_preset": "initial_training"
+      },
+      "inference_template_sha256": "e5dcd072bf1183e4000f75e54bd764f18b6a306037cc3141b4fdbff72c1191ed",
+      "adapter_sha256": "c6028fdcf9922c5f7c049d10f022ee3c0fe451e1a366b40bf27846db14958d2a",
+      "input_preparation_signature": "573eb72454119e2b73c2242e84759f8b3676756443bdcf80b8f3c4041b0ca26a",
+      "execution_parameters": {
+        "cpu": 4,
+        "threads": 4
+      },
+      "runtime_configuration": {
+        "import_mode": "source",
+        "extra_python_dependencies": {}
+      },
+      "input_protocol": {
+        "msa": "9eda4a8750445c088cfaca007b27676e6042f0225a7a9bd832e44da1c2047ee2",
+        "secondary_structure": [
+          {
+            "origin": "pipeline_generated",
+            "method": "IPknot",
+            "version": "1.1.0",
+            "role": "direct_model_input",
+            "source_type": "predicted"
+          }
+        ],
+        "templates": "disabled",
+        "additional_conditions": []
+      },
+      "adapter_revision": "native-adapters-1",
+      "display_name": "NuFold",
+      "input_summary": {
+        "msa": "使用",
+        "secondary_structure": "使用",
+        "templates": "未使用"
+      },
+      "counts": {
+        "requested_count": 265,
+        "generated_count": 235,
+        "evaluated_count": 235
+      },
+      "actual_target_count": 47,
+      "target_count": 53,
+      "evaluated_candidate_count_distribution": {
+        "0": 6,
+        "5": 47
+      }
+    },
+    {
+      "tool_id": "protenix-v2",
+      "version": "historical_source_unverified",
+      "checkpoint": {
+        "id": "protenix-v2.pt",
+        "sha256": null,
+        "evidence": "unknown"
+      },
+      "inference_parameters": {
+        "registered_model": "protenix-v2",
+        "cycle": 10,
+        "step": 200,
+        "samples": 5,
+        "dtype": "bf16",
+        "model_size": "464M",
+        "with_feature": "default",
+        "model_version_reported": "v2",
+        "strict_checkpoint_load_reported": true
+      },
+      "inference_template_sha256": "c09172ce7650c347197334e1c4db10ae2a449e5cf7b5a02de5f36efff043b321",
+      "adapter_sha256": null,
+      "input_preparation_signature": "53e0bc3cc0b7203703e1b76d148b5910982c933ba375a34f2d483cf89644c894",
+      "execution_parameters": {
+        "cpu": null,
+        "threads": null
+      },
+      "runtime_configuration": {
+        "import_mode": "historical_native_artifact_audit",
+        "source_code_provenance": "unknown",
+        "weight_provenance": "unknown"
+      },
+      "input_protocol": {
+        "msa": "9eda4a8750445c088cfaca007b27676e6042f0225a7a9bd832e44da1c2047ee2",
+        "secondary_structure": [],
+        "templates": "disabled",
+        "additional_conditions": []
+      },
+      "adapter_revision": "historical-protenix-import-v1",
+      "historical_provenance": {
+        "status": "source_and_weight_hashes_unknown",
+        "current_source_hash_is_not_historical_evidence": true
+      },
+      "method_variant_id": "protenix-v2-2ad8361a352a1db1",
+      "display_name": "Protenix v2",
+      "input_summary": {
+        "msa": "使用",
+        "secondary_structure": "未使用",
+        "templates": "未使用"
+      },
+      "counts": {
+        "requested_count": 265,
+        "generated_count": 235,
+        "evaluated_count": 235
+      },
+      "actual_target_count": 47,
+      "target_count": 53,
+      "evaluated_candidate_count_distribution": {
+        "0": 6,
+        "5": 47
+      }
+    },
+    {
+      "tool_id": "protenix_base_20250630_v1.0.0",
+      "version": "historical_source_unverified",
+      "checkpoint": {
+        "id": "protenix_base_20250630_v1.0.0.pt",
+        "sha256": null,
+        "evidence": "unknown"
+      },
+      "inference_parameters": {
+        "registered_model": "protenix_base_20250630_v1.0.0",
+        "cycle": 10,
+        "step": 200,
+        "samples": 5,
+        "dtype": "bf16",
+        "model_size": "base",
+        "with_feature": "20250630",
+        "model_version_reported": "v1.0.0",
+        "strict_checkpoint_load_reported": true
+      },
+      "inference_template_sha256": "460ef211bc6046e472d46d983d27d4056dfa158c191422cab8edd348b61b02b3",
+      "adapter_sha256": null,
+      "input_preparation_signature": "53e0bc3cc0b7203703e1b76d148b5910982c933ba375a34f2d483cf89644c894",
+      "execution_parameters": {
+        "cpu": null,
+        "threads": null
+      },
+      "runtime_configuration": {
+        "import_mode": "historical_native_artifact_audit",
+        "source_code_provenance": "unknown",
+        "weight_provenance": "unknown"
+      },
+      "input_protocol": {
+        "msa": "9eda4a8750445c088cfaca007b27676e6042f0225a7a9bd832e44da1c2047ee2",
+        "secondary_structure": [],
+        "templates": "disabled",
+        "additional_conditions": []
+      },
+      "adapter_revision": "historical-protenix-import-v1",
+      "historical_provenance": {
+        "status": "source_and_weight_hashes_unknown",
+        "current_source_hash_is_not_historical_evidence": true
+      },
+      "method_variant_id": "protenix_base_20250630_v1.0.0-c96150b5b002d197",
+      "display_name": "Protenix base 20250630 v1.0.0",
+      "input_summary": {
+        "msa": "使用",
+        "secondary_structure": "未使用",
+        "templates": "未使用"
+      },
+      "counts": {
+        "requested_count": 265,
+        "generated_count": 235,
+        "evaluated_count": 235
+      },
+      "actual_target_count": 47,
+      "target_count": 53,
+      "evaluated_candidate_count_distribution": {
+        "0": 6,
+        "5": 47
+      }
+    },
+    {
+      "tool_id": "protenix_base_default_v1.0.0",
+      "version": "historical_source_unverified",
+      "checkpoint": {
+        "id": "protenix_base_default_v1.0.0.pt",
+        "sha256": null,
+        "evidence": "unknown"
+      },
+      "inference_parameters": {
+        "registered_model": "protenix_base_default_v1.0.0",
+        "cycle": 10,
+        "step": 200,
+        "samples": 5,
+        "dtype": "bf16",
+        "model_size": "base",
+        "with_feature": "default",
+        "model_version_reported": "v1.0.0",
+        "strict_checkpoint_load_reported": true
+      },
+      "inference_template_sha256": "ca877841d5ed1d4a0cceb29494646df13395b3b0fd1f880f190e6359bdde8d75",
+      "adapter_sha256": null,
+      "input_preparation_signature": "53e0bc3cc0b7203703e1b76d148b5910982c933ba375a34f2d483cf89644c894",
+      "execution_parameters": {
+        "cpu": null,
+        "threads": null
+      },
+      "runtime_configuration": {
+        "import_mode": "historical_native_artifact_audit",
+        "source_code_provenance": "unknown",
+        "weight_provenance": "unknown"
+      },
+      "input_protocol": {
+        "msa": "9eda4a8750445c088cfaca007b27676e6042f0225a7a9bd832e44da1c2047ee2",
+        "secondary_structure": [],
+        "templates": "disabled",
+        "additional_conditions": []
+      },
+      "adapter_revision": "historical-protenix-import-v1",
+      "historical_provenance": {
+        "status": "source_and_weight_hashes_unknown",
+        "current_source_hash_is_not_historical_evidence": true
+      },
+      "method_variant_id": "protenix_base_default_v1.0.0-2b2a84e6ab2ad84f",
+      "display_name": "Protenix base default v1.0.0",
+      "input_summary": {
+        "msa": "使用",
+        "secondary_structure": "未使用",
+        "templates": "未使用"
+      },
+      "counts": {
+        "requested_count": 265,
+        "generated_count": 235,
+        "evaluated_count": 235
+      },
+      "actual_target_count": 47,
+      "target_count": 53,
+      "evaluated_candidate_count_distribution": {
+        "0": 6,
+        "5": 47
+      }
+    },
+    {
+      "method_variant_id": "rhofoldplus-8b0b62c918834ef3",
+      "tool_id": "rhofoldplus",
+      "version": "6bdfbda720184409eb682ce08c05d258162ddc48",
+      "checkpoint": {
+        "id": "rhofoldplus-installed",
+        "sha256": "3adb621978dfcd7ea0dc0edeb520d249f423d61530df85ff58a1fad2f33e5608"
+      },
+      "inference_parameters": {
+        "relax_steps": 1000,
+        "relax_platform": "CUDA",
+        "repeat": 5,
+        "seed_strategy": "native_seed_unavailable"
+      },
+      "inference_template_sha256": "449ebdeb919283c4357e357b22ccbb247305de567f437b47dd01cb41ead1b784",
+      "adapter_sha256": "c6028fdcf9922c5f7c049d10f022ee3c0fe451e1a366b40bf27846db14958d2a",
+      "input_preparation_signature": "b14d9191be8f173ae9f298218e52e36ca7bcda92baab626533c1b8238108d9e2",
+      "execution_parameters": {
+        "cpu": 4,
+        "threads": 4
+      },
+      "runtime_configuration": {
+        "import_mode": "source",
+        "extra_python_dependencies": {}
+      },
+      "input_protocol": {
+        "msa": "9eda4a8750445c088cfaca007b27676e6042f0225a7a9bd832e44da1c2047ee2",
+        "secondary_structure": [],
+        "templates": "disabled",
+        "additional_conditions": []
+      },
+      "adapter_revision": "five-independent-native-runs-1",
+      "display_name": "RhoFold+",
+      "input_summary": {
+        "msa": "使用",
+        "secondary_structure": "未使用",
+        "templates": "未使用"
+      },
+      "counts": {
+        "requested_count": 265,
+        "generated_count": 235,
+        "evaluated_count": 235
+      },
+      "actual_target_count": 47,
+      "target_count": 53,
+      "evaluated_candidate_count_distribution": {
+        "0": 6,
+        "5": 47
+      }
+    },
+    {
+      "method_variant_id": "rosettafold3-db97e04c47b20091",
+      "tool_id": "rosettafold3",
+      "version": "b02eed6a6bdf8f44d14a80cc36e3da13c9f2291c",
+      "checkpoint": {
+        "id": "rosettafold3-installed",
+        "sha256": "364ef592fd8042a9cf4176d045015190f8322f961ccca38d891b20ca578d3bb0"
+      },
+      "inference_parameters": {
+        "diffusion_samples": 5,
+        "num_steps": 50,
+        "n_recycles": 10,
+        "early_stopping_plddt_threshold": null
+      },
+      "inference_template_sha256": "a22a36d8b18193b7dc617bd7c44cbf804241dbe640bf224f4289b86b260e1f2b",
+      "adapter_sha256": "c6028fdcf9922c5f7c049d10f022ee3c0fe451e1a366b40bf27846db14958d2a",
+      "input_preparation_signature": "e5dce6147bc298c33b3c20b2ffc64d0788a702a56a3e8389ec01f6a1387f71bb",
+      "execution_parameters": {
+        "cpu": 4,
+        "threads": 4
+      },
+      "runtime_configuration": {
+        "import_mode": "source",
+        "extra_python_dependencies": {
+          "cuequivariance_bundle": {
+            "version": "0.6.1",
+            "packages": {
+              "cuequivariance": "0.6.1",
+              "cuequivariance-torch": "0.6.1",
+              "cuequivariance-ops-cu12": "0.6.1",
+              "cuequivariance-ops-torch-cu12": "0.6.1"
+            },
+            "files_sha256": "12076a8297083e94d9e556362c57bc49177cf896873b5059ae1e35e866f10dd5"
+          }
+        }
+      },
+      "input_protocol": {
+        "msa": "9eda4a8750445c088cfaca007b27676e6042f0225a7a9bd832e44da1c2047ee2",
+        "secondary_structure": [],
+        "templates": "disabled",
+        "additional_conditions": []
+      },
+      "adapter_revision": "native-adapters-1",
+      "display_name": "RoseTTAFold3",
+      "input_summary": {
+        "msa": "使用",
+        "secondary_structure": "未使用",
+        "templates": "未使用"
+      },
+      "counts": {
+        "requested_count": 265,
+        "generated_count": 235,
+        "evaluated_count": 235
+      },
+      "actual_target_count": 47,
+      "target_count": 53,
+      "evaluated_candidate_count_distribution": {
+        "0": 6,
+        "5": 47
+      }
+    },
+    {
+      "method_variant_id": "trrosettarna2-18a7024f1db66c56",
+      "tool_id": "trrosettarna2",
+      "version": "9839687f57a476df42323fe86d6effa78bf32a2e",
+      "checkpoint": {
+        "id": "trrosettarna2-installed",
+        "sha256": "1c7a5b327ca7ff8fcdbd7522163383b5b9925c9a6053232dd163619096e45d03"
+      },
+      "inference_parameters": {
+        "model": "model_1",
+        "max_msa_rows": 500,
+        "recycles": 3,
+        "relax_steps": 200,
+        "repeat": 5,
+        "seed_strategy": "native_seed_unavailable"
+      },
+      "inference_template_sha256": "5d35a992f9305e7e1d6176e19856db7839d342b309b6031e128eabee85f5340e",
+      "adapter_sha256": "c6028fdcf9922c5f7c049d10f022ee3c0fe451e1a366b40bf27846db14958d2a",
+      "input_preparation_signature": "4e406630ce1e7458eb09faadede11a5c497cf9f9bfe38b54ae470eafc0ddbb73",
+      "execution_parameters": {
+        "cpu": 4,
+        "threads": 4
+      },
+      "runtime_configuration": {
+        "import_mode": "source",
+        "extra_python_dependencies": {
+          "psutil": {
+            "version": "6.1.1",
+            "files_sha256": "1a5a9948357a33eaa9251fe4ad8126ababbf47aeb363f9758349a85814850de8"
+          }
+        }
+      },
+      "input_protocol": {
+        "msa": "9eda4a8750445c088cfaca007b27676e6042f0225a7a9bd832e44da1c2047ee2",
+        "secondary_structure": [
+          {
+            "origin": "model_internal",
+            "method": "trRNA2-SS",
+            "version": null,
+            "role": "derived_feature",
+            "source_type": "predicted"
+          }
+        ],
+        "templates": "disabled",
+        "additional_conditions": []
+      },
+      "adapter_revision": "five-independent-native-runs-1",
+      "display_name": "trRosettaRNA2",
+      "input_summary": {
+        "msa": "使用",
+        "secondary_structure": "使用",
+        "templates": "未使用"
+      },
+      "counts": {
+        "requested_count": 265,
+        "generated_count": 235,
+        "evaluated_count": 235
+      },
+      "actual_target_count": 47,
+      "target_count": 53,
+      "evaluated_candidate_count_distribution": {
+        "0": 6,
+        "5": 47
+      }
+    }
+  ]
+}
