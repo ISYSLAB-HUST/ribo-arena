@@ -18,6 +18,9 @@ await cp(sourceDir, outDir, { recursive: true });
 
 const leaderboard = JSON.parse(await readFile(join(datasetDir, "leaderboard.json"), "utf8"));
 leaderboard.methods = leaderboard.methods.filter((method) => !excludedMethodIds.has(method.method_variant_id));
+leaderboard.targets = leaderboard.targets.filter((target) => target.eligible);
+leaderboard.dataset.target_count = leaderboard.targets.length;
+leaderboard.dataset.eligible_target_count = leaderboard.targets.length;
 await writeFile(join(dataOut, "leaderboard.json"), `${JSON.stringify(leaderboard)}\n`);
 
 const methods = JSON.parse(await readFile(join(datasetDir, "methods.json"), "utf8"));
@@ -31,6 +34,7 @@ const targets = [];
 
 for (const filename of targetFiles) {
   const target = JSON.parse(await readFile(join(targetDir, filename), "utf8"));
+  if (!target.eligible) continue;
   targets.push({
     target_id: target.target_id,
     pdb_id: target.pdb_id,

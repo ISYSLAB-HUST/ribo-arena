@@ -56,7 +56,7 @@ const translations = {
     summaryAria: "数据集摘要",
     methods: "参评方法",
     modelsVersions: "模型与版本",
-    eligibleTargets: "有效目标",
+    eligibleTargets: "评测目标",
     evaluatedStructures: "已评估结构",
     allCandidates: "全部候选构象",
     releaseRange: "发布日期范围",
@@ -98,7 +98,7 @@ const translations = {
     loadFailedHelp: "请确认页面通过 HTTP 服务打开，并且构建产物包含 data 目录。",
     titleMeta: "RNA Structure Leaderboard",
     descriptionMeta: "RNA 三维结构预测方法的公开评测排行榜。",
-    targetsNote: (total, excluded) => `${total} 个目标 · ${excluded} 个未纳入`,
+    targetsNote: () => "CD-HIT 100 代表条目",
     ranking: (metric) => `${metric} 排名`,
     lowerBetter: "越低越好",
     higherBetter: "越高越好",
@@ -129,7 +129,7 @@ const translations = {
     summaryAria: "Dataset summary",
     methods: "Methods",
     modelsVersions: "Models and versions",
-    eligibleTargets: "Eligible targets",
+    eligibleTargets: "Benchmark targets",
     evaluatedStructures: "Evaluated structures",
     allCandidates: "All candidate conformations",
     releaseRange: "Release window",
@@ -171,7 +171,7 @@ const translations = {
     loadFailedHelp: "Open the page through an HTTP server and confirm that the build contains the data directory.",
     titleMeta: "RNA Structure Prediction Leaderboard",
     descriptionMeta: "A public benchmark leaderboard for RNA 3D structure prediction methods.",
-    targetsNote: (total, excluded) => `${total} targets · ${excluded} excluded`,
+    targetsNote: () => "CD-HIT 100 representatives",
     ranking: (metric) => `${metric} ranking`,
     lowerBetter: "Lower is better",
     higherBetter: "Higher is better",
@@ -267,7 +267,7 @@ function renderSummary() {
   const { dataset, generated_at, methods } = state.data;
   $("#method-count").textContent = methods.length;
   $("#target-count").textContent = dataset.eligible_target_count;
-  $("#target-note").textContent = t("targetsNote", dataset.target_count, dataset.target_count - dataset.eligible_target_count);
+  $("#target-note").textContent = t("targetsNote");
   $("#candidate-count").textContent = formatNumber(methods.reduce((sum, method) => sum + method.counts.evaluated_count, 0));
   $("#release-range").textContent = `${dataset.release_min} → ${dataset.release_max}`;
   $("#generated-at").textContent = new Intl.DateTimeFormat(locale(), { dateStyle: "medium", timeStyle: "short" }).format(new Date(generated_at));
@@ -345,7 +345,7 @@ function renderTable() {
             <td class="method-cell"><span class="method-name">${method.display_name}</span><span class="method-id">${method.method_variant_id}</span></td>
             ${metricKeys.map((metric) => `<td class="${metric === state.metric ? "active-score" : ""}">${formatMetric(metric, scoreFor(method, metric))}</td>`).join("")}
             <td><div class="input-chips">${chips}</div></td>
-            <td>${method.actual_target_count}/${method.target_count}</td>
+            <td>${method.actual_target_count}/${state.data.dataset.eligible_target_count}</td>
           </tr>`;
         })
         .join("")
