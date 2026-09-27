@@ -87,6 +87,18 @@
           </article>
         </section>
 
+        <section class="method-feature panel" aria-labelledby="metafold-title">
+          <div class="method-feature-mark" aria-hidden="true">M</div>
+          <div class="method-feature-copy">
+            <p class="panel-kicker" data-i18n="featuredMethodKicker">FEATURED METHOD</p>
+            <h2 id="metafold-title">MetaFold-RNA3d</h2>
+            <p data-i18n="metafoldIntro">MetaFold-RNA3d 是我们重新训练的 RNA 结构预测模型，采用类似 AlphaFold 3 的架构，并针对 RNA 结构预测整合 MSA、MetaFold-RNA 输出的二级结构预测和模板信息。</p>
+          </div>
+          <div class="method-feature-tags" aria-label="MetaFold-RNA3d 输入">
+            <span data-i18n="msaTag">MSA</span><span data-i18n="secondaryStructureTag">二级结构</span><span data-i18n="templateTag">模板</span>
+          </div>
+        </section>
+
         <section class="workspace" id="leaderboard-panel" data-panel-content="leaderboard">
           <div class="control-row">
             <div class="segmented" aria-label="统计视图" data-i18n-aria="statsViewAria">
@@ -138,7 +150,7 @@
                 <p class="panel-kicker">FULL RESULTS</p>
                 <h2 data-i18n="methodLeaderboard">方法总榜</h2>
               </div>
-              <span class="table-status" id="table-status" data-i18n="loading">加载中…</span>
+              <div class="table-status-wrap"><span class="table-status" id="table-status" data-i18n="loading">加载中…</span><span class="timing-note" data-i18n="timingNote">平均预测耗时；* 为部分计时</span></div>
             </header>
             <div class="table-scroll">
               <table class="board-table">
@@ -152,6 +164,7 @@
                     <th><button class="metric-sort" data-metric="clashscore">Clashscore</button></th>
                     <th data-i18n="inputs">输入</th>
                     <th data-i18n="coverage">覆盖</th>
+                    <th data-i18n="timing">平均耗时</th>
                   </tr>
                 </thead>
                 <tbody id="leaderboard-body"></tbody>

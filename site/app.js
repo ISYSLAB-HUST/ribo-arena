@@ -65,6 +65,11 @@ const translations = {
     sortingMetricsAria: "排序指标",
     matrixMetricsAria: "矩阵指标",
     barChartAria: "方法指标排名条形图",
+    featuredMethodKicker: "代表性方法",
+    metafoldIntro: "MetaFold-RNA3d 是我们重新训练的 RNA 结构预测模型，采用类似 AlphaFold 3 的架构，并针对 RNA 结构预测整合 MSA、MetaFold-RNA 输出的二级结构预测和模板信息。",
+    msaTag: "MSA",
+    secondaryStructureTag: "二级结构",
+    templateTag: "模板",
     meanPerformance: "平均表现",
     bestCandidate: "最佳候选",
     searchMethods: "搜索方法",
@@ -76,6 +81,8 @@ const translations = {
     method: "方法",
     inputs: "输入",
     coverage: "覆盖",
+    timing: "平均耗时",
+    timingNote: "平均预测耗时；* 为部分计时",
     loading: "加载中…",
     searchTargets: "搜索目标",
     searchTargetsPlaceholder: "搜索 PDB / 目标",
@@ -109,6 +116,7 @@ const translations = {
     unused: "未使用",
     targetCount: (count) => `目标 · ${count}`,
     noTargets: "没有匹配的目标",
+    timingUnavailable: "—",
     meanPerformanceUpper: "平均表现",
     bestCandidateUpper: "最佳候选",
   },
@@ -138,6 +146,11 @@ const translations = {
     sortingMetricsAria: "Ranking metrics",
     matrixMetricsAria: "Matrix metrics",
     barChartAria: "Method metric ranking bar chart",
+    featuredMethodKicker: "FEATURED METHOD",
+    metafoldIntro: "MetaFold-RNA3d is our retrained RNA structure prediction model. It uses an architecture similar to AlphaFold 3 and integrates MSA, secondary-structure predictions from MetaFold-RNA, and templates for RNA structure prediction.",
+    msaTag: "MSA",
+    secondaryStructureTag: "Secondary structure",
+    templateTag: "Templates",
     meanPerformance: "Mean performance",
     bestCandidate: "Best candidate",
     searchMethods: "Search methods",
@@ -149,6 +162,8 @@ const translations = {
     method: "Method",
     inputs: "Inputs",
     coverage: "Coverage",
+    timing: "Mean time",
+    timingNote: "Mean prediction time; * indicates partial timing",
     loading: "Loading…",
     searchTargets: "Search targets",
     searchTargetsPlaceholder: "Search PDB / target",
@@ -182,6 +197,7 @@ const translations = {
     unused: "Not used",
     targetCount: (count) => `Targets · ${count}`,
     noTargets: "No matching targets",
+    timingUnavailable: "—",
     meanPerformanceUpper: "MEAN PERFORMANCE",
     bestCandidateUpper: "BEST CANDIDATE",
   },
@@ -225,6 +241,13 @@ function formatMetric(metric, value) {
   if (value === null || value === undefined || Number.isNaN(value)) return "—";
   if (metric === "rna_tm_score" || metric === "heavy_atom_lddt") return value.toFixed(3);
   return value.toFixed(2);
+}
+
+function formatSeconds(seconds) {
+  if (!Number.isFinite(seconds)) return t("timingUnavailable");
+  if (seconds < 60) return `${seconds.toFixed(1)} s`;
+  if (seconds < 3600) return `${(seconds / 60).toFixed(1)} min`;
+  return `${(seconds / 3600).toFixed(1)} h`;
 }
 
 function isLowerBetter(metric) {
@@ -346,10 +369,11 @@ function renderTable() {
             ${metricKeys.map((metric) => `<td class="${metric === state.metric ? "active-score" : ""}">${formatMetric(metric, scoreFor(method, metric))}</td>`).join("")}
             <td><div class="input-chips">${chips}</div></td>
             <td>${method.actual_target_count}/${state.data.dataset.eligible_target_count}</td>
+            <td class="timing-cell" title="${method.timing?.protocol || ""}">${formatSeconds(method.timing?.mean_seconds)}${method.timing?.partial ? "*" : ""}</td>
           </tr>`;
         })
         .join("")
-    : `<tr><td class="empty-row" colspan="8">${t("noMethods")}</td></tr>`;
+    : `<tr><td class="empty-row" colspan="9">${t("noMethods")}</td></tr>`;
 }
 
 function targetScore(method, metric = state.metric, view = state.view) {
