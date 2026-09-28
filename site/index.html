@@ -53,14 +53,41 @@
 
       <main>
         <section class="page-intro">
-          <div>
+          <div class="intro-content">
             <p class="eyebrow" data-i18n="eyebrow">CD-HIT 100 · 单链 RNA</p>
             <h1 data-i18n="title">RNA 三维结构预测排行榜</h1>
             <p class="intro-copy" data-i18n="intro">在统一评测协议下，对比不同方法的结构精度、局部几何质量与原子冲突。</p>
           </div>
-          <div class="updated-block">
-            <span data-i18n="snapshot">数据快照</span>
-            <time id="generated-at">—</time>
+          <div class="hero-side">
+            <div class="hero-art" aria-hidden="true">
+              <div class="hero-art-label">RNA / 3D</div>
+              <svg class="rna-visual" viewBox="0 0 260 180" role="presentation">
+                <defs>
+                  <linearGradient id="helix-a" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#a49cff" />
+                    <stop offset="1" stop-color="#48d7c4" />
+                  </linearGradient>
+                  <linearGradient id="helix-b" x1="1" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#e5e4ff" stop-opacity=".9" />
+                    <stop offset="1" stop-color="#65dfd0" stop-opacity=".45" />
+                  </linearGradient>
+                </defs>
+                <path class="helix-line helix-line-a" d="M64 13 C192 36 192 68 64 91 C-10 104 -5 144 191 168" />
+                <path class="helix-line helix-line-b" d="M191 13 C63 36 63 68 191 91 C265 104 260 144 64 168" />
+                <g class="helix-rungs">
+                  <path d="M86 25 L170 25" /><path d="M63 46 L192 46" /><path d="M68 70 L187 70" />
+                  <path d="M96 94 L160 94" /><path d="M59 119 L197 119" /><path d="M72 143 L185 143" />
+                </g>
+                <g class="helix-nodes">
+                  <circle cx="64" cy="13" r="5" /><circle cx="191" cy="13" r="5" /><circle cx="64" cy="91" r="4" /><circle cx="191" cy="91" r="4" /><circle cx="64" cy="168" r="5" /><circle cx="191" cy="168" r="5" />
+                </g>
+              </svg>
+              <div class="hero-art-foot"><span class="live-dot"></span><span data-i18n="liveBenchmark">LIVE BENCHMARK</span></div>
+            </div>
+            <div class="updated-block">
+              <span data-i18n="snapshot">数据快照</span>
+              <time id="generated-at">—</time>
+            </div>
           </div>
         </section>
 
