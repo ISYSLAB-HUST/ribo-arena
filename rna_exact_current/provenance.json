@@ -1,0 +1,31 @@
+{
+  "schema_version": "rna-leaderboard/3.0",
+  "generated_at": "2026-09-28T13:40:38.003651+00:00",
+  "dataset": {
+    "id": "rna_exact_current",
+    "targets_sha256": "8de41aa5d09e3defa48ab6a34fdb51cc32f0ee7feb797c51c93ec736f9b096dd"
+  },
+  "evaluation_protocol": {
+    "id": "rna_usalign_ost_original_defaults_v1",
+    "settings_sha256": "3362731c08311ac1840a37cc0a8de9c1b9eed13b7c12a9f236f1347b833a8ca9",
+    "evaluator_sha256": "65e4274bee86cc6b2d6045915fd1c5816c172140147729096553a8ff7bce15ec",
+    "compatible_evaluator_sha256": [
+      "65e4274bee86cc6b2d6045915fd1c5816c172140147729096553a8ff7bce15ec"
+    ]
+  },
+  "statistics_policy": {
+    "mean": "Only candidates with all four metrics; equal target weighting",
+    "best": "Post-hoc per-metric optimum; candidate budgets affect comparability; not one best structure",
+    "common": "Intersection of valid targets across all displayed tools, separately for each statistical view",
+    "confidence": "Not calibrated across tools; excluded from cross-tool ranking",
+    "rank1": "Not published: native ranking is absent, non-unique, or semantically inconsistent across methods"
+  },
+  "public_layout": {
+    "leaderboard": "leaderboard.json",
+    "methods": "methods.json",
+    "timing": "timing.json",
+    "targets": "targets/<target_id>.json",
+    "reference_assets": "references/<target_id>.cif",
+    "candidate_assets": "assets/<target_id>/<tool_id>/<candidate_id>/"
+  }
+}

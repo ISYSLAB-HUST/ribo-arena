@@ -83,7 +83,7 @@ const translations = {
     inputs: "输入",
     coverage: "覆盖",
     timing: "平均耗时",
-    timingNote: "平均预测耗时；* 为部分计时",
+    timingNote: "完整目标集平均耗时；硬件及并发条件不同",
     loading: "加载中…",
     searchTargets: "搜索目标",
     searchTargetsPlaceholder: "搜索 PDB / 目标",
@@ -165,7 +165,7 @@ const translations = {
     inputs: "Inputs",
     coverage: "Coverage",
     timing: "Mean time",
-    timingNote: "Mean prediction time; * indicates partial timing",
+    timingNote: "Full-cohort mean time; hardware and concurrency vary",
     loading: "Loading…",
     searchTargets: "Search targets",
     searchTargetsPlaceholder: "Search PDB / target",
@@ -367,7 +367,7 @@ function renderTable() {
           const rankClass = rank <= 3 ? `rank-${rank}` : "";
           return `<tr>
             <td class="rank-cell"><span class="rank-badge ${rankClass}">${String(rank).padStart(2, "0")}</span></td>
-            <td class="method-cell"><span class="method-name">${method.display_name}</span><span class="method-id">${method.method_variant_id}</span></td>
+            <td class="method-cell"><span class="method-name">${method.display_name}</span><span class="method-id" title="${(method.method_variant_ids || [method.method_variant_id]).join(', ')}">${method.method_variant_id || method.tool_id}</span></td>
             ${metricKeys.map((metric) => `<td class="${metric === state.metric ? "active-score" : ""}">${formatMetric(metric, scoreFor(method, metric))}</td>`).join("")}
             <td><div class="input-chips">${chips}</div></td>
             <td>${method.actual_target_count}/${state.data.dataset.eligible_target_count}</td>
@@ -398,13 +398,13 @@ function renderMatrix() {
     .map((target) => {
       const cells = methods
         .map((method) => {
-          const result = target.methods.find((item) => item.method_variant_id === method.method_variant_id);
+          const result = target.methods.find((item) => item.tool_id === method.tool_id);
           const value = result ? targetScore(result) : null;
           if (value === null) return '<td class="matrix-cell na">—</td>';
           const quality = lower ? (max - value) / span : (value - min) / span;
           const alpha = (0.1 + quality * 0.82).toFixed(2);
           const text = quality > 0.67 ? "var(--accent-ink)" : "var(--ink-2)";
-          return `<td class="matrix-cell" style="--heat:${alpha};--heat-text:${text}"><button data-target="${target.target_id}" data-method="${method.method_variant_id}">${formatMetric(state.metric, value)}</button></td>`;
+          return `<td class="matrix-cell" style="--heat:${alpha};--heat-text:${text}"><button data-target="${target.target_id}" data-method="${method.tool_id}">${formatMetric(state.metric, value)}</button></td>`;
         })
         .join("");
       return `<tr><th><span class="target-name">${target.target_id}</span><span class="target-meta">${target.length} nt · ${target.release_date}</span></th>${cells}</tr>`;
@@ -418,8 +418,8 @@ function renderMatrix() {
 
 function openCell(targetId, methodId) {
   const target = state.targets.targets.find((item) => item.target_id === targetId);
-  const methodInfo = state.data.methods.find((item) => item.method_variant_id === methodId);
-  const method = target.methods.find((item) => item.method_variant_id === methodId);
+  const methodInfo = state.data.methods.find((item) => item.tool_id === methodId);
+  const method = target.methods.find((item) => item.tool_id === methodId);
   const values = method.statistics?.[state.view]?.values || {};
   $("#dialog-content").innerHTML = `<div class="dialog-body">
     <p class="eyebrow">${state.view === "mean" ? t("meanPerformanceUpper") : t("bestCandidateUpper")}</p>

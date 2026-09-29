@@ -4,3 +4,6 @@ dist/
 # Structure assets are ~2.1 GB and are not required by the lightweight Pages leaderboard.
 # Host them separately or use Git LFS before removing this rule.
 cdhit100_full/assets/
+rna_exact_current/assets/
+rna_exact_current/references/
+rna_exact_current_web.tar.gz

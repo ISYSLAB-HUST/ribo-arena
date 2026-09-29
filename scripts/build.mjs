@@ -4,52 +4,29 @@ import { fileURLToPath } from "node:url";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const sourceDir = join(root, "site");
-const datasetDir = join(root, "cdhit100_full");
+const datasetDir = join(root, "rna_exact_current");
 const targetDir = join(datasetDir, "targets");
 const outDir = join(root, "dist");
 const dataOut = join(outDir, "data");
-const excludedMethodIds = new Set([
-  "protenix_base_20250630_v1.0.0-c96150b5b002d197",
-]);
-
-const median = (values) => {
-  const sorted = [...values].sort((a, b) => a - b);
-  if (!sorted.length) return null;
-  const middle = Math.floor(sorted.length / 2);
-  return sorted.length % 2 ? sorted[middle] : (sorted[middle - 1] + sorted[middle]) / 2;
-};
+// Filter the tool, including every execution variant in the latest export.
+const includedMethod = (method) => method.tool_id !== "protenix_base_20250630_v1.0.0";
 
 const timingRaw = JSON.parse(await readFile(join(datasetDir, "timing.json"), "utf8"));
-const timingByMethod = new Map(timingRaw.methods.map((method) => [method.method_variant_id, method]));
-const runsByMethod = new Map();
-for (const run of timingRaw.runs) {
-  const values = runsByMethod.get(run.method_variant_id) || [];
-  const partialSeconds = run.timing?.native_reported?.job_completed_seconds?.value;
-  if (Number.isFinite(partialSeconds)) values.push(partialSeconds);
-  runsByMethod.set(run.method_variant_id, values);
-}
+const timingByMethod = new Map(timingRaw.methods.map((method) => [method.tool_id, method]));
 
-function timingSummary(methodVariantId) {
-  const source = timingByMethod.get(methodVariantId);
-  const cohort = source?.cohorts?.find((item) => item.prediction_wall_seconds?.available?.mean_seconds != null);
-  if (cohort) {
-    return {
-      mean_seconds: cohort.prediction_wall_seconds.available.mean_seconds,
-      median_seconds: cohort.prediction_wall_seconds.available.median_seconds,
-      protocol: cohort.protocol,
-      partial: false,
-    };
-  }
-  const partialValues = runsByMethod.get(methodVariantId) || [];
-  if (partialValues.length) {
-    return {
-      mean_seconds: partialValues.reduce((sum, value) => sum + value, 0) / partialValues.length,
-      median_seconds: median(partialValues),
-      protocol: source?.cohorts?.[0]?.protocol || "native_reported_partial_v1",
-      partial: true,
-    };
-  }
-  return { mean_seconds: null, median_seconds: null, protocol: null, partial: false };
+function timingSummary(toolId) {
+  const source = timingByMethod.get(toolId);
+  const summary = source?.prediction_wall_seconds;
+  // Use the published, equally target-weighted full cohort. Do not substitute
+  // native partial times or average resource-stratum means.
+  return {
+    mean_seconds: summary?.complete ? summary.mean_seconds : null,
+    median_seconds: summary?.complete ? summary.median_seconds : null,
+    measured_target_count: summary?.measured_target_count ?? 0,
+    target_count: summary?.target_count ?? 0,
+    protocol: [...new Set((source?.resource_strata || []).map((item) => item.protocol))].join(", "),
+    partial: false,
+  };
 }
 
 await rm(outDir, { recursive: true, force: true });
@@ -57,15 +34,15 @@ await mkdir(dataOut, { recursive: true });
 await cp(sourceDir, outDir, { recursive: true });
 
 const leaderboard = JSON.parse(await readFile(join(datasetDir, "leaderboard.json"), "utf8"));
-leaderboard.methods = leaderboard.methods.filter((method) => !excludedMethodIds.has(method.method_variant_id));
-leaderboard.methods = leaderboard.methods.map((method) => ({ ...method, timing: timingSummary(method.method_variant_id) }));
+leaderboard.methods = leaderboard.methods.filter(includedMethod);
+leaderboard.methods = leaderboard.methods.map((method) => ({ ...method, timing: timingSummary(method.tool_id) }));
 leaderboard.targets = leaderboard.targets.filter((target) => target.eligible);
 leaderboard.dataset.target_count = leaderboard.targets.length;
 leaderboard.dataset.eligible_target_count = leaderboard.targets.length;
 await writeFile(join(dataOut, "leaderboard.json"), `${JSON.stringify(leaderboard)}\n`);
 
 const methods = JSON.parse(await readFile(join(datasetDir, "methods.json"), "utf8"));
-methods.methods = methods.methods.filter((method) => !excludedMethodIds.has(method.method_variant_id));
+methods.methods = methods.methods.filter(includedMethod);
 await writeFile(join(dataOut, "methods.json"), `${JSON.stringify(methods)}\n`);
 
 await cp(join(datasetDir, "provenance.json"), join(dataOut, "provenance.json"));
@@ -83,7 +60,8 @@ for (const filename of targetFiles) {
     release_date: target.release_date,
     eligible: target.eligible,
     input_issue: target.input_issue,
-    methods: target.methods.filter((method) => !excludedMethodIds.has(method.method_variant_id)).map((method) => ({
+    methods: target.methods.filter(includedMethod).map((method) => ({
+      tool_id: method.tool_id,
       method_variant_id: method.method_variant_id,
       status: method.status,
       counts: method.counts,
