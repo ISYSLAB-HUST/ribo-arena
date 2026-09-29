@@ -21,6 +21,7 @@
     <script type="module" src="./app.js"></script>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="app-shell">
       <header class="topbar">
         <a class="brand" href="#" aria-label="RNA Structure Leaderboard 首页" data-i18n-aria="brandAria">
@@ -28,15 +29,17 @@
             <path d="M8 5c12 4 4 18 16 22M24 5C12 9 20 23 8 27" />
             <path d="M10.5 9.5h11M9.5 15h13M9.5 21h13" />
           </svg>
-          <span>RIBO<span class="brand-dim">/ARENA</span></span>
+          <span>ribo<span class="brand-dim">arena</span><small>RNA STRUCTURE BENCHMARK</small></span>
         </a>
 
+        <p class="nav-label">WORKSPACE</p>
         <nav class="main-tabs" aria-label="主导航" data-i18n-aria="mainNavAria">
-          <button class="nav-tab is-active" data-panel="leaderboard" aria-selected="true" data-i18n="navLeaderboard">总榜</button>
-          <button class="nav-tab" data-panel="matrix" aria-selected="false" data-i18n="navMatrix">目标矩阵</button>
-          <button class="nav-tab" data-panel="protocol" aria-selected="false" data-i18n="navProtocol">评测说明</button>
+          <button class="nav-tab is-active" data-panel="leaderboard" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19h16M6 15v-4m6 4V5m6 10V8"/></svg><span data-i18n="navLeaderboard">总榜</span></button>
+          <button class="nav-tab" data-panel="matrix" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg><span data-i18n="navMatrix">目标矩阵</span></button>
+          <button class="nav-tab" data-panel="protocol" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h8l4 4v14H5V3h2m8 0v5h4M9 12h6m-6 4h6"/></svg><span data-i18n="navProtocol">评测说明</span></button>
         </nav>
 
+        <a class="repo-link" href="https://github.com/ISYSLAB-HUST/ribo-arena" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
         <div class="top-actions">
           <div class="language-switch" aria-label="语言 / Language">
             <button data-lang="zh" aria-pressed="true">中文</button>
@@ -51,44 +54,15 @@
         </div>
       </header>
 
-      <main>
+      <main id="main-content">
+        <div class="page-meta"><span>BENCHMARKS <span aria-hidden="true">/</span> RNA STRUCTURE</span><div class="updated-block"><span data-i18n="snapshot">数据快照</span><time id="generated-at">—</time></div></div>
         <section class="page-intro">
           <div class="intro-content">
             <p class="eyebrow" data-i18n="eyebrow">CD-HIT 100 · 单链 RNA</p>
             <h1 data-i18n="title">RNA 三维结构预测排行榜</h1>
             <p class="intro-copy" data-i18n="intro">在统一评测协议下，对比不同方法的结构精度、局部几何质量与原子冲突。</p>
           </div>
-          <div class="hero-side">
-            <div class="hero-art" aria-hidden="true">
-              <div class="hero-art-label">RNA / 3D</div>
-              <svg class="rna-visual" viewBox="0 0 260 180" role="presentation">
-                <defs>
-                  <linearGradient id="helix-a" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0" stop-color="#a49cff" />
-                    <stop offset="1" stop-color="#48d7c4" />
-                  </linearGradient>
-                  <linearGradient id="helix-b" x1="1" y1="0" x2="0" y2="1">
-                    <stop offset="0" stop-color="#e5e4ff" stop-opacity=".9" />
-                    <stop offset="1" stop-color="#65dfd0" stop-opacity=".45" />
-                  </linearGradient>
-                </defs>
-                <path class="helix-line helix-line-a" d="M64 13 C192 36 192 68 64 91 C-10 104 -5 144 191 168" />
-                <path class="helix-line helix-line-b" d="M191 13 C63 36 63 68 191 91 C265 104 260 144 64 168" />
-                <g class="helix-rungs">
-                  <path d="M86 25 L170 25" /><path d="M63 46 L192 46" /><path d="M68 70 L187 70" />
-                  <path d="M96 94 L160 94" /><path d="M59 119 L197 119" /><path d="M72 143 L185 143" />
-                </g>
-                <g class="helix-nodes">
-                  <circle cx="64" cy="13" r="5" /><circle cx="191" cy="13" r="5" /><circle cx="64" cy="91" r="4" /><circle cx="191" cy="91" r="4" /><circle cx="64" cy="168" r="5" /><circle cx="191" cy="168" r="5" />
-                </g>
-              </svg>
-              <div class="hero-art-foot"><span class="live-dot"></span><span data-i18n="liveBenchmark">LIVE BENCHMARK</span></div>
-            </div>
-            <div class="updated-block">
-              <span data-i18n="snapshot">数据快照</span>
-              <time id="generated-at">—</time>
-            </div>
-          </div>
+          <a class="data-link" href="./data/leaderboard.json" download><span data-i18n="downloadData">下载数据</span><span aria-hidden="true">↗</span></a>
         </section>
 
         <section class="summary-grid" aria-label="数据集摘要" data-i18n-aria="summaryAria">
@@ -114,18 +88,6 @@
           </article>
         </section>
 
-        <section class="method-feature panel" aria-labelledby="metafold-title">
-          <div class="method-feature-mark" aria-hidden="true">M</div>
-          <div class="method-feature-copy">
-            <p class="panel-kicker" data-i18n="featuredMethodKicker">FEATURED METHOD</p>
-            <h2 id="metafold-title">MetaFold-RNA3d</h2>
-            <p data-i18n="metafoldIntro">MetaFold-RNA3d 是我们重新训练的 RNA 结构预测模型，采用类似 AlphaFold 3 的架构，并针对 RNA 结构预测整合 MSA、MetaFold-RNA 输出的二级结构预测和模板信息。</p>
-          </div>
-          <div class="method-feature-tags" aria-label="MetaFold-RNA3d 输入">
-            <span data-i18n="msaTag">MSA</span><span data-i18n="secondaryStructureTag">二级结构</span><span data-i18n="templateTag">模板</span>
-          </div>
-        </section>
-
         <section class="workspace" id="leaderboard-panel" data-panel-content="leaderboard">
           <div class="control-row">
             <div class="segmented" aria-label="统计视图" data-i18n-aria="statsViewAria">
@@ -138,37 +100,6 @@
               <span class="sr-only" data-i18n="searchMethods">搜索方法</span>
               <input id="method-search" type="search" placeholder="搜索方法" data-i18n-placeholder="searchMethods" autocomplete="off" />
             </label>
-          </div>
-
-          <div class="leader-grid">
-            <section class="panel ranking-panel">
-              <header class="panel-heading">
-                <div>
-                  <p class="panel-kicker">RANKING</p>
-                  <h2 id="chart-title">RNA TM-score 排名</h2>
-                </div>
-                <div class="direction-note"><span class="direction-arrow">↑</span><span id="direction-label">越高越好</span></div>
-              </header>
-              <div class="bar-chart" id="bar-chart" role="img" aria-label="方法指标排名条形图" data-i18n-aria="barChartAria"></div>
-            </section>
-
-            <aside class="panel metric-panel">
-              <header class="panel-heading compact-heading">
-                <div>
-                  <p class="panel-kicker">METRIC</p>
-                  <h2 id="metric-name">RNA TM-score</h2>
-                </div>
-              </header>
-              <div class="metric-explainer">
-                <div class="metric-gauge" id="metric-gauge" aria-hidden="true"><span></span></div>
-                <p id="metric-definition">—</p>
-                <dl>
-                  <div><dt data-i18n="direction">方向</dt><dd id="metric-direction">—</dd></div>
-                  <div><dt data-i18n="range">范围</dt><dd id="metric-range">—</dd></div>
-                  <div><dt data-i18n="unit">单位</dt><dd id="metric-unit">—</dd></div>
-                </dl>
-              </div>
-            </aside>
           </div>
 
           <section class="panel table-panel">
@@ -198,6 +129,38 @@
               </table>
             </div>
           </section>
+          <div class="analysis-heading"><h2 data-i18n="analysisTitle">表现一览</h2><span data-i18n="analysisSubtitle">同一评测集，多维度比较</span></div>
+          <div class="leader-grid">
+            <section class="panel ranking-panel">
+              <header class="panel-heading">
+                <div>
+                  <p class="panel-kicker">RANKING</p>
+                  <h2 id="chart-title">RNA TM-score 排名</h2>
+                </div>
+                <div class="direction-note"><span class="direction-arrow">↑</span><span id="direction-label">越高越好</span></div>
+              </header>
+              <div class="bar-chart" id="bar-chart" role="list" aria-label="方法指标排名条形图" data-i18n-aria="barChartAria"></div>
+              <div class="bar-scale" id="bar-scale" aria-hidden="true"></div>
+            </section>
+
+            <section class="panel scatter-panel">
+              <header class="panel-heading"><div><p class="panel-kicker" data-i18n="runtimeKicker">OBSERVED RUNTIME</p><h2 data-i18n="scatterTitle">精度与预测耗时</h2></div><span class="plot-tag">TM-score</span></header>
+              <div id="runtime-chart" class="runtime-chart"></div>
+              <p class="chart-footnote" data-i18n="scatterNote">横轴为平均预测耗时（秒，对数刻度）；不同硬件与并发条件下的实测值，仅作描述性比较。</p>
+            </section>
+          </div>
+          <details class="metric-guide"><summary><span data-i18n="metricGuide">当前指标说明</span><span id="metric-name"></span></summary><div class="metric-explainer"><p id="metric-definition"></p><dl><div><dt data-i18n="direction">方向</dt><dd id="metric-direction"></dd></div><div><dt data-i18n="range">范围</dt><dd id="metric-range"></dd></div><div><dt data-i18n="unit">单位</dt><dd id="metric-unit"></dd></div></dl></div></details>
+        <section class="method-feature panel" aria-labelledby="metafold-title">
+          <div class="method-feature-mark" aria-hidden="true">M</div>
+          <div class="method-feature-copy">
+            <p class="panel-kicker" data-i18n="featuredMethodKicker">FEATURED METHOD</p>
+            <h2 id="metafold-title">MetaFold-RNA3d</h2>
+            <p data-i18n="metafoldIntro">MetaFold-RNA3d 是我们重新训练的 RNA 结构预测模型，采用类似 AlphaFold 3 的架构，并针对 RNA 结构预测整合 MSA、MetaFold-RNA 输出的二级结构预测和模板信息。</p>
+          </div>
+          <div class="method-feature-tags" aria-label="MetaFold-RNA3d 输入">
+            <span data-i18n="msaTag">MSA</span><span data-i18n="secondaryStructureTag">二级结构</span><span data-i18n="templateTag">模板</span>
+          </div>
+        </section>
         </section>
 
         <section class="workspace is-hidden" id="matrix-panel" data-panel-content="matrix">
@@ -259,7 +222,7 @@
         </section>
       </main>
 
-      <footer>
+      <footer><a href="https://github.com/ISYSLAB-HUST" target="_blank" rel="noopener">ISYSLAB · HUST ↗</a>
         <div><span class="status-dot"></span><span data-i18n="generatedBy">数据由评测发布流程生成</span></div>
       </footer>
     </div>

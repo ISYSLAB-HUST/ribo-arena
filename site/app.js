@@ -22,6 +22,14 @@ const shortLabels = {
   clashscore: "Clash",
 };
 const metricKeys = ["c3_rmsd", "rna_tm_score", "heavy_atom_lddt", "clashscore"];
+const modelStyles = {
+  'MetaFold-RNA3d': ['MF', '#b95232'], alphafold3: ['AF', '#4272aa'],
+  boltz2: ['B2', '#568a72'], nufold: ['Nu', '#8c659d'],
+  'protenix-v2': ['P2', '#9b8040'], 'protenix_base_default_v1.0.0': ['P', '#a57560'],
+  rhofoldplus: ['Rh', '#6a7c8a'], rosettafold3: ['RF', '#4e8e91'],
+  trrosettarna2: ['TR', '#887952'],
+};
+const modelStyle = (method) => modelStyles[method.tool_id] || ['R', '#777777'];
 
 const metricDescriptions = {
   zh: {
@@ -53,7 +61,15 @@ const translations = {
     title: "RNA 三维结构预测排行榜",
     intro: "在统一评测协议下，对比不同方法的结构精度、局部几何质量与原子冲突。",
     snapshot: "数据快照",
-    liveBenchmark: "实时基准",
+    liveBenchmark: "评测快照",
+    downloadData: "下载数据",
+    analysisTitle: "表现一览",
+    analysisSubtitle: "同一评测集，多维度比较",
+    runtimeKicker: "OBSERVED RUNTIME",
+    scatterTitle: "精度与预测耗时",
+    scatterNote: "横轴为平均预测耗时（秒，对数刻度）；不同硬件与并发条件下的实测值，仅作描述性比较。",
+    runtimeAxis: "平均耗时 / 秒（对数刻度）",
+    metricGuide: "当前指标说明",
     summaryAria: "数据集摘要",
     methods: "参评方法",
     modelsVersions: "模型与版本",
@@ -135,7 +151,15 @@ const translations = {
     title: "RNA Structure Prediction Leaderboard",
     intro: "Compare structural accuracy, local atomic quality, and steric clashes under one evaluation protocol.",
     snapshot: "Data snapshot",
-    liveBenchmark: "LIVE BENCHMARK",
+    liveBenchmark: "BENCHMARK SNAPSHOT",
+    downloadData: "Download data",
+    analysisTitle: "Performance overview",
+    analysisSubtitle: "One dataset. Multiple perspectives.",
+    runtimeKicker: "OBSERVED RUNTIME",
+    scatterTitle: "Accuracy & prediction time",
+    scatterNote: "Mean prediction time in seconds (log scale). Observed hardware and concurrency vary; this is a descriptive comparison.",
+    runtimeAxis: "Mean time / seconds (log scale)",
+    metricGuide: "About the selected metric",
     summaryAria: "Dataset summary",
     methods: "Methods",
     modelsVersions: "Models and versions",
@@ -322,33 +346,59 @@ function renderMetricPanel() {
     : t("dimensionless");
   $("#direction-label").textContent = lower ? t("lowerBetter") : t("higherBetter");
   $(".direction-arrow").textContent = lower ? "↓" : "↑";
-  $("#metric-gauge span").style.transform = lower ? "scaleX(.44)" : "scaleX(.78)";
 }
 
 function renderChart() {
   const ranked = rankedMethods();
   if (!ranked.length) {
     $("#bar-chart").innerHTML = `<div class="loading-state">${t("noMethods")}</div>`;
+    $("#bar-scale").innerHTML = "";
     return;
   }
   const values = ranked.map(({ method }) => scoreFor(method)).filter((value) => value !== null);
-  const min = Math.min(...values);
-  const max = Math.max(...values);
-  const span = max - min || 1;
-  const lower = isLowerBetter(state.metric);
+  const max = values.length ? Math.max(...values) : 1;
+  const ceiling = ['rna_tm_score', 'heavy_atom_lddt'].includes(state.metric) ? 1 : max || 1;
   $("#bar-chart").innerHTML = ranked
     .map(({ method, rank }) => {
       const value = scoreFor(method);
-      const quality = value === null ? 0 : lower ? (max - value) / span : (value - min) / span;
-      const width = value === null ? 0 : 22 + quality * 78;
+      const width = value === null ? 0 : Math.max(0, Math.min(100, value / ceiling * 100));
       return `
-        <div class="bar-row">
+        <div class="bar-row" role="listitem" style="--model-color:${modelStyle(method)[1]}">
           <div class="bar-label" title="${method.display_name}"><span class="bar-rank">${String(rank).padStart(2, "0")}</span>${method.display_name}</div>
           <div class="bar-track"><div class="bar-fill" style="width:${width}%"></div></div>
           <div class="bar-value">${formatMetric(state.metric, value)}</div>
         </div>`;
     })
     .join("");
+  $("#bar-scale").innerHTML = `<span>0</span><span>${formatMetric(state.metric, ceiling)}</span>`;
+}
+
+function renderRuntimeChart() {
+  const methods = rankedMethods().map(({method}) => method).filter(method =>
+    Number.isFinite(method.timing?.mean_seconds) && method.timing.mean_seconds > 0 && Number.isFinite(scoreFor(method, 'rna_tm_score')));
+  if (!methods.length) { $('#runtime-chart').innerHTML = `<p class="empty-row">${t('noMethods')}</p>`; return; }
+  const left = 43, right = 440, top = 24, bottom = 245;
+  const lo = Math.floor(Math.log10(Math.min(...methods.map(m => m.timing.mean_seconds))));
+  const hi = Math.max(lo + 1, Math.ceil(Math.log10(Math.max(...methods.map(m => m.timing.mean_seconds)))));
+  const x = value => left + (Math.log10(value) - lo) / (hi - lo) * (right - left);
+  const y = value => bottom - value * (bottom - top);
+  const grid = [0, .25, .5, .75, 1].map(v => `<line class="plot-grid" x1="${left}" x2="${right}" y1="${y(v)}" y2="${y(v)}"/><text class="plot-label" x="${left-9}" y="${y(v)+3}" text-anchor="end">${v}</text>`).join('');
+  const ticks = Array.from({length:hi-lo+1}, (_,i) => 10 ** (lo+i)).map(v => `<line class="plot-grid" x1="${x(v)}" x2="${x(v)}" y1="${top}" y2="${bottom}"/><text class="plot-label" x="${x(v)}" y="${bottom+19}" text-anchor="middle">${v.toLocaleString('en-US')}</text>`).join('');
+  const points = methods.map(m => ({ x: x(m.timing.mean_seconds), y: y(scoreFor(m, 'rna_tm_score')) }));
+  const labels = [];
+  const dots = methods.map((m, index) => {
+    const [mark,color]=modelStyle(m), px=x(m.timing.mean_seconds), py=y(scoreFor(m,'rna_tm_score'));
+    const label = `${m.display_name}: TM-score ${formatMetric('rna_tm_score',scoreFor(m,'rna_tm_score'))}, ${formatSeconds(m.timing.mean_seconds)}`;
+    const width = mark.length * 7;
+    const candidates = [[8,-10], [8,17], [-width-8,-10], [-width-8,17], [11,4], [-width-11,4], [8,-24], [8,31]];
+    const positions = candidates.map(([dx,dy]) => ({x:px+dx, y:py+dy, width}));
+    const position = positions.find(p => p.x >= left && p.x+p.width <= right && p.y-10 >= top && p.y <= bottom &&
+      !labels.some(q => p.x < q.x+q.width+3 && p.x+p.width+3 > q.x && p.y-11 < q.y+3 && p.y+3 > q.y-11) &&
+      !points.some((q,i) => i !== index && q.x+7 > p.x && q.x-7 < p.x+p.width && q.y+7 > p.y-11 && q.y-7 < p.y+3)) || positions[0];
+    labels.push(position);
+    return `<g class="scatter-point" tabindex="0" aria-label="${label}"><title>${label}</title><circle cx="${px}" cy="${py}" r="6" fill="${color}"/><text class="plot-name" x="${position.x}" y="${position.y}">${mark}</text></g>`;
+  }).join('');
+  $('#runtime-chart').innerHTML = `<svg viewBox="0 0 475 295" role="img" aria-label="${t('scatterTitle')}"><title>${t('scatterTitle')}</title>${grid}${ticks}<text class="plot-label" x="${left}" y="12">TM-score ↑</text>${dots}<text class="plot-label" x="240" y="288" text-anchor="middle">${t('runtimeAxis')}</text></svg>`;
 }
 
 function renderTable() {
@@ -367,7 +417,7 @@ function renderTable() {
           const rankClass = rank <= 3 ? `rank-${rank}` : "";
           return `<tr>
             <td class="rank-cell"><span class="rank-badge ${rankClass}">${String(rank).padStart(2, "0")}</span></td>
-            <td class="method-cell"><span class="method-name">${method.display_name}</span><span class="method-id" title="${(method.method_variant_ids || [method.method_variant_id]).join(', ')}">${method.method_variant_id || method.tool_id}</span></td>
+            <td class="method-cell"><div class="method-identity"><span class="model-mark" aria-hidden="true" style="--model-color:${modelStyle(method)[1]}">${modelStyle(method)[0]}</span><div><span class="method-name">${method.display_name}</span><span class="method-id" title="${(method.method_variant_ids || [method.method_variant_id]).join(', ')}">${method.tool_id}</span></div></div></td>
             ${metricKeys.map((metric) => `<td class="${metric === state.metric ? "active-score" : ""}">${formatMetric(metric, scoreFor(method, metric))}</td>`).join("")}
             <td><div class="input-chips">${chips}</div></td>
             <td>${method.actual_target_count}/${state.data.dataset.eligible_target_count}</td>
@@ -404,7 +454,7 @@ function renderMatrix() {
           const quality = lower ? (max - value) / span : (value - min) / span;
           const alpha = (0.1 + quality * 0.82).toFixed(2);
           const text = quality > 0.67 ? "var(--accent-ink)" : "var(--ink-2)";
-          return `<td class="matrix-cell" style="--heat:${alpha};--heat-text:${text}"><button data-target="${target.target_id}" data-method="${method.tool_id}">${formatMetric(state.metric, value)}</button></td>`;
+          return `<td class="matrix-cell" style="--heat-value:${alpha};--heat-text:${text}"><button aria-label="${target.target_id} · ${method.display_name} · ${metricLabel(state.metric)} ${formatMetric(state.metric, value)}" data-target="${target.target_id}" data-method="${method.tool_id}">${formatMetric(state.metric, value)}</button></td>`;
         })
         .join("");
       return `<tr><th><span class="target-name">${target.target_id}</span><span class="target-meta">${target.length} nt · ${target.release_date}</span></th>${cells}</tr>`;
@@ -443,6 +493,7 @@ function renderAll() {
   renderMetricControls();
   renderMetricPanel();
   renderChart();
+  renderRuntimeChart();
   renderTable();
   renderMatrix();
 }
@@ -453,14 +504,14 @@ function bindInteractions() {
       state.panel = button.dataset.panel;
       $$(".nav-tab").forEach((item) => {
         item.classList.toggle("is-active", item === button);
-        item.setAttribute("aria-selected", String(item === button));
+        item.setAttribute("aria-pressed", String(item === button));
       });
       $$('[data-panel-content]').forEach((panel) => panel.classList.toggle("is-hidden", panel.dataset.panelContent !== state.panel));
     });
   });
   $$("[data-view]").forEach((button) => button.addEventListener("click", () => { state.view = button.dataset.view; renderAll(); }));
   $$(".metric-sort").forEach((button) => button.addEventListener("click", () => { state.metric = button.dataset.metric; renderAll(); }));
-  $("#method-search").addEventListener("input", (event) => { state.methodQuery = event.target.value.trim(); renderChart(); renderTable(); });
+  $("#method-search").addEventListener("input", (event) => { state.methodQuery = event.target.value.trim(); renderChart(); renderRuntimeChart(); renderTable(); });
   $("#target-search").addEventListener("input", (event) => { state.targetQuery = event.target.value.trim(); renderMatrix(); });
   $("#theme-toggle").addEventListener("click", () => {
     const current = document.documentElement.dataset.theme || "light";
