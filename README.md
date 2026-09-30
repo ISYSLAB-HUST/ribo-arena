@@ -1,20 +1,10 @@
-# Ribo Arena
+# Run RiboArena locally
 
-RNA 三维结构预测方法的公开评测排行榜。
-
-页面提供中英文切换、四项指标排序、方法总榜、逐目标矩阵和平均预测耗时。数据构建时，对待预测 RNA 条目的序列执行 CD-HIT 100% 一致性聚类，移除完全重复的冗余条目后再进行预测和评测。`Protenix base 20250630 v1.0.0` 不会出现在网页发布结果中。
-
-MetaFold-RNA3d 是重新训练的 RNA 结构预测模型，采用类似 AlphaFold 3 的架构，并整合 MSA、MetaFold-RNA 二级结构预测和模板信息。
-
-当前数据来自 `rna_exact_current/`（2026-09-28 快照）：网页展示 9 个方法、63 个目标和 2,835 个候选结构。耗时采用完整目标集的等权平均；不同硬件及并发条件下的记录不能视为受控速度对比。旧数据保留在 `cdhit100_full/`，不参与当前构建。
-
-## 本地预览
+Requires Node.js 22+ and Python 3. From the repository root, run:
 
 ```bash
 node scripts/build.mjs
 python3 -m http.server 4173 --directory dist
 ```
 
-访问 `http://localhost:4173`。
-
-推送到 `main` 后，GitHub Actions 会自动部署到 GitHub Pages。
+Open [http://localhost:4173](http://localhost:4173) in your browser.

@@ -237,7 +237,7 @@ const state = {
   methodQuery: "",
   targetQuery: "",
   panel: "leaderboard",
-  language: localStorage.getItem("rna-board-language") === "en" ? "en" : "zh",
+  language: localStorage.getItem("rna-board-language") === "zh" ? "zh" : "en",
 };
 
 const $ = (selector, root = document) => root.querySelector(selector);

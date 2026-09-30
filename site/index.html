@@ -1,21 +1,21 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="RNA 三维结构预测方法的公开评测排行榜，比较 C3′ RMSD、RNA TM-score、全重原子 lDDT 与 clashscore。"
+      content="A public benchmark leaderboard for RNA 3D structure prediction methods."
     />
     <meta name="color-scheme" content="dark light" />
-    <title>RNA Structure Leaderboard</title>
+    <title>RNA Structure Prediction Leaderboard</title>
     <link rel="stylesheet" href="./styles.css" />
     <script>
       (() => {
         const saved = localStorage.getItem("rna-board-theme");
         if (saved) document.documentElement.dataset.theme = saved;
         const language = localStorage.getItem("rna-board-language");
-        if (language) document.documentElement.lang = language === "en" ? "en" : "zh-CN";
+        document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
       })();
     </script>
     <script type="module" src="./app.js"></script>
@@ -24,7 +24,7 @@
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="app-shell">
       <header class="topbar">
-        <a class="brand" href="#" aria-label="RNA Structure Leaderboard 首页" data-i18n-aria="brandAria">
+        <a class="brand" href="#" aria-label="RNA Structure Leaderboard home" data-i18n-aria="brandAria">
           <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
             <path d="M8 5c12 4 4 18 16 22M24 5C12 9 20 23 8 27" />
             <path d="M10.5 9.5h11M9.5 15h13M9.5 21h13" />
@@ -33,56 +33,56 @@
         </a>
 
         <p class="nav-label">WORKSPACE</p>
-        <nav class="main-tabs" aria-label="主导航" data-i18n-aria="mainNavAria">
-          <button class="nav-tab is-active" data-panel="leaderboard" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19h16M6 15v-4m6 4V5m6 10V8"/></svg><span data-i18n="navLeaderboard">总榜</span></button>
-          <button class="nav-tab" data-panel="matrix" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg><span data-i18n="navMatrix">目标矩阵</span></button>
-          <button class="nav-tab" data-panel="protocol" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h8l4 4v14H5V3h2m8 0v5h4M9 12h6m-6 4h6"/></svg><span data-i18n="navProtocol">评测说明</span></button>
+        <nav class="main-tabs" aria-label="Main navigation" data-i18n-aria="mainNavAria">
+          <button class="nav-tab is-active" data-panel="leaderboard" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19h16M6 15v-4m6 4V5m6 10V8"/></svg><span data-i18n="navLeaderboard">Leaderboard</span></button>
+          <button class="nav-tab" data-panel="matrix" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg><span data-i18n="navMatrix">Target matrix</span></button>
+          <button class="nav-tab" data-panel="protocol" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h8l4 4v14H5V3h2m8 0v5h4M9 12h6m-6 4h6"/></svg><span data-i18n="navProtocol">Protocol</span></button>
         </nav>
 
         <a class="repo-link" href="https://github.com/ISYSLAB-HUST/ribo-arena" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
         <div class="top-actions">
           <div class="language-switch" aria-label="语言 / Language">
-            <button data-lang="zh" aria-pressed="true">中文</button>
-            <button data-lang="en" aria-pressed="false">EN</button>
+            <button data-lang="zh" aria-pressed="false">中文</button>
+            <button data-lang="en" aria-pressed="true">EN</button>
           </div>
-          <a class="icon-button download-link" href="./data/leaderboard.json" download title="下载原始排行榜 JSON" aria-label="下载排行榜 JSON" data-i18n-title="downloadTitle" data-i18n-aria="downloadAria">
+          <a class="icon-button download-link" href="./data/leaderboard.json" download title="Download raw leaderboard JSON" aria-label="Download leaderboard JSON" data-i18n-title="downloadTitle" data-i18n-aria="downloadAria">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 19h14" /></svg>
           </a>
-          <button class="icon-button" id="theme-toggle" title="切换明暗主题" aria-label="切换明暗主题" data-i18n-title="themeTitle" data-i18n-aria="themeAria">
+          <button class="icon-button" id="theme-toggle" title="Toggle light or dark theme" aria-label="Toggle light or dark theme" data-i18n-title="themeTitle" data-i18n-aria="themeAria">
             <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.6 5.6 7 7m10 10 1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4" /><circle cx="12" cy="12" r="4" /></svg>
           </button>
         </div>
       </header>
 
       <main id="main-content">
-        <div class="page-meta"><span>BENCHMARKS <span aria-hidden="true">/</span> RNA STRUCTURE</span><div class="updated-block"><span data-i18n="snapshot">数据快照</span><time id="generated-at">—</time></div></div>
+        <div class="page-meta"><span>BENCHMARKS <span aria-hidden="true">/</span> RNA STRUCTURE</span><div class="updated-block"><span data-i18n="snapshot">Data snapshot</span><time id="generated-at">—</time></div></div>
         <section class="page-intro">
           <div class="intro-content">
-            <p class="eyebrow" data-i18n="eyebrow">CD-HIT 100 · 单链 RNA</p>
-            <h1 data-i18n="title">RNA 三维结构预测排行榜</h1>
-            <p class="intro-copy" data-i18n="intro">在统一评测协议下，对比不同方法的结构精度、局部几何质量与原子冲突。</p>
+            <p class="eyebrow" data-i18n="eyebrow">CD-HIT 100 · SINGLE-CHAIN RNA</p>
+            <h1 data-i18n="title">RNA Structure Prediction Leaderboard</h1>
+            <p class="intro-copy" data-i18n="intro">Compare structural accuracy, local atomic quality, and steric clashes under one evaluation protocol.</p>
           </div>
-          <a class="data-link" href="./data/leaderboard.json" download><span data-i18n="downloadData">下载数据</span><span aria-hidden="true">↗</span></a>
+          <a class="data-link" href="./data/leaderboard.json" download><span data-i18n="downloadData">Download data</span><span aria-hidden="true">↗</span></a>
         </section>
 
-        <section class="summary-grid" aria-label="数据集摘要" data-i18n-aria="summaryAria">
+        <section class="summary-grid" aria-label="Dataset summary" data-i18n-aria="summaryAria">
           <article class="summary-card accent-card">
-            <span class="summary-label" data-i18n="methods">参评方法</span>
+            <span class="summary-label" data-i18n="methods">Methods</span>
             <strong id="method-count">—</strong>
-            <span class="summary-note" data-i18n="modelsVersions">模型与版本</span>
+            <span class="summary-note" data-i18n="modelsVersions">Models and versions</span>
           </article>
           <article class="summary-card">
-            <span class="summary-label" data-i18n="eligibleTargets">评测目标</span>
+            <span class="summary-label" data-i18n="eligibleTargets">Benchmark targets</span>
             <strong id="target-count">—</strong>
             <span class="summary-note" id="target-note">—</span>
           </article>
           <article class="summary-card">
-            <span class="summary-label" data-i18n="evaluatedStructures">已评估结构</span>
+            <span class="summary-label" data-i18n="evaluatedStructures">Evaluated structures</span>
             <strong id="candidate-count">—</strong>
-            <span class="summary-note" data-i18n="allCandidates">全部候选构象</span>
+            <span class="summary-note" data-i18n="allCandidates">All candidate conformations</span>
           </article>
           <article class="summary-card">
-            <span class="summary-label" data-i18n="releaseRange">发布日期范围</span>
+            <span class="summary-label" data-i18n="releaseRange">Release window</span>
             <strong class="date-range" id="release-range">—</strong>
             <span class="summary-note">PDB release date</span>
           </article>
@@ -90,15 +90,15 @@
 
         <section class="workspace" id="leaderboard-panel" data-panel-content="leaderboard">
           <div class="control-row">
-            <div class="segmented" aria-label="统计视图" data-i18n-aria="statsViewAria">
-              <button data-view="mean" aria-pressed="true" data-i18n="meanPerformance">平均表现</button>
-              <button data-view="best" aria-pressed="false" data-i18n="bestCandidate">最佳候选</button>
+            <div class="segmented" aria-label="Statistical view" data-i18n-aria="statsViewAria">
+              <button data-view="mean" aria-pressed="true" data-i18n="meanPerformance">Mean performance</button>
+              <button data-view="best" aria-pressed="false" data-i18n="bestCandidate">Best candidate</button>
             </div>
-            <div class="metric-tabs" id="metric-tabs" aria-label="排序指标" data-i18n-aria="sortingMetricsAria"></div>
+            <div class="metric-tabs" id="metric-tabs" aria-label="Ranking metrics" data-i18n-aria="sortingMetricsAria"></div>
             <label class="search-field">
               <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6" /><path d="m16 16 4 4" /></svg>
-              <span class="sr-only" data-i18n="searchMethods">搜索方法</span>
-              <input id="method-search" type="search" placeholder="搜索方法" data-i18n-placeholder="searchMethods" autocomplete="off" />
+              <span class="sr-only" data-i18n="searchMethods">Search methods</span>
+              <input id="method-search" type="search" placeholder="Search methods" data-i18n-placeholder="searchMethods" autocomplete="off" />
             </label>
           </div>
 
@@ -106,74 +106,74 @@
             <header class="panel-heading table-heading">
               <div>
                 <p class="panel-kicker">FULL RESULTS</p>
-                <h2 data-i18n="methodLeaderboard">方法总榜</h2>
+                <h2 data-i18n="methodLeaderboard">Method leaderboard</h2>
               </div>
-              <div class="table-status-wrap"><span class="table-status" id="table-status" data-i18n="loading">加载中…</span><span class="timing-note" data-i18n="timingNote">完整目标集平均耗时；硬件及并发条件不同</span></div>
+              <div class="table-status-wrap"><span class="table-status" id="table-status" data-i18n="loading">Loading…</span><span class="timing-note" data-i18n="timingNote">Full-cohort mean time; hardware and concurrency vary</span></div>
             </header>
             <div class="table-scroll">
               <table class="board-table">
                 <thead>
                   <tr>
-                    <th class="rank-cell" data-i18n="rank">排名</th>
-                    <th class="method-cell" data-i18n="method">方法</th>
+                    <th class="rank-cell" data-i18n="rank">Rank</th>
+                    <th class="method-cell" data-i18n="method">Method</th>
                     <th><button class="metric-sort" data-metric="c3_rmsd">C3′ RMSD</button></th>
                     <th><button class="metric-sort" data-metric="rna_tm_score">TM-score</button></th>
                     <th><button class="metric-sort" data-metric="heavy_atom_lddt">lDDT</button></th>
                     <th><button class="metric-sort" data-metric="clashscore">Clashscore</button></th>
-                    <th data-i18n="inputs">输入</th>
-                    <th data-i18n="coverage">覆盖</th>
-                    <th data-i18n="timing">平均耗时</th>
+                    <th data-i18n="inputs">Inputs</th>
+                    <th data-i18n="coverage">Coverage</th>
+                    <th data-i18n="timing">Mean time</th>
                   </tr>
                 </thead>
                 <tbody id="leaderboard-body"></tbody>
               </table>
             </div>
           </section>
-          <div class="analysis-heading"><h2 data-i18n="analysisTitle">表现一览</h2><span data-i18n="analysisSubtitle">同一评测集，多维度比较</span></div>
+          <div class="analysis-heading"><h2 data-i18n="analysisTitle">Performance overview</h2><span data-i18n="analysisSubtitle">One dataset. Multiple perspectives.</span></div>
           <div class="leader-grid">
             <section class="panel ranking-panel">
               <header class="panel-heading">
                 <div>
                   <p class="panel-kicker">RANKING</p>
-                  <h2 id="chart-title">RNA TM-score 排名</h2>
+                  <h2 id="chart-title">RNA TM-score ranking</h2>
                 </div>
-                <div class="direction-note"><span class="direction-arrow">↑</span><span id="direction-label">越高越好</span></div>
+                <div class="direction-note"><span class="direction-arrow">↑</span><span id="direction-label">Higher is better</span></div>
               </header>
-              <div class="bar-chart" id="bar-chart" role="list" aria-label="方法指标排名条形图" data-i18n-aria="barChartAria"></div>
+              <div class="bar-chart" id="bar-chart" role="list" aria-label="Method metric ranking bar chart" data-i18n-aria="barChartAria"></div>
               <div class="bar-scale" id="bar-scale" aria-hidden="true"></div>
             </section>
 
             <section class="panel scatter-panel">
-              <header class="panel-heading"><div><p class="panel-kicker" data-i18n="runtimeKicker">OBSERVED RUNTIME</p><h2 data-i18n="scatterTitle">精度与预测耗时</h2></div><span class="plot-tag">TM-score</span></header>
+              <header class="panel-heading"><div><p class="panel-kicker" data-i18n="runtimeKicker">OBSERVED RUNTIME</p><h2 data-i18n="scatterTitle">Accuracy & prediction time</h2></div><span class="plot-tag">TM-score</span></header>
               <div id="runtime-chart" class="runtime-chart"></div>
-              <p class="chart-footnote" data-i18n="scatterNote">横轴为平均预测耗时（秒，对数刻度）；不同硬件与并发条件下的实测值，仅作描述性比较。</p>
+              <p class="chart-footnote" data-i18n="scatterNote">Mean prediction time in seconds (log scale). Observed hardware and concurrency vary; this is a descriptive comparison.</p>
             </section>
           </div>
-          <details class="metric-guide"><summary><span data-i18n="metricGuide">当前指标说明</span><span id="metric-name"></span></summary><div class="metric-explainer"><p id="metric-definition"></p><dl><div><dt data-i18n="direction">方向</dt><dd id="metric-direction"></dd></div><div><dt data-i18n="range">范围</dt><dd id="metric-range"></dd></div><div><dt data-i18n="unit">单位</dt><dd id="metric-unit"></dd></div></dl></div></details>
+          <details class="metric-guide"><summary><span data-i18n="metricGuide">About the selected metric</span><span id="metric-name"></span></summary><div class="metric-explainer"><p id="metric-definition"></p><dl><div><dt data-i18n="direction">Direction</dt><dd id="metric-direction"></dd></div><div><dt data-i18n="range">Range</dt><dd id="metric-range"></dd></div><div><dt data-i18n="unit">Unit</dt><dd id="metric-unit"></dd></div></dl></div></details>
         <section class="method-feature panel" aria-labelledby="metafold-title">
           <div class="method-feature-mark" aria-hidden="true">M</div>
           <div class="method-feature-copy">
             <p class="panel-kicker" data-i18n="featuredMethodKicker">FEATURED METHOD</p>
             <h2 id="metafold-title">MetaFold-RNA3d</h2>
-            <p data-i18n="metafoldIntro">MetaFold-RNA3d 是我们重新训练的 RNA 结构预测模型，采用类似 AlphaFold 3 的架构，并针对 RNA 结构预测整合 MSA、MetaFold-RNA 输出的二级结构预测和模板信息。</p>
+            <p data-i18n="metafoldIntro">MetaFold-RNA3d is our retrained RNA structure prediction model. It uses an architecture similar to AlphaFold 3 and integrates MSA, secondary-structure predictions from MetaFold-RNA, and templates for RNA structure prediction.</p>
           </div>
-          <div class="method-feature-tags" aria-label="MetaFold-RNA3d 输入">
-            <span data-i18n="msaTag">MSA</span><span data-i18n="secondaryStructureTag">二级结构</span><span data-i18n="templateTag">模板</span>
+          <div class="method-feature-tags" aria-label="MetaFold-RNA3d inputs">
+            <span data-i18n="msaTag">MSA</span><span data-i18n="secondaryStructureTag">Secondary structure</span><span data-i18n="templateTag">Templates</span>
           </div>
         </section>
         </section>
 
         <section class="workspace is-hidden" id="matrix-panel" data-panel-content="matrix">
           <div class="control-row matrix-controls">
-            <div class="segmented" aria-label="矩阵统计视图" data-i18n-aria="matrixStatsAria">
-              <button data-view="mean" aria-pressed="true" data-i18n="meanPerformance">平均表现</button>
-              <button data-view="best" aria-pressed="false" data-i18n="bestCandidate">最佳候选</button>
+            <div class="segmented" aria-label="Matrix statistical view" data-i18n-aria="matrixStatsAria">
+              <button data-view="mean" aria-pressed="true" data-i18n="meanPerformance">Mean performance</button>
+              <button data-view="best" aria-pressed="false" data-i18n="bestCandidate">Best candidate</button>
             </div>
-            <div class="metric-tabs matrix-metric-tabs" aria-label="矩阵指标" data-i18n-aria="matrixMetricsAria"></div>
+            <div class="metric-tabs matrix-metric-tabs" aria-label="Matrix metrics" data-i18n-aria="matrixMetricsAria"></div>
             <label class="search-field">
               <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6" /><path d="m16 16 4 4" /></svg>
-              <span class="sr-only" data-i18n="searchTargets">搜索目标</span>
-              <input id="target-search" type="search" placeholder="搜索 PDB / 目标" data-i18n-placeholder="searchTargetsPlaceholder" autocomplete="off" />
+              <span class="sr-only" data-i18n="searchTargets">Search targets</span>
+              <input id="target-search" type="search" placeholder="Search PDB / target" data-i18n-placeholder="searchTargetsPlaceholder" autocomplete="off" />
             </label>
           </div>
 
@@ -181,12 +181,12 @@
             <header class="panel-heading table-heading">
               <div>
                 <p class="panel-kicker">TARGET × METHOD</p>
-                <h2 data-i18n="targetMatrix">逐目标表现矩阵</h2>
+                <h2 data-i18n="targetMatrix">Per-target performance matrix</h2>
               </div>
-              <div class="matrix-legend"><span data-i18n="weaker">较弱</span><i></i><i></i><i></i><i></i><span data-i18n="better">较优</span></div>
+              <div class="matrix-legend"><span data-i18n="weaker">Weaker</span><i></i><i></i><i></i><i></i><span data-i18n="better">Better</span></div>
             </header>
             <div class="matrix-scroll" id="matrix-wrap">
-              <div class="loading-state" data-i18n="loadingTargets">正在汇总目标数据…</div>
+              <div class="loading-state" data-i18n="loadingTargets">Summarizing target data…</div>
             </div>
           </section>
         </section>
@@ -195,46 +195,46 @@
           <div class="protocol-grid">
             <section class="panel protocol-card protocol-lead">
               <p class="panel-kicker">EVALUATION</p>
-              <h2 data-i18n="protocolTitle">统一协议，四个互补指标</h2>
-              <p data-i18n="protocolLead">排行榜同时报告全局拓扑、坐标偏差、局部原子环境和几何冲突。默认使用“平均表现”，避免只看最优采样造成的偏差。</p>
+              <h2 data-i18n="protocolTitle">One protocol, four complementary metrics</h2>
+              <p data-i18n="protocolLead">The leaderboard reports global topology, coordinate deviation, local atomic environment, and geometric clashes. Mean performance is the default to avoid overemphasizing the best sample.</p>
               <div class="protocol-stamp"><span>SCHEMA</span><code id="schema-version">—</code></div>
             </section>
             <section class="panel protocol-card">
               <span class="protocol-index">01</span>
-              <h3 data-i18n="statsDefinitionTitle">统计口径</h3>
-              <p data-i18n-html="statsDefinition"><b>平均表现</b>对每个目标的候选先取均值，再跨目标汇总；<b>最佳候选</b>允许每项指标选择该目标上表现最佳的候选。</p>
+              <h3 data-i18n="statsDefinitionTitle">Statistical views</h3>
+              <p data-i18n-html="statsDefinition"><b>Mean performance</b> averages candidates within each target before aggregating targets. <b>Best candidate</b> may select a different candidate for each metric on a target.</p>
             </section>
             <section class="panel protocol-card">
               <span class="protocol-index">02</span>
-              <h3 data-i18n="datasetConstructionTitle">数据构建</h3>
-              <p data-i18n="datasetConstructionText">对待预测 RNA 条目的序列执行 CD-HIT 100% 一致性聚类，移除完全重复的冗余条目后再进行预测和评测。</p>
+              <h3 data-i18n="datasetConstructionTitle">Dataset construction</h3>
+              <p data-i18n="datasetConstructionText">Candidate RNA target sequences are clustered with CD-HIT at 100% sequence identity. Exact duplicate entries are removed before prediction and evaluation.</p>
             </section>
             <section class="panel protocol-card">
               <span class="protocol-index">03</span>
-              <h3 data-i18n="inputTransparencyTitle">统一 MSA 与输入透明度</h3>
-              <p data-i18n="inputTransparencyText">为保持评测输入的一致性，对于同一 RNA 目标，我们向使用 MSA 的方法提供相同的多序列比对（MSA）输入。各方法的 MSA、二级结构及模板使用情况在结果中标注；逐目标输入记录保留在原始 JSON 中。</p>
+              <h3 data-i18n="inputTransparencyTitle">Shared MSA and input transparency</h3>
+              <p data-i18n="inputTransparencyText">To maintain consistent evaluation inputs, methods that use MSA receive the same multiple sequence alignment (MSA) input for each RNA target. MSA, secondary-structure, and template usage are indicated in the results; per-target input records are retained in the source JSON.</p>
             </section>
           </div>
           <section class="panel definitions-panel">
-            <header class="panel-heading"><div><p class="panel-kicker">DEFINITIONS</p><h2 data-i18n="metricDefinitions">指标定义</h2></div></header>
+            <header class="panel-heading"><div><p class="panel-kicker">DEFINITIONS</p><h2 data-i18n="metricDefinitions">Metric definitions</h2></div></header>
             <div class="definition-list" id="definition-list"></div>
           </section>
         </section>
       </main>
 
       <footer><a href="https://github.com/ISYSLAB-HUST" target="_blank" rel="noopener">ISYSLAB · HUST ↗</a>
-        <div><span class="status-dot"></span><span data-i18n="generatedBy">数据由评测发布流程生成</span></div>
+        <div><span class="status-dot"></span><span data-i18n="generatedBy">Generated by the evaluation publishing pipeline</span></div>
       </footer>
     </div>
 
     <dialog id="cell-dialog">
-      <button class="dialog-close" aria-label="关闭详情" data-i18n-aria="closeDetails">×</button>
+      <button class="dialog-close" aria-label="Close details" data-i18n-aria="closeDetails">×</button>
       <div id="dialog-content"></div>
     </dialog>
 
     <div class="fatal-error is-hidden" id="fatal-error" role="alert">
-      <strong data-i18n="loadFailed">数据加载失败</strong>
-      <p data-i18n="loadFailedHelp">请确认页面通过 HTTP 服务打开，并且构建产物包含 data 目录。</p>
+      <strong data-i18n="loadFailed">Could not load data</strong>
+      <p data-i18n="loadFailedHelp">Open the page through an HTTP server and confirm that the build contains the data directory.</p>
     </div>
   </body>
 </html>
