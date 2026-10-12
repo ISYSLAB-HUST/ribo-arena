@@ -1,6 +1,6 @@
 {
   "schema_version": "rna-leaderboard/3.0",
-  "generated_at": "2026-09-28T13:40:38.003651+00:00",
+  "generated_at": "2026-10-11T07:39:34.218710+00:00",
   "dataset_id": "rna_exact_current",
   "policy": {
     "prediction_wall_seconds": "Complete external process wall time only; zero is a valid measurement",
@@ -14,18 +14,20 @@
     {
       "tool_id": "MetaFold-RNA3d",
       "display_name": "MetaFold-RNA3d",
-      "target_count": 63,
+      "target_count": 66,
       "prediction_wall_seconds": {
         "target_ids": [
           "10zt_1_1_A",
           "10zu_1_1_A",
           "11ag_1_1_A",
           "11eh_1_1_A",
+          "12aa_1_1_A",
           "12ci_1_1_A",
           "12cj_1_1_A",
           "23jy_1_1_A",
           "23ka_1_1_A",
           "25sj_1_1_A",
+          "26hh_1_1_A",
           "36ll_1_1_A",
           "37cm_1_1_A",
           "37so_1_1_A",
@@ -74,6 +76,7 @@
           "9v7q_1_1_A",
           "9vmz_1_1_A",
           "9vsn_1_1_A",
+          "9x21_1_1_A",
           "9x6b_1_1_A",
           "9ydi_1_1_A",
           "9yx9_1_1_A",
@@ -81,25 +84,27 @@
           "9z6i_1_1_A",
           "9zgq_1_1_A"
         ],
-        "target_count": 63,
-        "measured_target_count": 63,
+        "target_count": 66,
+        "measured_target_count": 66,
         "missing_target_ids": [],
         "complete": true,
-        "denominator": 63,
-        "total_seconds": 5625.387819,
-        "mean_seconds": 89.29187014285715,
-        "median_seconds": 86.684915,
+        "denominator": 66,
+        "total_seconds": 5994.713252,
+        "mean_seconds": 90.82898866666666,
+        "median_seconds": 87.331212,
         "available_only": {
           "target_ids": [
             "10zt_1_1_A",
             "10zu_1_1_A",
             "11ag_1_1_A",
             "11eh_1_1_A",
+            "12aa_1_1_A",
             "12ci_1_1_A",
             "12cj_1_1_A",
             "23jy_1_1_A",
             "23ka_1_1_A",
             "25sj_1_1_A",
+            "26hh_1_1_A",
             "36ll_1_1_A",
             "37cm_1_1_A",
             "37so_1_1_A",
@@ -148,6 +153,7 @@
             "9v7q_1_1_A",
             "9vmz_1_1_A",
             "9vsn_1_1_A",
+            "9x21_1_1_A",
             "9x6b_1_1_A",
             "9ydi_1_1_A",
             "9yx9_1_1_A",
@@ -155,9 +161,9 @@
             "9z6i_1_1_A",
             "9zgq_1_1_A"
           ],
-          "target_count": 63,
-          "mean_seconds": 89.29187014285715,
-          "median_seconds": 86.684915
+          "target_count": 66,
+          "mean_seconds": 90.82898866666666,
+          "median_seconds": 87.331212
         }
       },
       "resource_strata": [
@@ -172,7 +178,9 @@
             ]
           },
           "reported_target_ids": [
+            "12aa_1_1_A",
             "25sj_1_1_A",
+            "26hh_1_1_A",
             "36ll_1_1_A",
             "38jc_1_1_A",
             "38jc_1_2_B",
@@ -190,15 +198,18 @@
             "9tca_1_1_A",
             "9tca_1_2_D",
             "9vmz_1_1_A",
+            "9x21_1_1_A",
             "9ydi_1_1_A",
             "9yx9_1_1_A",
             "9yxa_1_1_A"
           ],
-          "reported_target_count": 21,
+          "reported_target_count": 24,
           "prediction_wall_seconds": {
             "available": {
               "target_ids": [
+                "12aa_1_1_A",
                 "25sj_1_1_A",
+                "26hh_1_1_A",
                 "36ll_1_1_A",
                 "38jc_1_1_A",
                 "38jc_1_2_B",
@@ -216,16 +227,18 @@
                 "9tca_1_1_A",
                 "9tca_1_2_D",
                 "9vmz_1_1_A",
+                "9x21_1_1_A",
                 "9ydi_1_1_A",
                 "9yx9_1_1_A",
                 "9yxa_1_1_A"
               ],
-              "target_count": 21,
-              "mean_seconds": 81.98174123809524,
-              "median_seconds": 77.713732
+              "target_count": 24,
+              "mean_seconds": 87.12258329166667,
+              "median_seconds": 78.315776
             },
             "common": {
               "target_ids": [
+                "12aa_1_1_A",
                 "25sj_1_1_A",
                 "36ll_1_1_A",
                 "38jc_1_1_A",
@@ -243,13 +256,14 @@
                 "9tca_1_1_A",
                 "9tca_1_2_D",
                 "9vmz_1_1_A",
+                "9x21_1_1_A",
                 "9ydi_1_1_A",
                 "9yx9_1_1_A",
                 "9yxa_1_1_A"
               ],
-              "target_count": 20,
-              "mean_seconds": 82.2001308,
-              "median_seconds": 77.7387985
+              "target_count": 22,
+              "mean_seconds": 83.42876081818181,
+              "median_seconds": 78.315776
             }
           }
         },
@@ -413,18 +427,20 @@
     {
       "tool_id": "alphafold3",
       "display_name": "AlphaFold3",
-      "target_count": 63,
+      "target_count": 66,
       "prediction_wall_seconds": {
         "target_ids": [
           "10zt_1_1_A",
           "10zu_1_1_A",
           "11ag_1_1_A",
           "11eh_1_1_A",
+          "12aa_1_1_A",
           "12ci_1_1_A",
           "12cj_1_1_A",
           "23jy_1_1_A",
           "23ka_1_1_A",
           "25sj_1_1_A",
+          "26hh_1_1_A",
           "36ll_1_1_A",
           "37cm_1_1_A",
           "37so_1_1_A",
@@ -473,6 +489,7 @@
           "9v7q_1_1_A",
           "9vmz_1_1_A",
           "9vsn_1_1_A",
+          "9x21_1_1_A",
           "9x6b_1_1_A",
           "9ydi_1_1_A",
           "9yx9_1_1_A",
@@ -480,25 +497,27 @@
           "9z6i_1_1_A",
           "9zgq_1_1_A"
         ],
-        "target_count": 63,
-        "measured_target_count": 63,
+        "target_count": 66,
+        "measured_target_count": 66,
         "missing_target_ids": [],
         "complete": true,
-        "denominator": 63,
-        "total_seconds": 8483.955203000005,
-        "mean_seconds": 134.6659556031746,
-        "median_seconds": 125.434,
+        "denominator": 66,
+        "total_seconds": 9002.309371000005,
+        "mean_seconds": 136.39862683333334,
+        "median_seconds": 125.98,
         "available_only": {
           "target_ids": [
             "10zt_1_1_A",
             "10zu_1_1_A",
             "11ag_1_1_A",
             "11eh_1_1_A",
+            "12aa_1_1_A",
             "12ci_1_1_A",
             "12cj_1_1_A",
             "23jy_1_1_A",
             "23ka_1_1_A",
             "25sj_1_1_A",
+            "26hh_1_1_A",
             "36ll_1_1_A",
             "37cm_1_1_A",
             "37so_1_1_A",
@@ -547,6 +566,7 @@
             "9v7q_1_1_A",
             "9vmz_1_1_A",
             "9vsn_1_1_A",
+            "9x21_1_1_A",
             "9x6b_1_1_A",
             "9ydi_1_1_A",
             "9yx9_1_1_A",
@@ -554,9 +574,9 @@
             "9z6i_1_1_A",
             "9zgq_1_1_A"
           ],
-          "target_count": 63,
-          "mean_seconds": 134.6659556031746,
-          "median_seconds": 125.434
+          "target_count": 66,
+          "mean_seconds": 136.39862683333334,
+          "median_seconds": 125.98
         }
       },
       "resource_strata": [
@@ -571,7 +591,9 @@
             ]
           },
           "reported_target_ids": [
+            "12aa_1_1_A",
             "25sj_1_1_A",
+            "26hh_1_1_A",
             "36ll_1_1_A",
             "37cm_1_1_A",
             "37so_1_1_A",
@@ -591,15 +613,18 @@
             "9tca_1_1_A",
             "9tca_1_2_D",
             "9vmz_1_1_A",
+            "9x21_1_1_A",
             "9ydi_1_1_A",
             "9yx9_1_1_A",
             "9yxa_1_1_A"
           ],
-          "reported_target_count": 23,
+          "reported_target_count": 26,
           "prediction_wall_seconds": {
             "available": {
               "target_ids": [
+                "12aa_1_1_A",
                 "25sj_1_1_A",
+                "26hh_1_1_A",
                 "36ll_1_1_A",
                 "37cm_1_1_A",
                 "37so_1_1_A",
@@ -619,16 +644,18 @@
                 "9tca_1_1_A",
                 "9tca_1_2_D",
                 "9vmz_1_1_A",
+                "9x21_1_1_A",
                 "9ydi_1_1_A",
                 "9yx9_1_1_A",
                 "9yxa_1_1_A"
               ],
-              "target_count": 23,
-              "mean_seconds": 124.30451569565217,
-              "median_seconds": 117.278014
+              "target_count": 26,
+              "mean_seconds": 129.89838573076923,
+              "median_seconds": 117.34893600000001
             },
             "common": {
               "target_ids": [
+                "12aa_1_1_A",
                 "25sj_1_1_A",
                 "36ll_1_1_A",
                 "38jc_1_1_A",
@@ -646,13 +673,14 @@
                 "9tca_1_1_A",
                 "9tca_1_2_D",
                 "9vmz_1_1_A",
+                "9x21_1_1_A",
                 "9ydi_1_1_A",
                 "9yx9_1_1_A",
                 "9yxa_1_1_A"
               ],
-              "target_count": 20,
-              "mean_seconds": 121.8799523,
-              "median_seconds": 117.20219449999999
+              "target_count": 22,
+              "mean_seconds": 123.69100281818181,
+              "median_seconds": 117.2987935
             }
           }
         },
@@ -801,23 +829,28 @@
         }
       ],
       "processing_exceptions": [],
-      "method_variant_id": "alphafold3-00c532b2579a69c6"
+      "method_variant_ids": [
+        "alphafold3-00c532b2579a69c6",
+        "alphafold3-6dbf5c9f86917169"
+      ]
     },
     {
       "tool_id": "boltz2",
       "display_name": "Boltz-2",
-      "target_count": 63,
+      "target_count": 66,
       "prediction_wall_seconds": {
         "target_ids": [
           "10zt_1_1_A",
           "10zu_1_1_A",
           "11ag_1_1_A",
           "11eh_1_1_A",
+          "12aa_1_1_A",
           "12ci_1_1_A",
           "12cj_1_1_A",
           "23jy_1_1_A",
           "23ka_1_1_A",
           "25sj_1_1_A",
+          "26hh_1_1_A",
           "36ll_1_1_A",
           "37cm_1_1_A",
           "37so_1_1_A",
@@ -866,6 +899,7 @@
           "9v7q_1_1_A",
           "9vmz_1_1_A",
           "9vsn_1_1_A",
+          "9x21_1_1_A",
           "9x6b_1_1_A",
           "9ydi_1_1_A",
           "9yx9_1_1_A",
@@ -873,25 +907,27 @@
           "9z6i_1_1_A",
           "9zgq_1_1_A"
         ],
-        "target_count": 63,
-        "measured_target_count": 63,
+        "target_count": 66,
+        "measured_target_count": 66,
         "missing_target_ids": [],
         "complete": true,
-        "denominator": 63,
-        "total_seconds": 3234.2145470000005,
-        "mean_seconds": 51.33673884126984,
-        "median_seconds": 41.630053,
+        "denominator": 66,
+        "total_seconds": 3527.9236790000014,
+        "mean_seconds": 53.45338907575758,
+        "median_seconds": 42.8208925,
         "available_only": {
           "target_ids": [
             "10zt_1_1_A",
             "10zu_1_1_A",
             "11ag_1_1_A",
             "11eh_1_1_A",
+            "12aa_1_1_A",
             "12ci_1_1_A",
             "12cj_1_1_A",
             "23jy_1_1_A",
             "23ka_1_1_A",
             "25sj_1_1_A",
+            "26hh_1_1_A",
             "36ll_1_1_A",
             "37cm_1_1_A",
             "37so_1_1_A",
@@ -940,6 +976,7 @@
             "9v7q_1_1_A",
             "9vmz_1_1_A",
             "9vsn_1_1_A",
+            "9x21_1_1_A",
             "9x6b_1_1_A",
             "9ydi_1_1_A",
             "9yx9_1_1_A",
@@ -947,9 +984,9 @@
             "9z6i_1_1_A",
             "9zgq_1_1_A"
           ],
-          "target_count": 63,
-          "mean_seconds": 51.33673884126984,
-          "median_seconds": 41.630053
+          "target_count": 66,
+          "mean_seconds": 53.45338907575758,
+          "median_seconds": 42.8208925
         }
       },
       "resource_strata": [
@@ -964,7 +1001,9 @@
             ]
           },
           "reported_target_ids": [
+            "12aa_1_1_A",
             "25sj_1_1_A",
+            "26hh_1_1_A",
             "36ll_1_1_A",
             "37cm_1_1_A",
             "37so_1_1_A",
@@ -984,15 +1023,18 @@
             "9tca_1_1_A",
             "9tca_1_2_D",
             "9vmz_1_1_A",
+            "9x21_1_1_A",
             "9ydi_1_1_A",
             "9yx9_1_1_A",
             "9yxa_1_1_A"
           ],
-          "reported_target_count": 23,
+          "reported_target_count": 26,
           "prediction_wall_seconds": {
             "available": {
               "target_ids": [
+                "12aa_1_1_A",
                 "25sj_1_1_A",
+                "26hh_1_1_A",
                 "36ll_1_1_A",
                 "37cm_1_1_A",
                 "37so_1_1_A",
@@ -1012,16 +1054,18 @@
                 "9tca_1_1_A",
                 "9tca_1_2_D",
                 "9vmz_1_1_A",
+                "9x21_1_1_A",
                 "9ydi_1_1_A",
                 "9yx9_1_1_A",
                 "9yxa_1_1_A"
               ],
-              "target_count": 23,
-              "mean_seconds": 44.066666391304345,
-              "median_seconds": 37.370733
+              "target_count": 26,
+              "mean_seconds": 50.27855611538462,
+              "median_seconds": 37.668214000000006
             },
             "common": {
               "target_ids": [
+                "12aa_1_1_A",
                 "25sj_1_1_A",
                 "36ll_1_1_A",
                 "38jc_1_1_A",
@@ -1039,13 +1083,14 @@
                 "9tca_1_1_A",
                 "9tca_1_2_D",
                 "9vmz_1_1_A",
+                "9x21_1_1_A",
                 "9ydi_1_1_A",
                 "9yx9_1_1_A",
                 "9yxa_1_1_A"
               ],
-              "target_count": 20,
-              "mean_seconds": 41.94788045,
-              "median_seconds": 36.965839
+              "target_count": 22,
+              "mean_seconds": 43.52775981818182,
+              "median_seconds": 37.393997
             }
           }
         },
@@ -1194,23 +1239,28 @@
         }
       ],
       "processing_exceptions": [],
-      "method_variant_id": "boltz2-c8670f153759885f"
+      "method_variant_ids": [
+        "boltz2-25781a97c5e1fa22",
+        "boltz2-c8670f153759885f"
+      ]
     },
     {
       "tool_id": "nufold",
       "display_name": "NuFold",
-      "target_count": 63,
+      "target_count": 66,
       "prediction_wall_seconds": {
         "target_ids": [
           "10zt_1_1_A",
           "10zu_1_1_A",
           "11ag_1_1_A",
           "11eh_1_1_A",
+          "12aa_1_1_A",
           "12ci_1_1_A",
           "12cj_1_1_A",
           "23jy_1_1_A",
           "23ka_1_1_A",
           "25sj_1_1_A",
+          "26hh_1_1_A",
           "36ll_1_1_A",
           "37cm_1_1_A",
           "37so_1_1_A",
@@ -1259,6 +1309,7 @@
           "9v7q_1_1_A",
           "9vmz_1_1_A",
           "9vsn_1_1_A",
+          "9x21_1_1_A",
           "9x6b_1_1_A",
           "9ydi_1_1_A",
           "9yx9_1_1_A",
@@ -1266,25 +1317,27 @@
           "9z6i_1_1_A",
           "9zgq_1_1_A"
         ],
-        "target_count": 63,
-        "measured_target_count": 63,
+        "target_count": 66,
+        "measured_target_count": 66,
         "missing_target_ids": [],
         "complete": true,
-        "denominator": 63,
-        "total_seconds": 21413.355586999995,
-        "mean_seconds": 339.89453312698413,
-        "median_seconds": 63.161,
+        "denominator": 66,
+        "total_seconds": 23143.49539,
+        "mean_seconds": 350.65902106060605,
+        "median_seconds": 66.439,
         "available_only": {
           "target_ids": [
             "10zt_1_1_A",
             "10zu_1_1_A",
             "11ag_1_1_A",
             "11eh_1_1_A",
+            "12aa_1_1_A",
             "12ci_1_1_A",
             "12cj_1_1_A",
             "23jy_1_1_A",
             "23ka_1_1_A",
             "25sj_1_1_A",
+            "26hh_1_1_A",
             "36ll_1_1_A",
             "37cm_1_1_A",
             "37so_1_1_A",
@@ -1333,6 +1386,7 @@
             "9v7q_1_1_A",
             "9vmz_1_1_A",
             "9vsn_1_1_A",
+            "9x21_1_1_A",
             "9x6b_1_1_A",
             "9ydi_1_1_A",
             "9yx9_1_1_A",
@@ -1340,9 +1394,9 @@
             "9z6i_1_1_A",
             "9zgq_1_1_A"
           ],
-          "target_count": 63,
-          "mean_seconds": 339.89453312698413,
-          "median_seconds": 63.161
+          "target_count": 66,
+          "mean_seconds": 350.65902106060605,
+          "median_seconds": 66.439
         }
       },
       "resource_strata": [
@@ -1357,7 +1411,9 @@
             ]
           },
           "reported_target_ids": [
+            "12aa_1_1_A",
             "25sj_1_1_A",
+            "26hh_1_1_A",
             "36ll_1_1_A",
             "37cm_1_1_A",
             "37so_1_1_A",
@@ -1377,15 +1433,18 @@
             "9tca_1_1_A",
             "9tca_1_2_D",
             "9vmz_1_1_A",
+            "9x21_1_1_A",
             "9ydi_1_1_A",
             "9yx9_1_1_A",
             "9yxa_1_1_A"
           ],
-          "reported_target_count": 23,
+          "reported_target_count": 26,
           "prediction_wall_seconds": {
             "available": {
               "target_ids": [
+                "12aa_1_1_A",
                 "25sj_1_1_A",
+                "26hh_1_1_A",
                 "36ll_1_1_A",
                 "37cm_1_1_A",
                 "37so_1_1_A",
@@ -1405,16 +1464,18 @@
                 "9tca_1_1_A",
                 "9tca_1_2_D",
                 "9vmz_1_1_A",
+                "9x21_1_1_A",
                 "9ydi_1_1_A",
                 "9yx9_1_1_A",
                 "9yxa_1_1_A"
               ],
-              "target_count": 23,
-              "mean_seconds": 71.89930069565217,
-              "median_seconds": 39.981233
+              "target_count": 26,
+              "mean_seconds": 130.1470661153846,
+              "median_seconds": 44.618584
             },
             "common": {
               "target_ids": [
+                "12aa_1_1_A",
                 "25sj_1_1_A",
                 "36ll_1_1_A",
                 "38jc_1_1_A",
@@ -1432,13 +1493,14 @@
                 "9tca_1_1_A",
                 "9tca_1_2_D",
                 "9vmz_1_1_A",
+                "9x21_1_1_A",
                 "9ydi_1_1_A",
                 "9yx9_1_1_A",
                 "9yxa_1_1_A"
               ],
-              "target_count": 20,
-              "mean_seconds": 51.3922112,
-              "median_seconds": 38.453151500000004
+              "target_count": 22,
+              "mean_seconds": 60.014171136363636,
+              "median_seconds": 39.4049725
             }
           }
         },
@@ -1587,23 +1649,28 @@
         }
       ],
       "processing_exceptions": [],
-      "method_variant_id": "nufold-5abb24a4c8712363"
+      "method_variant_ids": [
+        "nufold-5abb24a4c8712363",
+        "nufold-6fb757532e438d61"
+      ]
     },
     {
       "tool_id": "protenix-v2",
       "display_name": "Protenix v2",
-      "target_count": 63,
+      "target_count": 66,
       "prediction_wall_seconds": {
         "target_ids": [
           "10zt_1_1_A",
           "10zu_1_1_A",
           "11ag_1_1_A",
           "11eh_1_1_A",
+          "12aa_1_1_A",
           "12ci_1_1_A",
           "12cj_1_1_A",
           "23jy_1_1_A",
           "23ka_1_1_A",
           "25sj_1_1_A",
+          "26hh_1_1_A",
           "36ll_1_1_A",
           "37cm_1_1_A",
           "37so_1_1_A",
@@ -1652,6 +1719,7 @@
           "9v7q_1_1_A",
           "9vmz_1_1_A",
           "9vsn_1_1_A",
+          "9x21_1_1_A",
           "9x6b_1_1_A",
           "9ydi_1_1_A",
           "9yx9_1_1_A",
@@ -1659,25 +1727,27 @@
           "9z6i_1_1_A",
           "9zgq_1_1_A"
         ],
-        "target_count": 63,
-        "measured_target_count": 63,
+        "target_count": 66,
+        "measured_target_count": 66,
         "missing_target_ids": [],
         "complete": true,
-        "denominator": 63,
-        "total_seconds": 6165.126873000001,
-        "mean_seconds": 97.85915671428572,
-        "median_seconds": 88.726422,
+        "denominator": 66,
+        "total_seconds": 6615.135930000002,
+        "mean_seconds": 100.22933227272728,
+        "median_seconds": 95.139692,
         "available_only": {
           "target_ids": [
             "10zt_1_1_A",
             "10zu_1_1_A",
             "11ag_1_1_A",
             "11eh_1_1_A",
+            "12aa_1_1_A",
             "12ci_1_1_A",
             "12cj_1_1_A",
             "23jy_1_1_A",
             "23ka_1_1_A",
             "25sj_1_1_A",
+            "26hh_1_1_A",
             "36ll_1_1_A",
             "37cm_1_1_A",
             "37so_1_1_A",
@@ -1726,6 +1796,7 @@
             "9v7q_1_1_A",
             "9vmz_1_1_A",
             "9vsn_1_1_A",
+            "9x21_1_1_A",
             "9x6b_1_1_A",
             "9ydi_1_1_A",
             "9yx9_1_1_A",
@@ -1733,9 +1804,9 @@
             "9z6i_1_1_A",
             "9zgq_1_1_A"
           ],
-          "target_count": 63,
-          "mean_seconds": 97.85915671428572,
-          "median_seconds": 88.726422
+          "target_count": 66,
+          "mean_seconds": 100.22933227272728,
+          "median_seconds": 95.139692
         }
       },
       "resource_strata": [
@@ -1750,7 +1821,9 @@
             ]
           },
           "reported_target_ids": [
+            "12aa_1_1_A",
             "25sj_1_1_A",
+            "26hh_1_1_A",
             "36ll_1_1_A",
             "37cm_1_1_A",
             "37so_1_1_A",
@@ -1770,15 +1843,18 @@
             "9tca_1_1_A",
             "9tca_1_2_D",
             "9vmz_1_1_A",
+            "9x21_1_1_A",
             "9ydi_1_1_A",
             "9yx9_1_1_A",
             "9yxa_1_1_A"
           ],
-          "reported_target_count": 23,
+          "reported_target_count": 26,
           "prediction_wall_seconds": {
             "available": {
               "target_ids": [
+                "12aa_1_1_A",
                 "25sj_1_1_A",
+                "26hh_1_1_A",
                 "36ll_1_1_A",
                 "37cm_1_1_A",
                 "37so_1_1_A",
@@ -1798,16 +1874,18 @@
                 "9tca_1_1_A",
                 "9tca_1_2_D",
                 "9vmz_1_1_A",
+                "9x21_1_1_A",
                 "9ydi_1_1_A",
                 "9yx9_1_1_A",
                 "9yxa_1_1_A"
               ],
-              "target_count": 23,
-              "mean_seconds": 91.41851434782609,
-              "median_seconds": 87.322455
+              "target_count": 26,
+              "mean_seconds": 98.17826488461539,
+              "median_seconds": 87.324469
             },
             "common": {
               "target_ids": [
+                "12aa_1_1_A",
                 "25sj_1_1_A",
                 "36ll_1_1_A",
                 "38jc_1_1_A",
@@ -1825,13 +1903,14 @@
                 "9tca_1_1_A",
                 "9tca_1_2_D",
                 "9vmz_1_1_A",
+                "9x21_1_1_A",
                 "9ydi_1_1_A",
                 "9yx9_1_1_A",
                 "9yxa_1_1_A"
               ],
-              "target_count": 20,
-              "mean_seconds": 89.16558075,
-              "median_seconds": 87.3041
+              "target_count": 22,
+              "mean_seconds": 90.74516304545455,
+              "median_seconds": 87.322991
             }
           }
         },
@@ -1991,18 +2070,20 @@
     {
       "tool_id": "protenix_base_20250630_v1.0.0",
       "display_name": "Protenix base 20250630 v1.0.0",
-      "target_count": 63,
+      "target_count": 66,
       "prediction_wall_seconds": {
         "target_ids": [
           "10zt_1_1_A",
           "10zu_1_1_A",
           "11ag_1_1_A",
           "11eh_1_1_A",
+          "12aa_1_1_A",
           "12ci_1_1_A",
           "12cj_1_1_A",
           "23jy_1_1_A",
           "23ka_1_1_A",
           "25sj_1_1_A",
+          "26hh_1_1_A",
           "36ll_1_1_A",
           "37cm_1_1_A",
           "37so_1_1_A",
@@ -2051,6 +2132,7 @@
           "9v7q_1_1_A",
           "9vmz_1_1_A",
           "9vsn_1_1_A",
+          "9x21_1_1_A",
           "9x6b_1_1_A",
           "9ydi_1_1_A",
           "9yx9_1_1_A",
@@ -2058,25 +2140,27 @@
           "9z6i_1_1_A",
           "9zgq_1_1_A"
         ],
-        "target_count": 63,
-        "measured_target_count": 63,
+        "target_count": 66,
+        "measured_target_count": 66,
         "missing_target_ids": [],
         "complete": true,
-        "denominator": 63,
-        "total_seconds": 5413.537582999999,
-        "mean_seconds": 85.92916798412698,
-        "median_seconds": 79.065925,
+        "denominator": 66,
+        "total_seconds": 5770.7934909999985,
+        "mean_seconds": 87.43626501515152,
+        "median_seconds": 83.473545,
         "available_only": {
           "target_ids": [
             "10zt_1_1_A",
             "10zu_1_1_A",
             "11ag_1_1_A",
             "11eh_1_1_A",
+            "12aa_1_1_A",
             "12ci_1_1_A",
             "12cj_1_1_A",
             "23jy_1_1_A",
             "23ka_1_1_A",
             "25sj_1_1_A",
+            "26hh_1_1_A",
             "36ll_1_1_A",
             "37cm_1_1_A",
             "37so_1_1_A",
@@ -2125,6 +2209,7 @@
             "9v7q_1_1_A",
             "9vmz_1_1_A",
             "9vsn_1_1_A",
+            "9x21_1_1_A",
             "9x6b_1_1_A",
             "9ydi_1_1_A",
             "9yx9_1_1_A",
@@ -2132,9 +2217,9 @@
             "9z6i_1_1_A",
             "9zgq_1_1_A"
           ],
-          "target_count": 63,
-          "mean_seconds": 85.92916798412698,
-          "median_seconds": 79.065925
+          "target_count": 66,
+          "mean_seconds": 87.43626501515152,
+          "median_seconds": 83.473545
         }
       },
       "resource_strata": [
@@ -2149,7 +2234,9 @@
             ]
           },
           "reported_target_ids": [
+            "12aa_1_1_A",
             "25sj_1_1_A",
+            "26hh_1_1_A",
             "36ll_1_1_A",
             "37cm_1_1_A",
             "37so_1_1_A",
@@ -2169,15 +2256,18 @@
             "9tca_1_1_A",
             "9tca_1_2_D",
             "9vmz_1_1_A",
+            "9x21_1_1_A",
             "9ydi_1_1_A",
             "9yx9_1_1_A",
             "9yxa_1_1_A"
           ],
-          "reported_target_count": 23,
+          "reported_target_count": 26,
           "prediction_wall_seconds": {
             "available": {
               "target_ids": [
+                "12aa_1_1_A",
                 "25sj_1_1_A",
+                "26hh_1_1_A",
                 "36ll_1_1_A",
                 "37cm_1_1_A",
                 "37so_1_1_A",
@@ -2197,16 +2287,18 @@
                 "9tca_1_1_A",
                 "9tca_1_2_D",
                 "9vmz_1_1_A",
+                "9x21_1_1_A",
                 "9ydi_1_1_A",
                 "9yx9_1_1_A",
                 "9yxa_1_1_A"
               ],
-              "target_count": 23,
-              "mean_seconds": 81.01426404347826,
-              "median_seconds": 77.911835
+              "target_count": 26,
+              "mean_seconds": 85.4070761923077,
+              "median_seconds": 78.13816
             },
             "common": {
               "target_ids": [
+                "12aa_1_1_A",
                 "25sj_1_1_A",
                 "36ll_1_1_A",
                 "38jc_1_1_A",
@@ -2224,13 +2316,14 @@
                 "9tca_1_1_A",
                 "9tca_1_2_D",
                 "9vmz_1_1_A",
+                "9x21_1_1_A",
                 "9ydi_1_1_A",
                 "9yx9_1_1_A",
                 "9yxa_1_1_A"
               ],
-              "target_count": 20,
-              "mean_seconds": 79.62197835,
-              "median_seconds": 77.98817199999999
+              "target_count": 22,
+              "mean_seconds": 80.76154763636363,
+              "median_seconds": 78.13816
             }
           }
         },
@@ -2390,18 +2483,20 @@
     {
       "tool_id": "protenix_base_default_v1.0.0",
       "display_name": "Protenix base default v1.0.0",
-      "target_count": 63,
+      "target_count": 66,
       "prediction_wall_seconds": {
         "target_ids": [
           "10zt_1_1_A",
           "10zu_1_1_A",
           "11ag_1_1_A",
           "11eh_1_1_A",
+          "12aa_1_1_A",
           "12ci_1_1_A",
           "12cj_1_1_A",
           "23jy_1_1_A",
           "23ka_1_1_A",
           "25sj_1_1_A",
+          "26hh_1_1_A",
           "36ll_1_1_A",
           "37cm_1_1_A",
           "37so_1_1_A",
@@ -2450,6 +2545,7 @@
           "9v7q_1_1_A",
           "9vmz_1_1_A",
           "9vsn_1_1_A",
+          "9x21_1_1_A",
           "9x6b_1_1_A",
           "9ydi_1_1_A",
           "9yx9_1_1_A",
@@ -2457,25 +2553,27 @@
           "9z6i_1_1_A",
           "9zgq_1_1_A"
         ],
-        "target_count": 63,
-        "measured_target_count": 63,
+        "target_count": 66,
+        "measured_target_count": 66,
         "missing_target_ids": [],
         "complete": true,
-        "denominator": 63,
-        "total_seconds": 5423.920741999997,
-        "mean_seconds": 86.09398003174603,
-        "median_seconds": 78.864108,
+        "denominator": 66,
+        "total_seconds": 5776.223415999997,
+        "mean_seconds": 87.51853660606061,
+        "median_seconds": 81.168503,
         "available_only": {
           "target_ids": [
             "10zt_1_1_A",
             "10zu_1_1_A",
             "11ag_1_1_A",
             "11eh_1_1_A",
+            "12aa_1_1_A",
             "12ci_1_1_A",
             "12cj_1_1_A",
             "23jy_1_1_A",
             "23ka_1_1_A",
             "25sj_1_1_A",
+            "26hh_1_1_A",
             "36ll_1_1_A",
             "37cm_1_1_A",
             "37so_1_1_A",
@@ -2524,6 +2622,7 @@
             "9v7q_1_1_A",
             "9vmz_1_1_A",
             "9vsn_1_1_A",
+            "9x21_1_1_A",
             "9x6b_1_1_A",
             "9ydi_1_1_A",
             "9yx9_1_1_A",
@@ -2531,9 +2630,9 @@
             "9z6i_1_1_A",
             "9zgq_1_1_A"
           ],
-          "target_count": 63,
-          "mean_seconds": 86.09398003174603,
-          "median_seconds": 78.864108
+          "target_count": 66,
+          "mean_seconds": 87.51853660606061,
+          "median_seconds": 81.168503
         }
       },
       "resource_strata": [
@@ -2548,7 +2647,9 @@
             ]
           },
           "reported_target_ids": [
+            "12aa_1_1_A",
             "25sj_1_1_A",
+            "26hh_1_1_A",
             "36ll_1_1_A",
             "37cm_1_1_A",
             "37so_1_1_A",
@@ -2568,15 +2669,18 @@
             "9tca_1_1_A",
             "9tca_1_2_D",
             "9vmz_1_1_A",
+            "9x21_1_1_A",
             "9ydi_1_1_A",
             "9yx9_1_1_A",
             "9yxa_1_1_A"
           ],
-          "reported_target_count": 23,
+          "reported_target_count": 26,
           "prediction_wall_seconds": {
             "available": {
               "target_ids": [
+                "12aa_1_1_A",
                 "25sj_1_1_A",
+                "26hh_1_1_A",
                 "36ll_1_1_A",
                 "37cm_1_1_A",
                 "37so_1_1_A",
@@ -2596,16 +2700,18 @@
                 "9tca_1_1_A",
                 "9tca_1_2_D",
                 "9vmz_1_1_A",
+                "9x21_1_1_A",
                 "9ydi_1_1_A",
                 "9yx9_1_1_A",
                 "9yxa_1_1_A"
               ],
-              "target_count": 23,
-              "mean_seconds": 81.06890186956522,
-              "median_seconds": 77.861051
+              "target_count": 26,
+              "mean_seconds": 85.26490065384615,
+              "median_seconds": 78.13656800000001
             },
             "common": {
               "target_ids": [
+                "12aa_1_1_A",
                 "25sj_1_1_A",
                 "36ll_1_1_A",
                 "38jc_1_1_A",
@@ -2623,13 +2729,14 @@
                 "9tca_1_1_A",
                 "9tca_1_2_D",
                 "9vmz_1_1_A",
+                "9x21_1_1_A",
                 "9ydi_1_1_A",
                 "9yx9_1_1_A",
                 "9yxa_1_1_A"
               ],
-              "target_count": 20,
-              "mean_seconds": 79.6698109,
-              "median_seconds": 77.961263
+              "target_count": 22,
+              "mean_seconds": 80.68464745454546,
+              "median_seconds": 78.13656800000001
             }
           }
         },
@@ -2789,18 +2896,20 @@
     {
       "tool_id": "rhofoldplus",
       "display_name": "RhoFold+",
-      "target_count": 63,
+      "target_count": 66,
       "prediction_wall_seconds": {
         "target_ids": [
           "10zt_1_1_A",
           "10zu_1_1_A",
           "11ag_1_1_A",
           "11eh_1_1_A",
+          "12aa_1_1_A",
           "12ci_1_1_A",
           "12cj_1_1_A",
           "23jy_1_1_A",
           "23ka_1_1_A",
           "25sj_1_1_A",
+          "26hh_1_1_A",
           "36ll_1_1_A",
           "37cm_1_1_A",
           "37so_1_1_A",
@@ -2849,6 +2958,7 @@
           "9v7q_1_1_A",
           "9vmz_1_1_A",
           "9vsn_1_1_A",
+          "9x21_1_1_A",
           "9x6b_1_1_A",
           "9ydi_1_1_A",
           "9yx9_1_1_A",
@@ -2856,20 +2966,23 @@
           "9z6i_1_1_A",
           "9zgq_1_1_A"
         ],
-        "target_count": 63,
-        "measured_target_count": 63,
-        "missing_target_ids": [],
-        "complete": true,
-        "denominator": 63,
-        "total_seconds": 137221.30728699995,
-        "mean_seconds": 2178.11598868254,
-        "median_seconds": 502.592,
+        "target_count": 66,
+        "measured_target_count": 65,
+        "missing_target_ids": [
+          "26hh_1_1_A"
+        ],
+        "complete": false,
+        "denominator": 66,
+        "total_seconds": null,
+        "mean_seconds": null,
+        "median_seconds": null,
         "available_only": {
           "target_ids": [
             "10zt_1_1_A",
             "10zu_1_1_A",
             "11ag_1_1_A",
             "11eh_1_1_A",
+            "12aa_1_1_A",
             "12ci_1_1_A",
             "12cj_1_1_A",
             "23jy_1_1_A",
@@ -2923,6 +3036,7 @@
             "9v7q_1_1_A",
             "9vmz_1_1_A",
             "9vsn_1_1_A",
+            "9x21_1_1_A",
             "9x6b_1_1_A",
             "9ydi_1_1_A",
             "9yx9_1_1_A",
@@ -2930,8 +3044,8 @@
             "9z6i_1_1_A",
             "9zgq_1_1_A"
           ],
-          "target_count": 63,
-          "mean_seconds": 2178.11598868254,
+          "target_count": 65,
+          "mean_seconds": 2207.9459544,
           "median_seconds": 502.592
         }
       },
@@ -2947,6 +3061,7 @@
             ]
           },
           "reported_target_ids": [
+            "12aa_1_1_A",
             "25sj_1_1_A",
             "36ll_1_1_A",
             "37cm_1_1_A",
@@ -2965,14 +3080,16 @@
             "9tca_1_1_A",
             "9tca_1_2_D",
             "9vmz_1_1_A",
+            "9x21_1_1_A",
             "9ydi_1_1_A",
             "9yx9_1_1_A",
             "9yxa_1_1_A"
           ],
-          "reported_target_count": 21,
+          "reported_target_count": 23,
           "prediction_wall_seconds": {
             "available": {
               "target_ids": [
+                "12aa_1_1_A",
                 "25sj_1_1_A",
                 "36ll_1_1_A",
                 "37cm_1_1_A",
@@ -2991,16 +3108,18 @@
                 "9tca_1_1_A",
                 "9tca_1_2_D",
                 "9vmz_1_1_A",
+                "9x21_1_1_A",
                 "9ydi_1_1_A",
                 "9yx9_1_1_A",
                 "9yxa_1_1_A"
               ],
-              "target_count": 21,
-              "mean_seconds": 536.5485776666667,
+              "target_count": 23,
+              "mean_seconds": 763.5956469565217,
               "median_seconds": 111.756004
             },
             "common": {
               "target_ids": [
+                "12aa_1_1_A",
                 "25sj_1_1_A",
                 "36ll_1_1_A",
                 "38jc_1_1_A",
@@ -3018,13 +3137,41 @@
                 "9tca_1_1_A",
                 "9tca_1_2_D",
                 "9vmz_1_1_A",
+                "9x21_1_1_A",
                 "9ydi_1_1_A",
                 "9yx9_1_1_A",
                 "9yxa_1_1_A"
               ],
-              "target_count": 20,
-              "mean_seconds": 542.7269321,
+              "target_count": 22,
+              "mean_seconds": 779.5326541363636,
               "median_seconds": 111.3721055
+            }
+          }
+        },
+        {
+          "protocol": "external_process_wall_v1",
+          "resources": {
+            "gpu_count": 0,
+            "gpu_models": [],
+            "cpu_threads": 32,
+            "concurrency": 2
+          },
+          "reported_target_ids": [
+            "26hh_1_1_A"
+          ],
+          "reported_target_count": 1,
+          "prediction_wall_seconds": {
+            "available": {
+              "target_ids": [],
+              "target_count": 0,
+              "mean_seconds": null,
+              "median_seconds": null
+            },
+            "common": {
+              "target_ids": [],
+              "target_count": 0,
+              "mean_seconds": null,
+              "median_seconds": null
             }
           }
         },
@@ -3218,6 +3365,8 @@
         }
       ],
       "method_variant_ids": [
+        "rhofoldplus-2add2c9359bc7bc6",
+        "rhofoldplus-63c4b6ab6e89c2df",
         "rhofoldplus-7361798f5727fc48",
         "rhofoldplus-8b0b62c918834ef3"
       ]
@@ -3225,18 +3374,20 @@
     {
       "tool_id": "rosettafold3",
       "display_name": "RoseTTAFold3",
-      "target_count": 63,
+      "target_count": 66,
       "prediction_wall_seconds": {
         "target_ids": [
           "10zt_1_1_A",
           "10zu_1_1_A",
           "11ag_1_1_A",
           "11eh_1_1_A",
+          "12aa_1_1_A",
           "12ci_1_1_A",
           "12cj_1_1_A",
           "23jy_1_1_A",
           "23ka_1_1_A",
           "25sj_1_1_A",
+          "26hh_1_1_A",
           "36ll_1_1_A",
           "37cm_1_1_A",
           "37so_1_1_A",
@@ -3285,6 +3436,7 @@
           "9v7q_1_1_A",
           "9vmz_1_1_A",
           "9vsn_1_1_A",
+          "9x21_1_1_A",
           "9x6b_1_1_A",
           "9ydi_1_1_A",
           "9yx9_1_1_A",
@@ -3292,25 +3444,27 @@
           "9z6i_1_1_A",
           "9zgq_1_1_A"
         ],
-        "target_count": 63,
-        "measured_target_count": 63,
+        "target_count": 66,
+        "measured_target_count": 66,
         "missing_target_ids": [],
         "complete": true,
-        "denominator": 63,
-        "total_seconds": 2316.954221,
-        "mean_seconds": 36.77705112698413,
-        "median_seconds": 25.696,
+        "denominator": 66,
+        "total_seconds": 19154.735658999994,
+        "mean_seconds": 290.2232675606061,
+        "median_seconds": 32.1807805,
         "available_only": {
           "target_ids": [
             "10zt_1_1_A",
             "10zu_1_1_A",
             "11ag_1_1_A",
             "11eh_1_1_A",
+            "12aa_1_1_A",
             "12ci_1_1_A",
             "12cj_1_1_A",
             "23jy_1_1_A",
             "23ka_1_1_A",
             "25sj_1_1_A",
+            "26hh_1_1_A",
             "36ll_1_1_A",
             "37cm_1_1_A",
             "37so_1_1_A",
@@ -3359,6 +3513,7 @@
             "9v7q_1_1_A",
             "9vmz_1_1_A",
             "9vsn_1_1_A",
+            "9x21_1_1_A",
             "9x6b_1_1_A",
             "9ydi_1_1_A",
             "9yx9_1_1_A",
@@ -3366,12 +3521,73 @@
             "9z6i_1_1_A",
             "9zgq_1_1_A"
           ],
-          "target_count": 63,
-          "mean_seconds": 36.77705112698413,
-          "median_seconds": 25.696
+          "target_count": 66,
+          "mean_seconds": 290.2232675606061,
+          "median_seconds": 32.1807805
         }
       },
       "resource_strata": [
+        {
+          "protocol": "external_process_wall_v1",
+          "resources": {
+            "attempts": [
+              {
+                "attempts": [
+                  {
+                    "concurrency": 2,
+                    "cpu_threads": 4,
+                    "gpu_count": 1,
+                    "gpu_models": [
+                      "NVIDIA RTX 5880 Ada Generation"
+                    ]
+                  },
+                  {
+                    "concurrency": 2,
+                    "cpu_threads": 32,
+                    "gpu_count": 0,
+                    "gpu_models": []
+                  }
+                ],
+                "concurrency": 2,
+                "cpu_threads": 32,
+                "gpu_count": 0,
+                "gpu_models": []
+              },
+              {
+                "concurrency": 1,
+                "cpu_threads": 32,
+                "gpu_count": 0,
+                "gpu_models": []
+              }
+            ],
+            "concurrency": 1,
+            "cpu_threads": 32,
+            "gpu_count": 0,
+            "gpu_models": []
+          },
+          "reported_target_ids": [
+            "26hh_1_1_A"
+          ],
+          "reported_target_count": 1,
+          "prediction_wall_seconds": {
+            "available": {
+              "target_ids": [
+                "26hh_1_1_A"
+              ],
+              "target_count": 1,
+              "mean_seconds": 16747.984234,
+              "median_seconds": 16747.984234
+            },
+            "common": {
+              "target_ids": [
+                "26hh_1_1_A"
+              ],
+              "target_count": 1,
+              "mean_seconds": 16747.984234,
+              "median_seconds": 16747.984234
+            }
+          }
+        },
         {
           "protocol": "external_process_wall_v1",
           "resources": {
@@ -3383,6 +3599,7 @@
             ]
           },
           "reported_target_ids": [
+            "12aa_1_1_A",
             "25sj_1_1_A",
             "36ll_1_1_A",
             "37cm_1_1_A",
@@ -3403,14 +3620,16 @@
             "9tca_1_1_A",
             "9tca_1_2_D",
             "9vmz_1_1_A",
+            "9x21_1_1_A",
             "9ydi_1_1_A",
             "9yx9_1_1_A",
             "9yxa_1_1_A"
           ],
-          "reported_target_count": 23,
+          "reported_target_count": 25,
           "prediction_wall_seconds": {
             "available": {
               "target_ids": [
+                "12aa_1_1_A",
                 "25sj_1_1_A",
                 "36ll_1_1_A",
                 "37cm_1_1_A",
@@ -3431,16 +3650,18 @@
                 "9tca_1_1_A",
                 "9tca_1_2_D",
                 "9vmz_1_1_A",
+                "9x21_1_1_A",
                 "9ydi_1_1_A",
                 "9yx9_1_1_A",
                 "9yxa_1_1_A"
               ],
-              "target_count": 23,
-              "mean_seconds": 27.581357173913045,
-              "median_seconds": 22.246705
+              "target_count": 25,
+              "mean_seconds": 28.96673676,
+              "median_seconds": 22.393521
             },
             "common": {
               "target_ids": [
+                "12aa_1_1_A",
                 "25sj_1_1_A",
                 "36ll_1_1_A",
                 "38jc_1_1_A",
@@ -3458,13 +3679,14 @@
                 "9tca_1_1_A",
                 "9tca_1_2_D",
                 "9vmz_1_1_A",
+                "9x21_1_1_A",
                 "9ydi_1_1_A",
                 "9yx9_1_1_A",
                 "9yxa_1_1_A"
               ],
-              "target_count": 20,
-              "mean_seconds": 25.075236,
-              "median_seconds": 22.243639
+              "target_count": 22,
+              "mean_seconds": 26.877360181818183,
+              "median_seconds": 22.245184000000002
             }
           }
         },
@@ -3613,23 +3835,29 @@
         }
       ],
       "processing_exceptions": [],
-      "method_variant_id": "rosettafold3-db97e04c47b20091"
+      "method_variant_ids": [
+        "rosettafold3-028f2ef45b460df0",
+        "rosettafold3-44981ea17b10648c",
+        "rosettafold3-db97e04c47b20091"
+      ]
     },
     {
       "tool_id": "trrosettarna2",
       "display_name": "trRosettaRNA2",
-      "target_count": 63,
+      "target_count": 66,
       "prediction_wall_seconds": {
         "target_ids": [
           "10zt_1_1_A",
           "10zu_1_1_A",
           "11ag_1_1_A",
           "11eh_1_1_A",
+          "12aa_1_1_A",
           "12ci_1_1_A",
           "12cj_1_1_A",
           "23jy_1_1_A",
           "23ka_1_1_A",
           "25sj_1_1_A",
+          "26hh_1_1_A",
           "36ll_1_1_A",
           "37cm_1_1_A",
           "37so_1_1_A",
@@ -3678,6 +3906,7 @@
           "9v7q_1_1_A",
           "9vmz_1_1_A",
           "9vsn_1_1_A",
+          "9x21_1_1_A",
           "9x6b_1_1_A",
           "9ydi_1_1_A",
           "9yx9_1_1_A",
@@ -3685,25 +3914,27 @@
           "9z6i_1_1_A",
           "9zgq_1_1_A"
         ],
-        "target_count": 63,
-        "measured_target_count": 63,
+        "target_count": 66,
+        "measured_target_count": 66,
         "missing_target_ids": [],
         "complete": true,
-        "denominator": 63,
-        "total_seconds": 58148.287636000015,
-        "mean_seconds": 922.9886926349207,
-        "median_seconds": 166.494,
+        "denominator": 66,
+        "total_seconds": 122544.34431100007,
+        "mean_seconds": 1856.7324895606062,
+        "median_seconds": 166.59199999999998,
         "available_only": {
           "target_ids": [
             "10zt_1_1_A",
             "10zu_1_1_A",
             "11ag_1_1_A",
             "11eh_1_1_A",
+            "12aa_1_1_A",
             "12ci_1_1_A",
             "12cj_1_1_A",
             "23jy_1_1_A",
             "23ka_1_1_A",
             "25sj_1_1_A",
+            "26hh_1_1_A",
             "36ll_1_1_A",
             "37cm_1_1_A",
             "37so_1_1_A",
@@ -3752,6 +3983,7 @@
             "9v7q_1_1_A",
             "9vmz_1_1_A",
             "9vsn_1_1_A",
+            "9x21_1_1_A",
             "9x6b_1_1_A",
             "9ydi_1_1_A",
             "9yx9_1_1_A",
@@ -3759,9 +3991,9 @@
             "9z6i_1_1_A",
             "9zgq_1_1_A"
           ],
-          "target_count": 63,
-          "mean_seconds": 922.9886926349207,
-          "median_seconds": 166.494
+          "target_count": 66,
+          "mean_seconds": 1856.7324895606062,
+          "median_seconds": 166.59199999999998
         }
       },
       "resource_strata": [
@@ -3776,7 +4008,9 @@
             ]
           },
           "reported_target_ids": [
+            "12aa_1_1_A",
             "25sj_1_1_A",
+            "26hh_1_1_A",
             "36ll_1_1_A",
             "37cm_1_1_A",
             "37so_1_1_A",
@@ -3796,15 +4030,18 @@
             "9tca_1_1_A",
             "9tca_1_2_D",
             "9vmz_1_1_A",
+            "9x21_1_1_A",
             "9ydi_1_1_A",
             "9yx9_1_1_A",
             "9yxa_1_1_A"
           ],
-          "reported_target_count": 23,
+          "reported_target_count": 26,
           "prediction_wall_seconds": {
             "available": {
               "target_ids": [
+                "12aa_1_1_A",
                 "25sj_1_1_A",
+                "26hh_1_1_A",
                 "36ll_1_1_A",
                 "37cm_1_1_A",
                 "37so_1_1_A",
@@ -3824,16 +4061,18 @@
                 "9tca_1_1_A",
                 "9tca_1_2_D",
                 "9vmz_1_1_A",
+                "9x21_1_1_A",
                 "9ydi_1_1_A",
                 "9yx9_1_1_A",
                 "9yxa_1_1_A"
               ],
-              "target_count": 23,
-              "mean_seconds": 429.6152500434783,
-              "median_seconds": 66.868772
+              "target_count": 26,
+              "mean_seconds": 2856.8156702307692,
+              "median_seconds": 70.289465
             },
             "common": {
               "target_ids": [
+                "12aa_1_1_A",
                 "25sj_1_1_A",
                 "36ll_1_1_A",
                 "38jc_1_1_A",
@@ -3851,13 +4090,14 @@
                 "9tca_1_1_A",
                 "9tca_1_2_D",
                 "9vmz_1_1_A",
+                "9x21_1_1_A",
                 "9ydi_1_1_A",
                 "9yx9_1_1_A",
                 "9yxa_1_1_A"
               ],
-              "target_count": 20,
-              "mean_seconds": 113.56846095,
-              "median_seconds": 64.154773
+              "target_count": 22,
+              "mean_seconds": 180.91682772727273,
+              "median_seconds": 65.5617215
             }
           }
         },
@@ -4006,7 +4246,10 @@
         }
       ],
       "processing_exceptions": [],
-      "method_variant_id": "trrosettarna2-18a7024f1db66c56"
+      "method_variant_ids": [
+        "trrosettarna2-18a7024f1db66c56",
+        "trrosettarna2-285892fbb94aa025"
+      ]
     }
   ],
   "runs": [
@@ -4182,6 +4425,50 @@
             "started_at": "2026-09-28T07:51:03.819808+00:00",
             "status": "completed",
             "wall_seconds": 111.60762
+          }
+        ]
+      }
+    },
+    {
+      "method_variant_id": "MetaFold-RNA3d-0577a449eaeea2a9",
+      "tool_id": "MetaFold-RNA3d",
+      "target_id": "12aa_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T09:41:12.178198+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 84.374134,
+        "preparation_wall_seconds": 0.002822,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T09:39:47.788916+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T09:41:12.163851+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T09:39:47.789653+00:00",
+            "status": "completed",
+            "wall_seconds": 84.374134
           }
         ]
       }
@@ -4402,6 +4689,50 @@
             "started_at": "2026-09-24T21:19:34.832491+00:00",
             "status": "completed",
             "wall_seconds": 79.916587
+          }
+        ]
+      }
+    },
+    {
+      "method_variant_id": "MetaFold-RNA3d-0577a449eaeea2a9",
+      "tool_id": "MetaFold-RNA3d",
+      "target_id": "26hh_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T09:46:47.192590+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 177.895311,
+        "preparation_wall_seconds": 0.012399,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T09:43:49.248440+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T09:46:47.144515+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T09:43:49.249153+00:00",
+            "status": "completed",
+            "wall_seconds": 177.895311
           }
         ]
       }
@@ -6521,6 +6852,50 @@
     {
       "method_variant_id": "MetaFold-RNA3d-0577a449eaeea2a9",
       "tool_id": "MetaFold-RNA3d",
+      "target_id": "9x21_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T09:52:47.133885+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 107.055988,
+        "preparation_wall_seconds": 0.017558,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T09:51:00.057397+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T09:52:47.114260+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T09:51:00.058234+00:00",
+            "status": "completed",
+            "wall_seconds": 107.055988
+          }
+        ]
+      }
+    },
+    {
+      "method_variant_id": "MetaFold-RNA3d-0577a449eaeea2a9",
+      "tool_id": "MetaFold-RNA3d",
       "target_id": "9x6b_1_1_A",
       "status": "inference_completed",
       "timing": {
@@ -6875,6 +7250,50 @@
       }
     },
     {
+      "method_variant_id": "alphafold3-6dbf5c9f86917169",
+      "tool_id": "alphafold3",
+      "target_id": "12aa_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T07:45:56.893175+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 132.227753,
+        "preparation_wall_seconds": 0.004369,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T07:43:44.652463+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T07:45:56.880897+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T07:43:44.653096+00:00",
+            "status": "completed",
+            "wall_seconds": 132.227753
+          }
+        ]
+      }
+    },
+    {
       "method_variant_id": "alphafold3-00c532b2579a69c6",
       "tool_id": "alphafold3",
       "target_id": "12ci_1_1_A",
@@ -7006,6 +7425,50 @@
             "started_at": "2026-09-24T17:29:18.433753+00:00",
             "status": "completed",
             "wall_seconds": 161.279657
+          }
+        ]
+      }
+    },
+    {
+      "method_variant_id": "alphafold3-6dbf5c9f86917169",
+      "tool_id": "alphafold3",
+      "target_id": "26hh_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T07:49:55.588238+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 234.751152,
+        "preparation_wall_seconds": 0.011748,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T07:46:00.817701+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T07:49:55.569704+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T07:46:00.818505+00:00",
+            "status": "completed",
+            "wall_seconds": 234.751152
           }
         ]
       }
@@ -8640,6 +9103,50 @@
       }
     },
     {
+      "method_variant_id": "alphafold3-6dbf5c9f86917169",
+      "tool_id": "alphafold3",
+      "target_id": "9x21_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T07:52:31.047512+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 151.375263,
+        "preparation_wall_seconds": 0.041588,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T07:49:59.632428+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T07:52:31.008373+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T07:49:59.633061+00:00",
+            "status": "completed",
+            "wall_seconds": 151.375263
+          }
+        ]
+      }
+    },
+    {
       "method_variant_id": "alphafold3-00c532b2579a69c6",
       "tool_id": "alphafold3",
       "target_id": "9x6b_1_1_A",
@@ -8954,6 +9461,50 @@
       }
     },
     {
+      "method_variant_id": "boltz2-25781a97c5e1fa22",
+      "tool_id": "boltz2",
+      "target_id": "12aa_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T07:44:42.734056+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 50.738326,
+        "preparation_wall_seconds": 0.003297,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T07:43:51.981617+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T07:44:42.720626+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T07:43:51.982250+00:00",
+            "status": "completed",
+            "wall_seconds": 50.738326
+          }
+        ]
+      }
+    },
+    {
       "method_variant_id": "boltz2-c8670f153759885f",
       "tool_id": "boltz2",
       "target_id": "12ci_1_1_A",
@@ -9085,6 +9636,50 @@
             "started_at": "2026-09-24T17:29:21.653283+00:00",
             "status": "completed",
             "wall_seconds": 99.578246
+          }
+        ]
+      }
+    },
+    {
+      "method_variant_id": "boltz2-25781a97c5e1fa22",
+      "tool_id": "boltz2",
+      "target_id": "26hh_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T07:47:46.192290+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 175.056025,
+        "preparation_wall_seconds": 0.00069,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T07:44:51.101500+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T07:47:46.158357+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T07:44:51.102254+00:00",
+            "status": "completed",
+            "wall_seconds": 175.056025
           }
         ]
       }
@@ -10719,6 +11314,50 @@
       }
     },
     {
+      "method_variant_id": "boltz2-25781a97c5e1fa22",
+      "tool_id": "boltz2",
+      "target_id": "9x21_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T07:49:02.427375+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 67.914781,
+        "preparation_wall_seconds": 0.000769,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T07:47:54.491585+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T07:49:02.407284+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T07:47:54.492424+00:00",
+            "status": "completed",
+            "wall_seconds": 67.914781
+          }
+        ]
+      }
+    },
+    {
       "method_variant_id": "boltz2-c8670f153759885f",
       "tool_id": "boltz2",
       "target_id": "9x6b_1_1_A",
@@ -11033,6 +11672,84 @@
       }
     },
     {
+      "method_variant_id": "nufold-6fb757532e438d61",
+      "tool_id": "nufold",
+      "target_id": "12aa_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T07:49:52.879913+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 46.938562,
+        "preparation_wall_seconds": 0.117031,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T07:49:05.904322+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T07:49:02.776833+00:00",
+            "name": "preparation_0",
+            "phase": "preparation",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T07:49:02.711673+00:00",
+            "status": "completed",
+            "wall_seconds": 0.065114
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T07:49:52.478707+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T07:49:05.905252+00:00",
+            "status": "completed",
+            "wall_seconds": 46.5734
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T07:49:52.846647+00:00",
+            "name": "prediction_1",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T07:49:52.481442+00:00",
+            "status": "completed",
+            "wall_seconds": 0.365162
+          }
+        ]
+      }
+    },
+    {
       "method_variant_id": "nufold-5abb24a4c8712363",
       "tool_id": "nufold",
       "target_id": "12ci_1_1_A",
@@ -11198,6 +11915,84 @@
             "started_at": "2026-09-24T17:50:23.994555+00:00",
             "status": "completed",
             "wall_seconds": 0.365084
+          }
+        ]
+      }
+    },
+    {
+      "method_variant_id": "nufold-6fb757532e438d61",
+      "tool_id": "nufold",
+      "target_id": "26hh_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T08:13:56.755495+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 1437.672262,
+        "preparation_wall_seconds": 3.209641,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T07:49:59.012343+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T07:49:56.075263+00:00",
+            "name": "preparation_0",
+            "phase": "preparation",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T07:49:52.906998+00:00",
+            "status": "completed",
+            "wall_seconds": 3.168225
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T08:12:57.844368+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T07:49:59.013029+00:00",
+            "status": "completed",
+            "wall_seconds": 1378.831037
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T08:13:56.689971+00:00",
+            "name": "prediction_1",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T08:12:57.848686+00:00",
+            "status": "completed",
+            "wall_seconds": 58.841225
           }
         ]
       }
@@ -13682,6 +14477,84 @@
       }
     },
     {
+      "method_variant_id": "nufold-6fb757532e438d61",
+      "tool_id": "nufold",
+      "target_id": "9x21_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T08:18:10.504563+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 245.528979,
+        "preparation_wall_seconds": 2.244459,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T08:14:04.916744+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T08:14:02.055125+00:00",
+            "name": "preparation_0",
+            "phase": "preparation",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T08:13:59.837885+00:00",
+            "status": "completed",
+            "wall_seconds": 2.217193
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T08:18:02.621459+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T08:14:04.917422+00:00",
+            "status": "completed",
+            "wall_seconds": 237.703991
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T08:18:10.448528+00:00",
+            "name": "prediction_1",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T08:18:02.623481+00:00",
+            "status": "completed",
+            "wall_seconds": 7.824988
+          }
+        ]
+      }
+    },
+    {
       "method_variant_id": "nufold-5abb24a4c8712363",
       "tool_id": "nufold",
       "target_id": "9x6b_1_1_A",
@@ -14218,6 +15091,50 @@
     {
       "method_variant_id": "protenix-v2-da26ea22a45798f1",
       "tool_id": "protenix-v2",
+      "target_id": "12aa_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T09:54:29.523362+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 94.643534,
+        "preparation_wall_seconds": 0.006062,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T09:52:54.866324+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T09:54:29.510585+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T09:52:54.867004+00:00",
+            "status": "completed",
+            "wall_seconds": 94.643534
+          }
+        ]
+      }
+    },
+    {
+      "method_variant_id": "protenix-v2-da26ea22a45798f1",
+      "tool_id": "protenix-v2",
       "target_id": "12ci_1_1_A",
       "status": "inference_completed",
       "timing": {
@@ -14431,6 +15348,50 @@
             "started_at": "2026-09-24T22:05:56.080624+00:00",
             "status": "completed",
             "wall_seconds": 85.925061
+          }
+        ]
+      }
+    },
+    {
+      "method_variant_id": "protenix-v2-da26ea22a45798f1",
+      "tool_id": "protenix-v2",
+      "target_id": "26hh_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T09:58:33.827991+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 236.927085,
+        "preparation_wall_seconds": 0.012031,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T09:54:36.855346+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T09:58:33.783165+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T09:54:36.856029+00:00",
+            "status": "completed",
+            "wall_seconds": 236.927085
           }
         ]
       }
@@ -16550,6 +17511,50 @@
     {
       "method_variant_id": "protenix-v2-da26ea22a45798f1",
       "tool_id": "protenix-v2",
+      "target_id": "9x21_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T10:00:39.726819+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 118.438438,
+        "preparation_wall_seconds": 0.016523,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T09:58:41.237928+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T10:00:39.677049+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T09:58:41.238562+00:00",
+            "status": "completed",
+            "wall_seconds": 118.438438
+          }
+        ]
+      }
+    },
+    {
+      "method_variant_id": "protenix-v2-da26ea22a45798f1",
+      "tool_id": "protenix-v2",
       "target_id": "9x6b_1_1_A",
       "status": "inference_completed",
       "timing": {
@@ -16990,6 +17995,50 @@
     {
       "method_variant_id": "protenix_base_20250630_v1.0.0-d0f4e9c72dcba0d9",
       "tool_id": "protenix_base_20250630_v1.0.0",
+      "target_id": "12aa_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T10:02:09.065450+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 83.071698,
+        "preparation_wall_seconds": 0.00583,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T10:00:45.979903+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T10:02:09.052389+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T10:00:45.980635+00:00",
+            "status": "completed",
+            "wall_seconds": 83.071698
+          }
+        ]
+      }
+    },
+    {
+      "method_variant_id": "protenix_base_20250630_v1.0.0-d0f4e9c72dcba0d9",
+      "tool_id": "protenix_base_20250630_v1.0.0",
       "target_id": "12ci_1_1_A",
       "status": "inference_completed",
       "timing": {
@@ -17203,6 +18252,50 @@
             "started_at": "2026-09-24T22:43:43.808183+00:00",
             "status": "completed",
             "wall_seconds": 77.512928
+          }
+        ]
+      }
+    },
+    {
+      "method_variant_id": "protenix_base_20250630_v1.0.0-d0f4e9c72dcba0d9",
+      "tool_id": "protenix_base_20250630_v1.0.0",
+      "target_id": "26hh_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T10:05:07.904336+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 172.941427,
+        "preparation_wall_seconds": 0.012252,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T10:02:14.919255+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T10:05:07.861344+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T10:02:14.919871+00:00",
+            "status": "completed",
+            "wall_seconds": 172.941427
           }
         ]
       }
@@ -19322,6 +20415,50 @@
     {
       "method_variant_id": "protenix_base_20250630_v1.0.0-d0f4e9c72dcba0d9",
       "tool_id": "protenix_base_20250630_v1.0.0",
+      "target_id": "9x21_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T10:06:55.103233+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 101.242783,
+        "preparation_wall_seconds": 0.016101,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T10:05:13.819405+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T10:06:55.062866+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T10:05:13.820033+00:00",
+            "status": "completed",
+            "wall_seconds": 101.242783
+          }
+        ]
+      }
+    },
+    {
+      "method_variant_id": "protenix_base_20250630_v1.0.0-d0f4e9c72dcba0d9",
+      "tool_id": "protenix_base_20250630_v1.0.0",
       "target_id": "9x6b_1_1_A",
       "status": "inference_completed",
       "timing": {
@@ -19762,6 +20899,50 @@
     {
       "method_variant_id": "protenix_base_default_v1.0.0-20935419266db871",
       "tool_id": "protenix_base_default_v1.0.0",
+      "target_id": "12aa_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T10:08:22.913159+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 81.920499,
+        "preparation_wall_seconds": 0.006104,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T10:07:00.978043+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T10:08:22.899418+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T10:07:00.978863+00:00",
+            "status": "completed",
+            "wall_seconds": 81.920499
+          }
+        ]
+      }
+    },
+    {
+      "method_variant_id": "protenix_base_default_v1.0.0-20935419266db871",
+      "tool_id": "protenix_base_default_v1.0.0",
       "target_id": "12ci_1_1_A",
       "status": "inference_completed",
       "timing": {
@@ -19975,6 +21156,50 @@
             "started_at": "2026-09-24T23:16:59.403115+00:00",
             "status": "completed",
             "wall_seconds": 76.962424
+          }
+        ]
+      }
+    },
+    {
+      "method_variant_id": "protenix_base_default_v1.0.0-20935419266db871",
+      "tool_id": "protenix_base_default_v1.0.0",
+      "target_id": "26hh_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T10:11:19.207114+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 170.636648,
+        "preparation_wall_seconds": 0.011468,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T10:08:28.526396+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T10:11:19.163752+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T10:08:28.527052+00:00",
+            "status": "completed",
+            "wall_seconds": 170.636648
           }
         ]
       }
@@ -22094,6 +23319,50 @@
     {
       "method_variant_id": "protenix_base_default_v1.0.0-20935419266db871",
       "tool_id": "protenix_base_default_v1.0.0",
+      "target_id": "9x21_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T10:13:04.690463+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 99.745527,
+        "preparation_wall_seconds": 0.016125,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T10:11:24.903700+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T10:13:04.649919+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T10:11:24.904337+00:00",
+            "status": "completed",
+            "wall_seconds": 99.745527
+          }
+        ]
+      }
+    },
+    {
+      "method_variant_id": "protenix_base_default_v1.0.0-20935419266db871",
+      "tool_id": "protenix_base_default_v1.0.0",
       "target_id": "9x6b_1_1_A",
       "status": "inference_completed",
       "timing": {
@@ -22448,6 +23717,203 @@
       }
     },
     {
+      "method_variant_id": "rhofoldplus-2add2c9359bc7bc6",
+      "tool_id": "rhofoldplus",
+      "target_id": "12aa_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T07:53:40.814263+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 67.638578,
+        "preparation_wall_seconds": 0.00503,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T07:52:33.141087+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T07:52:41.768374+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T07:52:33.141857+00:00",
+            "status": "completed",
+            "wall_seconds": 8.626473
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T07:52:50.999986+00:00",
+            "name": "prediction_1",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T07:52:41.772518+00:00",
+            "status": "completed",
+            "wall_seconds": 9.227419
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T07:52:56.573455+00:00",
+            "name": "prediction_2",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T07:52:51.001475+00:00",
+            "status": "completed",
+            "wall_seconds": 5.571923
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T07:53:03.399601+00:00",
+            "name": "prediction_3",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T07:52:56.575768+00:00",
+            "status": "completed",
+            "wall_seconds": 6.82377
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T07:53:08.924224+00:00",
+            "name": "prediction_4",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T07:53:03.401987+00:00",
+            "status": "completed",
+            "wall_seconds": 5.522169
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T07:53:15.750943+00:00",
+            "name": "prediction_5",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T07:53:08.926734+00:00",
+            "status": "completed",
+            "wall_seconds": 6.824145
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T07:53:21.275567+00:00",
+            "name": "prediction_6",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T07:53:15.753452+00:00",
+            "status": "completed",
+            "wall_seconds": 5.522047
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T07:53:28.202757+00:00",
+            "name": "prediction_7",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T07:53:21.278113+00:00",
+            "status": "completed",
+            "wall_seconds": 6.924583
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T07:53:33.777602+00:00",
+            "name": "prediction_8",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T07:53:28.205295+00:00",
+            "status": "completed",
+            "wall_seconds": 5.572256
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T07:53:40.803377+00:00",
+            "name": "prediction_9",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T07:53:33.779524+00:00",
+            "status": "completed",
+            "wall_seconds": 7.023793
+          }
+        ]
+      }
+    },
+    {
       "method_variant_id": "rhofoldplus-8b0b62c918834ef3",
       "tool_id": "rhofoldplus",
       "target_id": "12ci_1_1_A",
@@ -22734,6 +24200,61 @@
             "wall_seconds": 6.372908
           }
         ]
+      }
+    },
+    {
+      "method_variant_id": "rhofoldplus-63c4b6ab6e89c2df",
+      "tool_id": "rhofoldplus",
+      "target_id": "26hh_1_1_A",
+      "status": "failed",
+      "timing": {
+        "protocol": "external_process_wall_v1",
+        "source": "runner_monotonic",
+        "complete": false,
+        "started_at": "2026-10-09T09:14:21.190227+00:00",
+        "finished_at": "2026-10-09T10:04:12.393676+00:00",
+        "status": "failed",
+        "prediction_wall_seconds": 2991.198168,
+        "preparation_wall_seconds": 0.00631,
+        "steps": [
+          {
+            "name": "prediction_0",
+            "phase": "prediction",
+            "status": "completed",
+            "started_at": "2026-10-09T09:14:21.191476+00:00",
+            "finished_at": "2026-10-09T10:04:09.471075+00:00",
+            "wall_seconds": 2988.27954,
+            "exit_code": 0,
+            "resources": {
+              "gpu_count": 0,
+              "gpu_models": [],
+              "cpu_threads": 32,
+              "concurrency": 2
+            }
+          },
+          {
+            "name": "prediction_1",
+            "phase": "prediction",
+            "status": "nonzero_exit",
+            "started_at": "2026-10-09T10:04:09.473450+00:00",
+            "finished_at": "2026-10-09T10:04:12.392124+00:00",
+            "wall_seconds": 2.918628,
+            "exit_code": 1,
+            "resources": {
+              "gpu_count": 0,
+              "gpu_models": [],
+              "cpu_threads": 32,
+              "concurrency": 2
+            }
+          }
+        ],
+        "native_reported": {},
+        "resources": {
+          "gpu_count": 0,
+          "gpu_models": [],
+          "cpu_threads": 32,
+          "concurrency": 2
+        }
       }
     },
     {
@@ -28113,6 +29634,203 @@
       }
     },
     {
+      "method_variant_id": "rhofoldplus-2add2c9359bc7bc6",
+      "tool_id": "rhofoldplus",
+      "target_id": "9x21_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T09:37:44.598593+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 6227.541171,
+        "preparation_wall_seconds": 0.031401,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T07:53:56.626823+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T07:54:19.021306+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T07:53:56.627598+00:00",
+            "status": "completed",
+            "wall_seconds": 22.393653
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T08:17:37.160513+00:00",
+            "name": "prediction_1",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T07:54:19.023601+00:00",
+            "status": "completed",
+            "wall_seconds": 1398.136839
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T08:17:59.756969+00:00",
+            "name": "prediction_2",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T08:17:37.162941+00:00",
+            "status": "completed",
+            "wall_seconds": 22.593962
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T08:35:41.300567+00:00",
+            "name": "prediction_3",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T08:17:59.759359+00:00",
+            "status": "completed",
+            "wall_seconds": 1061.541155
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T08:36:03.900919+00:00",
+            "name": "prediction_4",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T08:35:41.302667+00:00",
+            "status": "completed",
+            "wall_seconds": 22.598193
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T08:57:28.712127+00:00",
+            "name": "prediction_5",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T08:36:03.903383+00:00",
+            "status": "completed",
+            "wall_seconds": 1284.808644
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T08:57:51.158540+00:00",
+            "name": "prediction_6",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T08:57:28.715407+00:00",
+            "status": "completed",
+            "wall_seconds": 22.443066
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T09:15:20.324497+00:00",
+            "name": "prediction_7",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T08:57:51.160920+00:00",
+            "status": "completed",
+            "wall_seconds": 1049.163507
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T09:15:42.722774+00:00",
+            "name": "prediction_8",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T09:15:20.327139+00:00",
+            "status": "completed",
+            "wall_seconds": 22.395568
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T09:37:44.209723+00:00",
+            "name": "prediction_9",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T09:15:42.742962+00:00",
+            "status": "completed",
+            "wall_seconds": 1321.466584
+          }
+        ]
+      }
+    },
+    {
       "method_variant_id": "rhofoldplus-8b0b62c918834ef3",
       "tool_id": "rhofoldplus",
       "target_id": "9x6b_1_1_A",
@@ -29039,6 +30757,50 @@
       }
     },
     {
+      "method_variant_id": "rosettafold3-028f2ef45b460df0",
+      "tool_id": "rosettafold3",
+      "target_id": "12aa_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T08:19:01.989715+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 34.912775,
+        "preparation_wall_seconds": 0.005712,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T08:18:27.060943+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T08:19:01.974520+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T08:18:27.061686+00:00",
+            "status": "completed",
+            "wall_seconds": 34.912775
+          }
+        ]
+      }
+    },
+    {
       "method_variant_id": "rosettafold3-db97e04c47b20091",
       "tool_id": "rosettafold3",
       "target_id": "12ci_1_1_A",
@@ -29170,6 +30932,108 @@
             "started_at": "2026-09-24T18:19:29.518844+00:00",
             "status": "completed",
             "wall_seconds": 35.26711
+          }
+        ]
+      }
+    },
+    {
+      "method_variant_id": "rosettafold3-44981ea17b10648c",
+      "tool_id": "rosettafold3",
+      "target_id": "26hh_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-10T07:10:29.844762+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 16747.984234,
+        "preparation_wall_seconds": 0.01913,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "attempts": [
+            {
+              "attempts": [
+                {
+                  "concurrency": 2,
+                  "cpu_threads": 4,
+                  "gpu_count": 1,
+                  "gpu_models": [
+                    "NVIDIA RTX 5880 Ada Generation"
+                  ]
+                },
+                {
+                  "concurrency": 2,
+                  "cpu_threads": 32,
+                  "gpu_count": 0,
+                  "gpu_models": []
+                }
+              ],
+              "concurrency": 2,
+              "cpu_threads": 32,
+              "gpu_count": 0,
+              "gpu_models": []
+            },
+            {
+              "concurrency": 1,
+              "cpu_threads": 32,
+              "gpu_count": 0,
+              "gpu_models": []
+            }
+          ],
+          "concurrency": 1,
+          "cpu_threads": 32,
+          "gpu_count": 0,
+          "gpu_models": []
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T08:19:16.340823+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 1,
+            "finished_at": "2026-10-08T08:20:59.490932+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T08:19:16.341871+00:00",
+            "status": "nonzero_exit",
+            "wall_seconds": 103.149
+          },
+          {
+            "exit_code": 1,
+            "finished_at": "2026-10-09T09:19:27.051977+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 32,
+              "gpu_count": 0,
+              "gpu_models": []
+            },
+            "started_at": "2026-10-09T09:14:31.871366+00:00",
+            "status": "nonzero_exit",
+            "wall_seconds": 295.180545
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-10T07:10:29.810348+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 1,
+              "cpu_threads": 32,
+              "gpu_count": 0,
+              "gpu_models": []
+            },
+            "started_at": "2026-10-10T02:38:00.155586+00:00",
+            "status": "completed",
+            "wall_seconds": 16349.654689
           }
         ]
       }
@@ -30804,6 +32668,50 @@
       }
     },
     {
+      "method_variant_id": "rosettafold3-028f2ef45b460df0",
+      "tool_id": "rosettafold3",
+      "target_id": "9x21_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T08:22:05.857549+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 54.884429,
+        "preparation_wall_seconds": 0.051526,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T08:21:10.904693+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T08:22:05.789868+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T08:21:10.905385+00:00",
+            "status": "completed",
+            "wall_seconds": 54.884429
+          }
+        ]
+      }
+    },
+    {
       "method_variant_id": "rosettafold3-db97e04c47b20091",
       "tool_id": "rosettafold3",
       "target_id": "9x6b_1_1_A",
@@ -31118,6 +33026,118 @@
       }
     },
     {
+      "method_variant_id": "trrosettarna2-285892fbb94aa025",
+      "tool_id": "trrosettarna2",
+      "target_id": "12aa_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-08T08:23:17.181363+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 70.815964,
+        "preparation_wall_seconds": 0.005267,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T08:22:06.346978+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T08:22:27.138887+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T08:22:06.347745+00:00",
+            "status": "completed",
+            "wall_seconds": 20.791094
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T08:22:39.572967+00:00",
+            "name": "prediction_1",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T08:22:27.141769+00:00",
+            "status": "completed",
+            "wall_seconds": 12.431127
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T08:22:52.106648+00:00",
+            "name": "prediction_2",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T08:22:39.575280+00:00",
+            "status": "completed",
+            "wall_seconds": 12.531302
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T08:23:04.690237+00:00",
+            "name": "prediction_3",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T08:22:52.108920+00:00",
+            "status": "completed",
+            "wall_seconds": 12.581248
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T08:23:17.173789+00:00",
+            "name": "prediction_4",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T08:23:04.692532+00:00",
+            "status": "completed",
+            "wall_seconds": 12.481193
+          }
+        ]
+      }
+    },
+    {
       "method_variant_id": "trrosettarna2-18a7024f1db66c56",
       "tool_id": "trrosettarna2",
       "target_id": "12ci_1_1_A",
@@ -31317,6 +33337,118 @@
             "started_at": "2026-09-24T18:35:03.778582+00:00",
             "status": "completed",
             "wall_seconds": 11.279401
+          }
+        ]
+      }
+    },
+    {
+      "method_variant_id": "trrosettarna2-285892fbb94aa025",
+      "tool_id": "trrosettarna2",
+      "target_id": "26hh_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-09T01:48:04.833636+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 62687.255684,
+        "preparation_wall_seconds": 0.012379,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-08T08:23:17.512405+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T10:57:23.248616+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T08:23:17.513113+00:00",
+            "status": "completed",
+            "wall_seconds": 9245.735146
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T14:21:02.328219+00:00",
+            "name": "prediction_1",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T10:57:23.254322+00:00",
+            "status": "completed",
+            "wall_seconds": 12219.073818
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T18:35:08.749101+00:00",
+            "name": "prediction_2",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T14:21:02.330468+00:00",
+            "status": "completed",
+            "wall_seconds": 15246.418527
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-08T22:00:24.243384+00:00",
+            "name": "prediction_3",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T18:35:08.751356+00:00",
+            "status": "completed",
+            "wall_seconds": 12315.491959
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-09T01:48:04.782126+00:00",
+            "name": "prediction_4",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-08T22:00:24.245829+00:00",
+            "status": "completed",
+            "wall_seconds": 13660.536234
           }
         ]
       }
@@ -34648,6 +36780,118 @@
           "threads": 4
         },
         "source_record_sha256": "008bb23ac4ad605418741f60c2de346f92400bab765c3e3022d5c80a99ef2f72"
+      }
+    },
+    {
+      "method_variant_id": "trrosettarna2-285892fbb94aa025",
+      "tool_id": "trrosettarna2",
+      "target_id": "9x21_1_1_A",
+      "status": "inference_completed",
+      "timing": {
+        "complete": true,
+        "finished_at": "2026-10-09T02:15:23.923170+00:00",
+        "native_reported": {},
+        "prediction_wall_seconds": 1637.985027,
+        "preparation_wall_seconds": 0.017308,
+        "protocol": "external_process_wall_v1",
+        "resources": {
+          "concurrency": 2,
+          "cpu_threads": 4,
+          "gpu_count": 1,
+          "gpu_models": [
+            "NVIDIA RTX 5880 Ada Generation"
+          ]
+        },
+        "source": "runner_monotonic",
+        "started_at": "2026-10-09T01:48:05.887541+00:00",
+        "status": "completed",
+        "steps": [
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-09T01:53:45.206380+00:00",
+            "name": "prediction_0",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-09T01:48:05.888205+00:00",
+            "status": "completed",
+            "wall_seconds": 339.318128
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-09T01:59:05.882857+00:00",
+            "name": "prediction_1",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-09T01:53:45.208580+00:00",
+            "status": "completed",
+            "wall_seconds": 320.674217
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-09T02:04:33.218414+00:00",
+            "name": "prediction_2",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-09T01:59:05.884999+00:00",
+            "status": "completed",
+            "wall_seconds": 327.333357
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-09T02:10:24.882848+00:00",
+            "name": "prediction_3",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-09T02:04:33.220676+00:00",
+            "status": "completed",
+            "wall_seconds": 351.662113
+          },
+          {
+            "exit_code": 0,
+            "finished_at": "2026-10-09T02:15:23.882371+00:00",
+            "name": "prediction_4",
+            "phase": "prediction",
+            "resources": {
+              "concurrency": 2,
+              "cpu_threads": 4,
+              "gpu_count": 1,
+              "gpu_models": [
+                "NVIDIA RTX 5880 Ada Generation"
+              ]
+            },
+            "started_at": "2026-10-09T02:10:24.885068+00:00",
+            "status": "completed",
+            "wall_seconds": 298.997212
+          }
+        ]
       }
     },
     {

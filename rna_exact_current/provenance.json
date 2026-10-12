@@ -1,9 +1,9 @@
 {
   "schema_version": "rna-leaderboard/3.0",
-  "generated_at": "2026-09-28T13:40:38.003651+00:00",
+  "generated_at": "2026-10-11T07:39:34.218710+00:00",
   "dataset": {
     "id": "rna_exact_current",
-    "targets_sha256": "8de41aa5d09e3defa48ab6a34fdb51cc32f0ee7feb797c51c93ec736f9b096dd"
+    "targets_sha256": "21106224cfc273f96d1cc246908f113225ab8fb7444d3c7c8ce059eb9c760298"
   },
   "evaluation_protocol": {
     "id": "rna_usalign_ost_original_defaults_v1",

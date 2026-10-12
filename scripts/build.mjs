@@ -64,6 +64,7 @@ for (const filename of targetFiles) {
       tool_id: method.tool_id,
       method_variant_id: method.method_variant_id,
       status: method.status,
+      failure_reason: method.failure_reason ?? null,
       counts: method.counts,
       statistics: method.statistics,
     })),

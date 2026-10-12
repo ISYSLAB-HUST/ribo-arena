@@ -53,6 +53,19 @@ const translations = {
     navLeaderboard: "总榜",
     navMatrix: "目标矩阵",
     navProtocol: "评测说明",
+    navNews: "动态",
+    newsTitle: "数据与排名更新",
+    newsHeadline: "新增 3 个目标，评测集扩展至 66 个 RNA",
+    newsSummary: "新增 26hh_1_1_A（932 nt，9 月 30 日发布）、9x21_1_1_A（381 nt，10 月 7 日发布）和 12aa_1_1_A（13 nt，10 月 7 日发布）。展示方法仍为 9 种，有效候选结构由 2,835 增至 2,965（+130）。数据快照生成于 2026-10-11。",
+    newsRanking: "按平均 TM-score 排序，MetaFold-RNA3d 仍居首位（0.5538 → 0.5603），Protenix v2 保持第二。Protenix base default v1.0.0 从第四升至第三，AlphaFold3 从第三变为第四；其余方法名次不变。这是评测集扩展后的统计变化，不代表模型版本更新或经检验的显著差异。",
+    newsCoverage: "RhoFold+ 在 26hh_1_1_A 上失败，缺少 5 个有效候选：覆盖率为 65/66，其余方法为 66/66。当前榜单按各方法有效目标汇总；所有展示方法共同有效的目标数为 65。失败运行的耗时不完整，因此不报告 RhoFold+ 的全目标集平均耗时。",
+    newsBaseline: "排名口径：9 种展示方法、平均表现、TM-score 降序。对比 2026-09-28 的 63 目标快照与 2026-10-11 的新快照。",
+    newsPrevious: "此前排名",
+    newsCurrent: "当前排名",
+    newsScore: "平均 TM-score（旧 → 新）",
+    newsTeaser: "10 月更新：66 个目标、2,965 个结构；查看排名变化 →",
+    coverageNote: "覆盖率按当前视图的有效评测目标计；各方法汇总的目标集可能不同。",
+    incompleteTiming: "完整目标集耗时不齐；不报告平均值",
     downloadTitle: "下载原始排行榜 JSON",
     downloadAria: "下载排行榜 JSON",
     themeTitle: "切换明暗主题",
@@ -143,6 +156,19 @@ const translations = {
     navLeaderboard: "Leaderboard",
     navMatrix: "Target matrix",
     navProtocol: "Protocol",
+    navNews: "News",
+    newsTitle: "Data & ranking updates",
+    newsHeadline: "Three new targets bring the benchmark to 66 RNAs",
+    newsSummary: "Added 26hh_1_1_A (932 nt, released September 30), 9x21_1_1_A (381 nt, released October 7), and 12aa_1_1_A (13 nt, released October 7). The leaderboard still features 9 methods, with evaluated candidates increasing from 2,835 to 2,965 (+130). The data snapshot was generated on October 11, 2026.",
+    newsRanking: "By mean TM-score, MetaFold-RNA3d remains first (0.5538 → 0.5603) and Protenix v2 remains second. Protenix base default v1.0.0 moves from fourth to third, while AlphaFold3 moves from third to fourth; all other ranks are unchanged. These changes reflect the expanded evaluation set, not model version updates or tested statistical significance.",
+    newsCoverage: "RhoFold+ failed on 26hh_1_1_A, leaving 5 candidates unavailable: its valid coverage is 65/66, versus 66/66 for the other methods. The current leaderboard aggregates each method's available targets; 65 targets are valid across all displayed methods. The failed run has incomplete timing, so RhoFold+'s full-cohort mean time is not reported.",
+    newsBaseline: "Ranking basis: 9 displayed methods, mean performance, descending TM-score. Comparison of the September 28, 2026 snapshot (63 targets) and the October 11, 2026 snapshot.",
+    newsPrevious: "Previous rank",
+    newsCurrent: "New rank",
+    newsScore: "Mean TM-score (old → new)",
+    newsTeaser: "October update: 66 targets, 2,965 structures. See ranking changes →",
+    coverageNote: "Coverage counts valid evaluated targets in the selected view; aggregated target sets may differ across methods.",
+    incompleteTiming: "Incomplete full-cohort timing; mean not reported",
     downloadTitle: "Download raw leaderboard JSON",
     downloadAria: "Download leaderboard JSON",
     themeTitle: "Toggle light or dark theme",
@@ -420,8 +446,8 @@ function renderTable() {
             <td class="method-cell"><div class="method-identity"><span class="model-mark" aria-hidden="true" style="--model-color:${modelStyle(method)[1]}">${modelStyle(method)[0]}</span><div><span class="method-name">${method.display_name}</span><span class="method-id" title="${(method.method_variant_ids || [method.method_variant_id]).join(', ')}">${method.tool_id}</span></div></div></td>
             ${metricKeys.map((metric) => `<td class="${metric === state.metric ? "active-score" : ""}">${formatMetric(metric, scoreFor(method, metric))}</td>`).join("")}
             <td><div class="input-chips">${chips}</div></td>
-            <td>${method.actual_target_count}/${state.data.dataset.eligible_target_count}</td>
-            <td class="timing-cell" title="${method.timing?.protocol || ""}">${formatSeconds(method.timing?.mean_seconds)}${method.timing?.partial ? "*" : ""}</td>
+            <td>${method.statistics?.[state.view]?.available?.target_count ?? 0}/${state.data.dataset.eligible_target_count}</td>
+            <td class="timing-cell" title="${Number.isFinite(method.timing?.mean_seconds) ? method.timing.protocol : t('incompleteTiming')}">${formatSeconds(method.timing?.mean_seconds)}</td>
           </tr>`;
         })
         .join("")
@@ -499,6 +525,7 @@ function renderAll() {
 }
 
 function bindInteractions() {
+  $("#news-teaser").addEventListener("click", () => $('.nav-tab[data-panel="news"]').click());
   $$(".nav-tab").forEach((button) => {
     button.addEventListener("click", () => {
       state.panel = button.dataset.panel;
