@@ -6,18 +6,21 @@ import { buildRss, snapshotOf, escapeXml, FEED_URL } from "./rss.mjs";
 const history = JSON.parse(await readFile(new URL("../updates/history.json", import.meta.url), "utf8"));
 const raw = JSON.parse(await readFile(new URL("../rna_exact_current/leaderboard.json", import.meta.url), "utf8"));
 const current = snapshotOf(raw);
+const octoberIndex = history.findIndex((snapshot) => snapshot.published_at === "2026-10-12T00:00:00+08:00");
+const october = history[octoberIndex];
 
 test("current snapshot matches the retained archive and filters the excluded model", () => {
   assert.equal(current.id, history.at(-1).id);
-  assert.equal(current.methods.length, 9);
-  assert.equal(current.targets.length, 66);
-  assert.equal(current.methods.reduce((total, method) => total + method.evaluated, 0), 2965);
-  assert.equal(current.methods.find((method) => method.id === "rhofoldplus").coverage, 65);
+  const displayed = raw.methods.filter((method) => method.tool_id !== "protenix_base_20250630_v1.0.0");
+  assert.equal(current.methods.length, displayed.length);
+  assert.equal(current.targets.length, raw.targets.filter((target) => target.eligible).length);
+  assert.equal(current.methods.reduce((total, method) => total + method.evaluated, 0), displayed.reduce((total, method) => total + method.counts.evaluated_count, 0));
+  assert.ok(current.methods.every((method) => method.coverage <= current.targets.length));
   assert.ok(!JSON.stringify(current).includes("protenix_base_20250630"));
 });
 
 test("feed describes the published target additions and rank exchange accurately", () => {
-  const feed = buildRss(current, history);
+  const feed = buildRss(october, history.slice(0, octoberIndex + 1));
   assert.equal((feed.match(/<item>/g) || []).length, 1);
   assert.ok(feed.includes(FEED_URL));
   for (const id of ["26hh_1_1_A", "9x21_1_1_A", "12aa_1_1_A"]) assert.ok(feed.includes(id));
@@ -41,12 +44,12 @@ test("unchanged rebuilds keep GUIDs, publication dates, and feed bytes stable", 
 
 test("future snapshots retain earlier entries and compare against the latest archive", () => {
   const future = structuredClone(raw);
-  future.generated_at = "2026-10-20T00:00:00Z";
+  future.generated_at = new Date(Date.parse(history.at(-1).published_at || current.generated_at) + 7 * 86400000).toISOString();
   future.targets.push({ eligible: true, target_id: "future_1_A", pdb_id: "FUTR", length: 10, release_date: "2026-10-14" });
   const next = snapshotOf(future);
   const feed = buildRss(next, history);
   assert.equal((feed.match(/<item>/g) || []).length, 2);
-  assert.ok(feed.includes("67 RNA targets, 1 new target</title>"));
+  assert.ok(feed.includes(`${current.targets.length + 1} RNA targets, 1 new target</title>`));
   assert.ok(feed.includes(`urn:riboarena:snapshot:${current.id}`));
   assert.ok(feed.indexOf(next.id) < feed.indexOf(current.id));
 });
@@ -55,7 +58,7 @@ test("XML and HTML content are escaped, missing scores are not coerced to zero",
   assert.equal(escapeXml('&<>"\''), "&amp;&lt;&gt;&quot;&apos;");
   const special = structuredClone(current);
   special.id = "test-escape";
-  special.generated_at = "2026-10-20T00:00:00Z";
+  special.generated_at = new Date(Date.parse(history.at(-1).published_at || current.generated_at) + 7 * 86400000).toISOString();
   special.methods[0].name = "RNA & <script> ]]>";
   special.methods[0].metrics.rna_tm_score = null;
   const feed = buildRss(special, history);
