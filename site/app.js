@@ -54,6 +54,15 @@ const translations = {
     navMatrix: "目标矩阵",
     navProtocol: "评测说明",
     navNews: "动态",
+    rssSubscribe: "RSS 订阅",
+    rssHeading: "关注排名变化与新增 RNA 靶标",
+    rssDescription: "将此英文 Feed 添加到 RSS 阅读器，即可关注排名变化、新增 RNA 靶标及评测覆盖情况。我们计划在有新结果时每周更新。",
+    rssAddress: "RSS 订阅地址",
+    rssCopy: "复制订阅地址",
+    rssOpen: "打开 Feed ↗",
+    rssCopied: "订阅地址已复制，请粘贴到 RSS 阅读器中添加订阅。",
+    rssCopyFallback: "请选中上方订阅地址并手动复制，再添加到 RSS 阅读器。",
+    rssPrivacy: "无需提供邮箱或注册 RiboArena 账号。RSS 更新显示在阅读器中，不会直接发送邮件。",
     newsTitle: "数据与排名更新",
     newsHeadline: "新增 3 个目标，评测集扩展至 66 个 RNA",
     newsSummary: "新增 26hh_1_1_A（932 nt，9 月 30 日发布）、9x21_1_1_A（381 nt，10 月 7 日发布）和 12aa_1_1_A（13 nt，10 月 7 日发布）。展示方法仍为 9 种，有效候选结构由 2,835 增至 2,965（+130）。数据快照生成于 2026-10-11。",
@@ -157,6 +166,15 @@ const translations = {
     navMatrix: "Target matrix",
     navProtocol: "Protocol",
     navNews: "News",
+    rssSubscribe: "Subscribe via RSS",
+    rssHeading: "Follow rankings & new RNA targets",
+    rssDescription: "Add this English-language feed to your RSS reader for ranking changes, new RNA targets, and benchmark coverage. We aim to update weekly when new results are available.",
+    rssAddress: "RSS feed address",
+    rssCopy: "Copy feed URL",
+    rssOpen: "Open feed ↗",
+    rssCopied: "Feed URL copied. Paste it into your RSS reader to subscribe.",
+    rssCopyFallback: "Select and copy the feed URL above, then add it to your RSS reader.",
+    rssPrivacy: "No email address or RiboArena account needed. RSS updates appear in your reader, not your email inbox.",
     newsTitle: "Data & ranking updates",
     newsHeadline: "Three new targets bring the benchmark to 66 RNAs",
     newsSummary: "Added 26hh_1_1_A (932 nt, released September 30), 9x21_1_1_A (381 nt, released October 7), and 12aa_1_1_A (13 nt, released October 7). The leaderboard still features 9 methods, with evaluated candidates increasing from 2,835 to 2,965 (+130). The data snapshot was generated on October 11, 2026.",
@@ -287,6 +305,7 @@ function applyLanguage() {
   $$('[data-i18n-aria]').forEach((element) => { element.setAttribute("aria-label", t(element.dataset.i18nAria)); });
   $$('[data-i18n-title]').forEach((element) => { element.title = t(element.dataset.i18nTitle); });
   $$('[data-lang]').forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.lang === state.language)));
+  $("#rss-status").textContent = "";
 }
 
 function formatMetric(metric, value) {
@@ -525,6 +544,17 @@ function renderAll() {
 }
 
 function bindInteractions() {
+  $(".rss-shortcut").addEventListener("click", () => { $("#rss-subscription").open = true; });
+  $("#copy-rss").addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText($("#rss-feed-url").value);
+      $("#rss-status").textContent = t("rssCopied");
+    } catch {
+      $("#rss-feed-url").focus();
+      $("#rss-feed-url").select();
+      $("#rss-status").textContent = t("rssCopyFallback");
+    }
+  });
   $("#news-teaser").addEventListener("click", () => $('.nav-tab[data-panel="news"]').click());
   $$(".nav-tab").forEach((button) => {
     button.addEventListener("click", () => {
@@ -576,6 +606,8 @@ async function init() {
     renderSummary();
     renderDefinitions();
     bindInteractions();
+    if (location.hash === "#news-panel") $('.nav-tab[data-panel="news"]').click();
+    if (location.hash === "#rss-subscription") $("#rss-subscription").open = true;
     renderAll();
   } catch (error) {
     console.error(error);

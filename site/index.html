@@ -10,6 +10,7 @@
     <meta name="color-scheme" content="dark light" />
     <title>RNA Structure Prediction Leaderboard</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="alternate" type="application/rss+xml" title="RiboArena Updates" href="./feed.xml" />
     <script>
       (() => {
         const saved = localStorage.getItem("rna-board-theme");
@@ -63,7 +64,10 @@
             <h1 data-i18n="title">RNA Structure Prediction Leaderboard</h1>
             <p class="intro-copy" data-i18n="intro">Compare structural accuracy, local atomic quality, and steric clashes under one evaluation protocol.</p>
           </div>
-          <a class="data-link" href="./data/leaderboard.json" download><span data-i18n="downloadData">Download data</span><span aria-hidden="true">↗</span></a>
+          <div class="intro-actions">
+            <a class="data-link" href="./data/leaderboard.json" download><span data-i18n="downloadData">Download data</span><span aria-hidden="true">↗</span></a>
+            <a class="data-link rss-shortcut" href="#rss-subscription"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="19" r="1"/><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/></svg><span data-i18n="rssSubscribe">Subscribe via RSS</span></a>
+          </div>
         </section>
 
         <section class="summary-grid" aria-label="Dataset summary" data-i18n-aria="summaryAria">
@@ -88,6 +92,21 @@
             <span class="summary-note">PDB release date</span>
           </article>
         </section>
+
+        <details class="rss-subscription panel" id="rss-subscription">
+          <summary><span class="rss-badge" aria-hidden="true">RSS</span><span data-i18n="rssHeading">Follow rankings &amp; new RNA targets</span></summary>
+          <div class="rss-subscription-body">
+            <p data-i18n="rssDescription">Add this English-language feed to your RSS reader for ranking changes, new RNA targets, and benchmark coverage. We aim to update weekly when new results are available.</p>
+            <div class="rss-feed-controls">
+              <label class="sr-only" for="rss-feed-url" data-i18n="rssAddress">RSS feed address</label>
+              <input id="rss-feed-url" type="url" readonly spellcheck="false" value="https://isyslab-hust.github.io/ribo-arena/feed.xml" />
+              <button id="copy-rss" type="button" data-i18n="rssCopy">Copy feed URL</button>
+              <a href="./feed.xml" type="application/rss+xml" data-i18n="rssOpen">Open feed ↗</a>
+            </div>
+            <p class="rss-status" id="rss-status" role="status" aria-live="polite" aria-atomic="true"></p>
+            <p class="rss-privacy" data-i18n="rssPrivacy">No email address or RiboArena account needed. RSS updates appear in your reader, not your email inbox.</p>
+          </div>
+        </details>
 
         <section class="workspace" id="leaderboard-panel" data-panel-content="leaderboard">
           <button class="news-teaser" id="news-teaser" data-i18n="newsTeaser">October update: 66 targets, 2,965 structures. See ranking changes →</button>

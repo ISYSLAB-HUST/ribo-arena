@@ -1,6 +1,7 @@
 import { cp, mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { buildRss, snapshotOf } from "./rss.mjs";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const sourceDir = join(root, "site");
@@ -8,6 +9,7 @@ const datasetDir = join(root, "rna_exact_current");
 const targetDir = join(datasetDir, "targets");
 const outDir = join(root, "dist");
 const dataOut = join(outDir, "data");
+const feedHistory = JSON.parse(await readFile(join(root, "updates/history.json"), "utf8"));
 // Filter the tool, including every execution variant in the latest export.
 const includedMethod = (method) => method.tool_id !== "protenix_base_20250630_v1.0.0";
 
@@ -76,5 +78,6 @@ await writeFile(
   `${JSON.stringify({ schema_version: "rna-leaderboard-target-summary/1.0", targets })}\n`,
 );
 await writeFile(join(outDir, ".nojekyll"), "");
+await writeFile(join(outDir, "feed.xml"), buildRss(snapshotOf(leaderboard), feedHistory));
 
-console.log(`Built dist/ with ${leaderboard.methods.length} methods and ${targets.length} target summaries.`);
+console.log(`Built dist/ with ${leaderboard.methods.length} methods, ${targets.length} target summaries, and RSS feed.`);
