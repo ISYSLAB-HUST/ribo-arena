@@ -48,7 +48,7 @@ test("future snapshots retain earlier entries and compare against the latest arc
   future.targets.push({ eligible: true, target_id: "future_1_A", pdb_id: "FUTR", length: 10, release_date: "2026-10-14" });
   const next = snapshotOf(future);
   const feed = buildRss(next, history);
-  assert.equal((feed.match(/<item>/g) || []).length, 2);
+  assert.equal((feed.match(/<item>/g) || []).length, history.filter((snapshot) => !snapshot.baseline_only).length + 1);
   assert.ok(feed.includes(`${current.targets.length + 1} RNA targets, 1 new target</title>`));
   assert.ok(feed.includes(`urn:riboarena:snapshot:${current.id}`));
   assert.ok(feed.indexOf(next.id) < feed.indexOf(current.id));
