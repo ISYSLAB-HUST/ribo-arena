@@ -1,16 +1,16 @@
 {
   "schema_version": "rna-leaderboard/3.0",
-  "generated_at": "2026-10-11T07:39:34.218710+00:00",
+  "generated_at": "2026-10-30T09:35:55.183929+00:00",
   "asset_base_url": "./",
   "url_resolution": "All resource URLs resolve against asset_base_url relative to leaderboard.json",
   "dataset": {
     "id": "rna_exact_current",
-    "target_count": 66,
-    "eligible_target_count": 66,
+    "target_count": 74,
+    "eligible_target_count": 74,
     "release_min": "2026-02-04",
-    "release_max": "2026-10-07",
+    "release_max": "2026-10-21",
     "prediction_unit": "single_RNA_chain",
-    "targets_sha256": "21106224cfc273f96d1cc246908f113225ab8fb7444d3c7c8ce059eb9c760298",
+    "targets_sha256": "49dc39b52cb6437d3ae96ff11958963cd4e99a36235cf518e78bd6f43d64c1d2",
     "assembly_selection": "Extracted RNA chains; original assembly annotations retained; strict biological monomer selection not performed"
   },
   "metric_definitions": {
@@ -74,14 +74,14 @@
         "templates": "使用"
       },
       "counts": {
-        "requested_count": 330,
-        "generated_count": 330,
-        "evaluated_count": 330
+        "requested_count": 370,
+        "generated_count": 370,
+        "evaluated_count": 370
       },
-      "actual_target_count": 66,
-      "target_count": 66,
+      "actual_target_count": 74,
+      "target_count": 74,
       "evaluated_candidate_count_distribution": {
-        "5": 66
+        "5": 74
       },
       "method_variant_ids": [
         "MetaFold-RNA3d-0577a449eaeea2a9",
@@ -98,6 +98,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -135,6 +139,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -153,17 +160,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 66,
+            "target_count": 74,
             "values": {
-              "c3_rmsd": 2.451787878787879,
-              "rna_tm_score": 0.5602871212121212,
-              "heavy_atom_lddt": 0.7411909090909091,
-              "clashscore": 10.203969696969697
+              "c3_rmsd": 2.3885945945945948,
+              "rna_tm_score": 0.5636203783783784,
+              "heavy_atom_lddt": 0.7366783783783784,
+              "clashscore": 9.79372972972973
             }
           },
           "common": {
@@ -175,6 +183,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -211,6 +223,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -229,17 +244,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 65,
+            "target_count": 73,
             "values": {
-              "c3_rmsd": 2.4224923076923077,
-              "rna_tm_score": 0.5551137538461538,
-              "heavy_atom_lddt": 0.7461630769230769,
-              "clashscore": 8.546307692307693
+              "c3_rmsd": 2.361643835616438,
+              "rna_tm_score": 0.5590596164383562,
+              "heavy_atom_lddt": 0.7410438356164384,
+              "clashscore": 8.312109589041096
             }
           }
         },
@@ -253,6 +269,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -290,6 +310,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -308,17 +331,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 66,
+            "target_count": 74,
             "values": {
-              "c3_rmsd": 2.2457575757575756,
-              "rna_tm_score": 0.581060303030303,
-              "heavy_atom_lddt": 0.7555000000000001,
-              "clashscore": 6.763636363636364
+              "c3_rmsd": 2.1813513513513514,
+              "rna_tm_score": 0.5855647297297297,
+              "heavy_atom_lddt": 0.7512027027027027,
+              "clashscore": 6.503243243243244
             }
           },
           "common": {
@@ -330,6 +354,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -366,6 +394,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -384,17 +415,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 65,
+            "target_count": 73,
             "values": {
-              "c3_rmsd": 2.216,
-              "rna_tm_score": 0.5760915384615385,
-              "heavy_atom_lddt": 0.7596769230769231,
-              "clashscore": 6.164923076923077
+              "c3_rmsd": 2.153972602739726,
+              "rna_tm_score": 0.5812021917808219,
+              "heavy_atom_lddt": 0.7548630136986302,
+              "clashscore": 5.966575342465753
             }
           }
         }
@@ -409,14 +441,14 @@
         "templates": "未使用"
       },
       "counts": {
-        "requested_count": 330,
-        "generated_count": 330,
-        "evaluated_count": 330
+        "requested_count": 370,
+        "generated_count": 370,
+        "evaluated_count": 370
       },
-      "actual_target_count": 66,
-      "target_count": 66,
+      "actual_target_count": 74,
+      "target_count": 74,
       "evaluated_candidate_count_distribution": {
-        "5": 66
+        "5": 74
       },
       "method_variant_ids": [
         "alphafold3-00c532b2579a69c6",
@@ -433,6 +465,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -470,6 +506,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -488,17 +527,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 66,
+            "target_count": 74,
             "values": {
-              "c3_rmsd": 2.918030303030303,
-              "rna_tm_score": 0.4782053636363636,
-              "heavy_atom_lddt": 0.6625,
-              "clashscore": 14.642606060606061
+              "c3_rmsd": 2.91472972972973,
+              "rna_tm_score": 0.4801937837837838,
+              "heavy_atom_lddt": 0.6661972972972973,
+              "clashscore": 14.985891891891892
             }
           },
           "common": {
@@ -510,6 +550,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -546,6 +590,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -564,17 +611,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 65,
+            "target_count": 73,
             "values": {
-              "c3_rmsd": 2.842984615384615,
-              "rna_tm_score": 0.4809333538461538,
-              "heavy_atom_lddt": 0.6666,
-              "clashscore": 14.395076923076923
+              "c3_rmsd": 2.84786301369863,
+              "rna_tm_score": 0.48265005479452056,
+              "heavy_atom_lddt": 0.6698986301369863,
+              "clashscore": 14.770191780821918
             }
           }
         },
@@ -588,6 +636,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -625,6 +677,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -643,17 +698,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 66,
+            "target_count": 74,
             "values": {
-              "c3_rmsd": 2.5912121212121213,
-              "rna_tm_score": 0.5145904545454545,
-              "heavy_atom_lddt": 0.6943333333333334,
-              "clashscore": 9.146060606060606
+              "c3_rmsd": 2.572837837837838,
+              "rna_tm_score": 0.5206306756756757,
+              "heavy_atom_lddt": 0.6990135135135135,
+              "clashscore": 9.007702702702703
             }
           },
           "common": {
@@ -665,6 +721,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -701,6 +761,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -719,17 +782,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 65,
+            "target_count": 73,
             "values": {
-              "c3_rmsd": 2.514923076923077,
-              "rna_tm_score": 0.5172872307692308,
-              "heavy_atom_lddt": 0.6986615384615384,
-              "clashscore": 8.953846153846154
+              "c3_rmsd": 2.5046575342465753,
+              "rna_tm_score": 0.5231146575342466,
+              "heavy_atom_lddt": 0.702931506849315,
+              "clashscore": 8.834657534246576
             }
           }
         }
@@ -744,14 +808,14 @@
         "templates": "未使用"
       },
       "counts": {
-        "requested_count": 330,
-        "generated_count": 330,
-        "evaluated_count": 330
+        "requested_count": 370,
+        "generated_count": 370,
+        "evaluated_count": 370
       },
-      "actual_target_count": 66,
-      "target_count": 66,
+      "actual_target_count": 74,
+      "target_count": 74,
       "evaluated_candidate_count_distribution": {
-        "5": 66
+        "5": 74
       },
       "method_variant_ids": [
         "boltz2-25781a97c5e1fa22",
@@ -768,6 +832,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -805,6 +873,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -823,17 +894,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 66,
+            "target_count": 74,
             "values": {
-              "c3_rmsd": 2.9113333333333333,
-              "rna_tm_score": 0.4378319393939394,
-              "heavy_atom_lddt": 0.6367212121212121,
-              "clashscore": 19.683666666666667
+              "c3_rmsd": 2.867864864864865,
+              "rna_tm_score": 0.4550295135135135,
+              "heavy_atom_lddt": 0.6474054054054054,
+              "clashscore": 19.145675675675676
             }
           },
           "common": {
@@ -845,6 +917,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -881,6 +957,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -899,17 +978,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 65,
+            "target_count": 73,
             "values": {
-              "c3_rmsd": 2.8326153846153845,
-              "rna_tm_score": 0.4405294153846154,
-              "heavy_atom_lddt": 0.6421723076923077,
-              "clashscore": 18.9176
+              "c3_rmsd": 2.7971780821917807,
+              "rna_tm_score": 0.4576669589041096,
+              "heavy_atom_lddt": 0.6524054794520548,
+              "clashscore": 18.456191780821918
             }
           }
         },
@@ -923,6 +1003,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -960,6 +1044,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -978,17 +1065,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 66,
+            "target_count": 74,
             "values": {
-              "c3_rmsd": 2.514090909090909,
-              "rna_tm_score": 0.47934272727272725,
-              "heavy_atom_lddt": 0.6735606060606061,
-              "clashscore": 13.888484848484849
+              "c3_rmsd": 2.4798648648648647,
+              "rna_tm_score": 0.498062027027027,
+              "heavy_atom_lddt": 0.6825270270270271,
+              "clashscore": 13.557837837837837
             }
           },
           "common": {
@@ -1000,6 +1088,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -1036,6 +1128,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -1054,17 +1149,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 65,
+            "target_count": 73,
             "values": {
-              "c3_rmsd": 2.4384615384615387,
-              "rna_tm_score": 0.48178615384615386,
-              "heavy_atom_lddt": 0.6794461538461538,
-              "clashscore": 13.196
+              "c3_rmsd": 2.412054794520548,
+              "rna_tm_score": 0.5004941095890411,
+              "heavy_atom_lddt": 0.6878904109589041,
+              "clashscore": 12.936712328767124
             }
           }
         }
@@ -1079,14 +1175,14 @@
         "templates": "未使用"
       },
       "counts": {
-        "requested_count": 330,
-        "generated_count": 330,
-        "evaluated_count": 330
+        "requested_count": 370,
+        "generated_count": 370,
+        "evaluated_count": 370
       },
-      "actual_target_count": 66,
-      "target_count": 66,
+      "actual_target_count": 74,
+      "target_count": 74,
       "evaluated_candidate_count_distribution": {
-        "5": 66
+        "5": 74
       },
       "method_variant_ids": [
         "nufold-5abb24a4c8712363",
@@ -1103,6 +1199,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -1140,6 +1240,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -1158,17 +1261,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 66,
+            "target_count": 74,
             "values": {
-              "c3_rmsd": 3.5862121212121214,
-              "rna_tm_score": 0.351243,
-              "heavy_atom_lddt": 0.44704242424242424,
-              "clashscore": 59.440969696969695
+              "c3_rmsd": 3.5824324324324324,
+              "rna_tm_score": 0.35473362162162164,
+              "heavy_atom_lddt": 0.4415108108108108,
+              "clashscore": 57.804162162162164
             }
           },
           "common": {
@@ -1180,6 +1284,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -1216,6 +1324,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -1234,17 +1345,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 65,
+            "target_count": 73,
             "values": {
-              "c3_rmsd": 3.5207384615384614,
-              "rna_tm_score": 0.35312953846153844,
-              "heavy_atom_lddt": 0.45288,
-              "clashscore": 57.24172307692308
+              "c3_rmsd": 3.524082191780822,
+              "rna_tm_score": 0.35646123287671233,
+              "heavy_atom_lddt": 0.44663287671232876,
+              "clashscore": 55.823506849315066
             }
           }
         },
@@ -1258,6 +1370,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -1295,6 +1411,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -1313,17 +1432,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 66,
+            "target_count": 74,
             "values": {
-              "c3_rmsd": 3.333939393939394,
-              "rna_tm_score": 0.3634477272727273,
-              "heavy_atom_lddt": 0.4668181818181818,
-              "clashscore": 51.45318181818182
+              "c3_rmsd": 3.3412162162162162,
+              "rna_tm_score": 0.3706021621621622,
+              "heavy_atom_lddt": 0.4643918918918919,
+              "clashscore": 49.43783783783784
             }
           },
           "common": {
@@ -1335,6 +1455,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -1371,6 +1495,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -1389,17 +1516,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 65,
+            "target_count": 73,
             "values": {
-              "c3_rmsd": 3.267846153846154,
-              "rna_tm_score": 0.36525,
-              "heavy_atom_lddt": 0.47281538461538464,
-              "clashscore": 49.32015384615384
+              "c3_rmsd": 3.2824657534246575,
+              "rna_tm_score": 0.3723049315068493,
+              "heavy_atom_lddt": 0.4696986301369863,
+              "clashscore": 47.510958904109586
             }
           }
         }
@@ -1414,14 +1542,14 @@
         "templates": "未使用"
       },
       "counts": {
-        "requested_count": 330,
-        "generated_count": 330,
-        "evaluated_count": 330
+        "requested_count": 370,
+        "generated_count": 370,
+        "evaluated_count": 370
       },
-      "actual_target_count": 66,
-      "target_count": 66,
+      "actual_target_count": 74,
+      "target_count": 74,
       "evaluated_candidate_count_distribution": {
-        "5": 66
+        "5": 74
       },
       "method_variant_ids": [
         "protenix-v2-da26ea22a45798f1",
@@ -1438,6 +1566,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -1475,6 +1607,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -1493,17 +1628,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 66,
+            "target_count": 74,
             "values": {
-              "c3_rmsd": 2.602969696969697,
-              "rna_tm_score": 0.5022076060606061,
-              "heavy_atom_lddt": 0.6855909090909091,
-              "clashscore": 10.560636363636364
+              "c3_rmsd": 2.5537027027027026,
+              "rna_tm_score": 0.5080283513513514,
+              "heavy_atom_lddt": 0.6907972972972973,
+              "clashscore": 10.354945945945946
             }
           },
           "common": {
@@ -1515,6 +1651,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -1551,6 +1691,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -1569,17 +1712,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 65,
+            "target_count": 73,
             "values": {
-              "c3_rmsd": 2.5656923076923075,
-              "rna_tm_score": 0.49712055384615383,
-              "heavy_atom_lddt": 0.6878492307692308,
-              "clashscore": 10.334953846153846
+              "c3_rmsd": 2.519835616438356,
+              "rna_tm_score": 0.5035785205479452,
+              "heavy_atom_lddt": 0.6928794520547945,
+              "clashscore": 10.15117808219178
             }
           }
         },
@@ -1593,6 +1737,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -1630,6 +1778,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -1648,17 +1799,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 66,
+            "target_count": 74,
             "values": {
-              "c3_rmsd": 2.265909090909091,
-              "rna_tm_score": 0.5304259090909091,
-              "heavy_atom_lddt": 0.7093030303030303,
-              "clashscore": 6.819393939393939
+              "c3_rmsd": 2.230810810810811,
+              "rna_tm_score": 0.5352898648648649,
+              "heavy_atom_lddt": 0.7134459459459459,
+              "clashscore": 6.671081081081081
             }
           },
           "common": {
@@ -1670,6 +1822,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -1706,6 +1862,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -1724,352 +1883,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 65,
+            "target_count": 73,
             "values": {
-              "c3_rmsd": 2.2266153846153847,
-              "rna_tm_score": 0.5255175384615385,
-              "heavy_atom_lddt": 0.7116461538461538,
-              "clashscore": 6.555538461538462
-            }
-          }
-        }
-      }
-    },
-    {
-      "tool_id": "protenix_base_20250630_v1.0.0",
-      "display_name": "Protenix base 20250630 v1.0.0",
-      "input_summary": {
-        "msa": "使用",
-        "secondary_structure": "未使用",
-        "templates": "未使用"
-      },
-      "counts": {
-        "requested_count": 330,
-        "generated_count": 330,
-        "evaluated_count": 330
-      },
-      "actual_target_count": 66,
-      "target_count": 66,
-      "evaluated_candidate_count_distribution": {
-        "5": 66
-      },
-      "method_variant_ids": [
-        "protenix_base_20250630_v1.0.0-64d73ba3ce196f83",
-        "protenix_base_20250630_v1.0.0-d0f4e9c72dcba0d9"
-      ],
-      "statistics": {
-        "mean": {
-          "available": {
-            "target_ids": [
-              "10zt_1_1_A",
-              "10zu_1_1_A",
-              "11ag_1_1_A",
-              "11eh_1_1_A",
-              "12aa_1_1_A",
-              "12ci_1_1_A",
-              "12cj_1_1_A",
-              "23jy_1_1_A",
-              "23ka_1_1_A",
-              "25sj_1_1_A",
-              "26hh_1_1_A",
-              "36ll_1_1_A",
-              "37cm_1_1_A",
-              "37so_1_1_A",
-              "38jc_1_1_A",
-              "38jc_1_2_B",
-              "38jd_1_3_C",
-              "9dkg_1_1_A",
-              "9j9x_1_1_A",
-              "9k9g_1_1_A",
-              "9k9j_1_1_A",
-              "9k9k_1_1_A",
-              "9l8f_1_1_A",
-              "9m6b_1_1_D",
-              "9m6c_1_1_A",
-              "9n3i_1_1_A",
-              "9na1_1_1_A",
-              "9na7_1_1_A",
-              "9nak_1_1_A",
-              "9nap_1_1_A",
-              "9nas_1_1_A",
-              "9ndd_1_1_A",
-              "9ndx_1_1_A",
-              "9owj_1_2_B",
-              "9owm_1_2_B",
-              "9own_1_2_B",
-              "9owq_1_1_A",
-              "9owq_1_2_B",
-              "9oy3_1_1_A",
-              "9oy4_1_1_A",
-              "9pde_1_1_A",
-              "9pdf_1_1_A",
-              "9pdg_1_1_A",
-              "9qtj_1_1_A",
-              "9qu6_1_1_A",
-              "9qu6_1_2_B",
-              "9s1d_1_1_A",
-              "9s1d_1_2_B",
-              "9s1d_1_3_C",
-              "9sy8_1_1_A",
-              "9syd_1_1_A",
-              "9tca_1_1_A",
-              "9tca_1_2_D",
-              "9uug_1_1_A",
-              "9v7o_1_1_A",
-              "9v7p_1_1_A",
-              "9v7q_1_1_A",
-              "9vmz_1_1_A",
-              "9vsn_1_1_A",
-              "9x21_1_1_A",
-              "9x6b_1_1_A",
-              "9ydi_1_1_A",
-              "9yx9_1_1_A",
-              "9yxa_1_1_A",
-              "9z6i_1_1_A",
-              "9zgq_1_1_A"
-            ],
-            "target_count": 66,
-            "values": {
-              "c3_rmsd": 2.570242424242424,
-              "rna_tm_score": 0.5346641212121213,
-              "heavy_atom_lddt": 0.6981151515151515,
-              "clashscore": 11.174787878787878
-            }
-          },
-          "common": {
-            "target_ids": [
-              "10zt_1_1_A",
-              "10zu_1_1_A",
-              "11ag_1_1_A",
-              "11eh_1_1_A",
-              "12aa_1_1_A",
-              "12ci_1_1_A",
-              "12cj_1_1_A",
-              "23jy_1_1_A",
-              "23ka_1_1_A",
-              "25sj_1_1_A",
-              "36ll_1_1_A",
-              "37cm_1_1_A",
-              "37so_1_1_A",
-              "38jc_1_1_A",
-              "38jc_1_2_B",
-              "38jd_1_3_C",
-              "9dkg_1_1_A",
-              "9j9x_1_1_A",
-              "9k9g_1_1_A",
-              "9k9j_1_1_A",
-              "9k9k_1_1_A",
-              "9l8f_1_1_A",
-              "9m6b_1_1_D",
-              "9m6c_1_1_A",
-              "9n3i_1_1_A",
-              "9na1_1_1_A",
-              "9na7_1_1_A",
-              "9nak_1_1_A",
-              "9nap_1_1_A",
-              "9nas_1_1_A",
-              "9ndd_1_1_A",
-              "9ndx_1_1_A",
-              "9owj_1_2_B",
-              "9owm_1_2_B",
-              "9own_1_2_B",
-              "9owq_1_1_A",
-              "9owq_1_2_B",
-              "9oy3_1_1_A",
-              "9oy4_1_1_A",
-              "9pde_1_1_A",
-              "9pdf_1_1_A",
-              "9pdg_1_1_A",
-              "9qtj_1_1_A",
-              "9qu6_1_1_A",
-              "9qu6_1_2_B",
-              "9s1d_1_1_A",
-              "9s1d_1_2_B",
-              "9s1d_1_3_C",
-              "9sy8_1_1_A",
-              "9syd_1_1_A",
-              "9tca_1_1_A",
-              "9tca_1_2_D",
-              "9uug_1_1_A",
-              "9v7o_1_1_A",
-              "9v7p_1_1_A",
-              "9v7q_1_1_A",
-              "9vmz_1_1_A",
-              "9vsn_1_1_A",
-              "9x21_1_1_A",
-              "9x6b_1_1_A",
-              "9ydi_1_1_A",
-              "9yx9_1_1_A",
-              "9yxa_1_1_A",
-              "9z6i_1_1_A",
-              "9zgq_1_1_A"
-            ],
-            "target_count": 65,
-            "values": {
-              "c3_rmsd": 2.5143692307692307,
-              "rna_tm_score": 0.5328127692307693,
-              "heavy_atom_lddt": 0.7015353846153846,
-              "clashscore": 10.9308
-            }
-          }
-        },
-        "best": {
-          "available": {
-            "target_ids": [
-              "10zt_1_1_A",
-              "10zu_1_1_A",
-              "11ag_1_1_A",
-              "11eh_1_1_A",
-              "12aa_1_1_A",
-              "12ci_1_1_A",
-              "12cj_1_1_A",
-              "23jy_1_1_A",
-              "23ka_1_1_A",
-              "25sj_1_1_A",
-              "26hh_1_1_A",
-              "36ll_1_1_A",
-              "37cm_1_1_A",
-              "37so_1_1_A",
-              "38jc_1_1_A",
-              "38jc_1_2_B",
-              "38jd_1_3_C",
-              "9dkg_1_1_A",
-              "9j9x_1_1_A",
-              "9k9g_1_1_A",
-              "9k9j_1_1_A",
-              "9k9k_1_1_A",
-              "9l8f_1_1_A",
-              "9m6b_1_1_D",
-              "9m6c_1_1_A",
-              "9n3i_1_1_A",
-              "9na1_1_1_A",
-              "9na7_1_1_A",
-              "9nak_1_1_A",
-              "9nap_1_1_A",
-              "9nas_1_1_A",
-              "9ndd_1_1_A",
-              "9ndx_1_1_A",
-              "9owj_1_2_B",
-              "9owm_1_2_B",
-              "9own_1_2_B",
-              "9owq_1_1_A",
-              "9owq_1_2_B",
-              "9oy3_1_1_A",
-              "9oy4_1_1_A",
-              "9pde_1_1_A",
-              "9pdf_1_1_A",
-              "9pdg_1_1_A",
-              "9qtj_1_1_A",
-              "9qu6_1_1_A",
-              "9qu6_1_2_B",
-              "9s1d_1_1_A",
-              "9s1d_1_2_B",
-              "9s1d_1_3_C",
-              "9sy8_1_1_A",
-              "9syd_1_1_A",
-              "9tca_1_1_A",
-              "9tca_1_2_D",
-              "9uug_1_1_A",
-              "9v7o_1_1_A",
-              "9v7p_1_1_A",
-              "9v7q_1_1_A",
-              "9vmz_1_1_A",
-              "9vsn_1_1_A",
-              "9x21_1_1_A",
-              "9x6b_1_1_A",
-              "9ydi_1_1_A",
-              "9yx9_1_1_A",
-              "9yxa_1_1_A",
-              "9z6i_1_1_A",
-              "9zgq_1_1_A"
-            ],
-            "target_count": 66,
-            "values": {
-              "c3_rmsd": 2.3096969696969696,
-              "rna_tm_score": 0.5651860606060606,
-              "heavy_atom_lddt": 0.7210454545454545,
-              "clashscore": 8.001212121212122
-            }
-          },
-          "common": {
-            "target_ids": [
-              "10zt_1_1_A",
-              "10zu_1_1_A",
-              "11ag_1_1_A",
-              "11eh_1_1_A",
-              "12aa_1_1_A",
-              "12ci_1_1_A",
-              "12cj_1_1_A",
-              "23jy_1_1_A",
-              "23ka_1_1_A",
-              "25sj_1_1_A",
-              "36ll_1_1_A",
-              "37cm_1_1_A",
-              "37so_1_1_A",
-              "38jc_1_1_A",
-              "38jc_1_2_B",
-              "38jd_1_3_C",
-              "9dkg_1_1_A",
-              "9j9x_1_1_A",
-              "9k9g_1_1_A",
-              "9k9j_1_1_A",
-              "9k9k_1_1_A",
-              "9l8f_1_1_A",
-              "9m6b_1_1_D",
-              "9m6c_1_1_A",
-              "9n3i_1_1_A",
-              "9na1_1_1_A",
-              "9na7_1_1_A",
-              "9nak_1_1_A",
-              "9nap_1_1_A",
-              "9nas_1_1_A",
-              "9ndd_1_1_A",
-              "9ndx_1_1_A",
-              "9owj_1_2_B",
-              "9owm_1_2_B",
-              "9own_1_2_B",
-              "9owq_1_1_A",
-              "9owq_1_2_B",
-              "9oy3_1_1_A",
-              "9oy4_1_1_A",
-              "9pde_1_1_A",
-              "9pdf_1_1_A",
-              "9pdg_1_1_A",
-              "9qtj_1_1_A",
-              "9qu6_1_1_A",
-              "9qu6_1_2_B",
-              "9s1d_1_1_A",
-              "9s1d_1_2_B",
-              "9s1d_1_3_C",
-              "9sy8_1_1_A",
-              "9syd_1_1_A",
-              "9tca_1_1_A",
-              "9tca_1_2_D",
-              "9uug_1_1_A",
-              "9v7o_1_1_A",
-              "9v7p_1_1_A",
-              "9v7q_1_1_A",
-              "9vmz_1_1_A",
-              "9vsn_1_1_A",
-              "9x21_1_1_A",
-              "9x6b_1_1_A",
-              "9ydi_1_1_A",
-              "9yx9_1_1_A",
-              "9yxa_1_1_A",
-              "9z6i_1_1_A",
-              "9zgq_1_1_A"
-            ],
-            "target_count": 65,
-            "values": {
-              "c3_rmsd": 2.2546153846153847,
-              "rna_tm_score": 0.5631701538461539,
-              "heavy_atom_lddt": 0.7246769230769231,
-              "clashscore": 7.751538461538462
+              "c3_rmsd": 2.195342465753425,
+              "rna_tm_score": 0.5309860273972603,
+              "heavy_atom_lddt": 0.7155890410958904,
+              "clashscore": 6.434109589041096
             }
           }
         }
@@ -2084,14 +1909,14 @@
         "templates": "未使用"
       },
       "counts": {
-        "requested_count": 330,
-        "generated_count": 330,
-        "evaluated_count": 330
+        "requested_count": 370,
+        "generated_count": 370,
+        "evaluated_count": 370
       },
-      "actual_target_count": 66,
-      "target_count": 66,
+      "actual_target_count": 74,
+      "target_count": 74,
       "evaluated_candidate_count_distribution": {
-        "5": 66
+        "5": 74
       },
       "method_variant_ids": [
         "protenix_base_default_v1.0.0-1dcf2a6f6fb262d0",
@@ -2108,6 +1933,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -2145,6 +1974,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -2163,17 +1995,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 66,
+            "target_count": 74,
             "values": {
-              "c3_rmsd": 2.768121212121212,
-              "rna_tm_score": 0.47950342424242426,
-              "heavy_atom_lddt": 0.6314606060606061,
-              "clashscore": 16.23909090909091
+              "c3_rmsd": 2.6869459459459457,
+              "rna_tm_score": 0.49358421621621623,
+              "heavy_atom_lddt": 0.6373540540540541,
+              "clashscore": 15.994810810810812
             }
           },
           "common": {
@@ -2185,6 +2018,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -2221,6 +2058,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -2239,17 +2079,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 65,
+            "target_count": 73,
             "values": {
-              "c3_rmsd": 2.6950153846153846,
-              "rna_tm_score": 0.4817144923076923,
-              "heavy_atom_lddt": 0.63468,
-              "clashscore": 15.996492307692307
+              "c3_rmsd": 2.6207397260273972,
+              "rna_tm_score": 0.4957458630136986,
+              "heavy_atom_lddt": 0.6403013698630137,
+              "clashscore": 15.77545205479452
             }
           }
         },
@@ -2263,6 +2104,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -2300,6 +2145,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -2318,17 +2166,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 66,
+            "target_count": 74,
             "values": {
-              "c3_rmsd": 2.444848484848485,
-              "rna_tm_score": 0.5104283333333334,
-              "heavy_atom_lddt": 0.6611818181818182,
-              "clashscore": 10.027121212121212
+              "c3_rmsd": 2.3725675675675677,
+              "rna_tm_score": 0.5268804054054054,
+              "heavy_atom_lddt": 0.6681351351351351,
+              "clashscore": 9.925405405405405
             }
           },
           "common": {
@@ -2340,6 +2189,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -2376,6 +2229,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -2394,17 +2250,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 65,
+            "target_count": 73,
             "values": {
-              "c3_rmsd": 2.374,
-              "rna_tm_score": 0.5128336923076923,
-              "heavy_atom_lddt": 0.664723076923077,
-              "clashscore": 9.835538461538462
+              "c3_rmsd": 2.3084931506849315,
+              "rna_tm_score": 0.5292475342465753,
+              "heavy_atom_lddt": 0.6713835616438356,
+              "clashscore": 9.753424657534246
             }
           }
         }
@@ -2419,15 +2276,15 @@
         "templates": "未使用"
       },
       "counts": {
-        "requested_count": 330,
-        "generated_count": 325,
-        "evaluated_count": 325
+        "requested_count": 370,
+        "generated_count": 365,
+        "evaluated_count": 365
       },
-      "actual_target_count": 66,
-      "target_count": 66,
+      "actual_target_count": 74,
+      "target_count": 74,
       "evaluated_candidate_count_distribution": {
         "0": 1,
-        "5": 65
+        "5": 73
       },
       "method_variant_ids": [
         "rhofoldplus-2add2c9359bc7bc6",
@@ -2446,6 +2303,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -2482,6 +2343,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -2500,17 +2364,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 65,
+            "target_count": 73,
             "values": {
-              "c3_rmsd": 3.534123076923077,
-              "rna_tm_score": 0.3285973846153846,
-              "heavy_atom_lddt": 0.4874,
-              "clashscore": 51.601261538461536
+              "c3_rmsd": 3.498904109589041,
+              "rna_tm_score": 0.3364194794520548,
+              "heavy_atom_lddt": 0.4810109589041096,
+              "clashscore": 57.682
             }
           },
           "common": {
@@ -2522,6 +2387,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -2558,6 +2427,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -2576,17 +2448,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 65,
+            "target_count": 73,
             "values": {
-              "c3_rmsd": 3.534123076923077,
-              "rna_tm_score": 0.3285973846153846,
-              "heavy_atom_lddt": 0.4874,
-              "clashscore": 51.601261538461536
+              "c3_rmsd": 3.498904109589041,
+              "rna_tm_score": 0.3364194794520548,
+              "heavy_atom_lddt": 0.4810109589041096,
+              "clashscore": 57.682
             }
           }
         },
@@ -2600,6 +2473,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -2636,6 +2513,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -2654,17 +2534,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 65,
+            "target_count": 73,
             "values": {
-              "c3_rmsd": 3.3256923076923077,
-              "rna_tm_score": 0.34812461538461537,
-              "heavy_atom_lddt": 0.5153076923076924,
-              "clashscore": 23.666923076923077
+              "c3_rmsd": 3.294109589041096,
+              "rna_tm_score": 0.3569454794520548,
+              "heavy_atom_lddt": 0.5067945205479452,
+              "clashscore": 21.284246575342465
             }
           },
           "common": {
@@ -2676,6 +2557,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -2712,6 +2597,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -2730,17 +2618,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 65,
+            "target_count": 73,
             "values": {
-              "c3_rmsd": 3.3256923076923077,
-              "rna_tm_score": 0.34812461538461537,
-              "heavy_atom_lddt": 0.5153076923076924,
-              "clashscore": 23.666923076923077
+              "c3_rmsd": 3.294109589041096,
+              "rna_tm_score": 0.3569454794520548,
+              "heavy_atom_lddt": 0.5067945205479452,
+              "clashscore": 21.284246575342465
             }
           }
         }
@@ -2755,14 +2644,14 @@
         "templates": "未使用"
       },
       "counts": {
-        "requested_count": 330,
-        "generated_count": 330,
-        "evaluated_count": 330
+        "requested_count": 370,
+        "generated_count": 370,
+        "evaluated_count": 370
       },
-      "actual_target_count": 66,
-      "target_count": 66,
+      "actual_target_count": 74,
+      "target_count": 74,
       "evaluated_candidate_count_distribution": {
-        "5": 66
+        "5": 74
       },
       "method_variant_ids": [
         "rosettafold3-028f2ef45b460df0",
@@ -2780,6 +2669,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -2817,6 +2710,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -2835,17 +2731,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 66,
+            "target_count": 74,
             "values": {
-              "c3_rmsd": 2.8963636363636365,
-              "rna_tm_score": 0.43807854545454544,
-              "heavy_atom_lddt": 0.5605393939393939,
-              "clashscore": 31.662454545454544
+              "c3_rmsd": 2.9075945945945945,
+              "rna_tm_score": 0.4441397297297297,
+              "heavy_atom_lddt": 0.5677108108108108,
+              "clashscore": 31.30116216216216
             }
           },
           "common": {
@@ -2857,6 +2754,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -2893,6 +2794,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -2911,17 +2815,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 65,
+            "target_count": 73,
             "values": {
-              "c3_rmsd": 2.820892307692308,
-              "rna_tm_score": 0.4416990769230769,
-              "heavy_atom_lddt": 0.5654092307692308,
-              "clashscore": 30.80910769230769
+              "c3_rmsd": 2.8405479452054796,
+              "rna_tm_score": 0.4474465205479452,
+              "heavy_atom_lddt": 0.572145205479452,
+              "clashscore": 30.536383561643834
             }
           }
         },
@@ -2935,6 +2840,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -2972,6 +2881,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -2990,17 +2902,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 66,
+            "target_count": 74,
             "values": {
-              "c3_rmsd": 2.5672727272727274,
-              "rna_tm_score": 0.46824651515151516,
-              "heavy_atom_lddt": 0.6095454545454545,
-              "clashscore": 22.027878787878787
+              "c3_rmsd": 2.5574324324324325,
+              "rna_tm_score": 0.478032972972973,
+              "heavy_atom_lddt": 0.6168918918918919,
+              "clashscore": 21.96743243243243
             }
           },
           "common": {
@@ -3012,6 +2925,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -3048,6 +2965,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -3066,17 +2986,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 65,
+            "target_count": 73,
             "values": {
-              "c3_rmsd": 2.498153846153846,
-              "rna_tm_score": 0.4720427692307692,
-              "heavy_atom_lddt": 0.6148307692307692,
-              "clashscore": 21.154615384615386
+              "c3_rmsd": 2.495753424657534,
+              "rna_tm_score": 0.4815472602739726,
+              "heavy_atom_lddt": 0.6216986301369863,
+              "clashscore": 21.18904109589041
             }
           }
         }
@@ -3091,14 +3012,14 @@
         "templates": "未使用"
       },
       "counts": {
-        "requested_count": 330,
-        "generated_count": 330,
-        "evaluated_count": 330
+        "requested_count": 370,
+        "generated_count": 370,
+        "evaluated_count": 370
       },
-      "actual_target_count": 66,
-      "target_count": 66,
+      "actual_target_count": 74,
+      "target_count": 74,
       "evaluated_candidate_count_distribution": {
-        "5": 66
+        "5": 74
       },
       "method_variant_ids": [
         "trrosettarna2-18a7024f1db66c56",
@@ -3115,6 +3036,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -3152,6 +3077,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -3170,17 +3098,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 66,
+            "target_count": 74,
             "values": {
-              "c3_rmsd": 2.9136060606060608,
-              "rna_tm_score": 0.4592370303030303,
-              "heavy_atom_lddt": 0.6082242424242424,
-              "clashscore": 3.6066969696969697
+              "c3_rmsd": 2.9114594594594596,
+              "rna_tm_score": 0.45970005405405406,
+              "heavy_atom_lddt": 0.6089378378378378,
+              "clashscore": 3.5127027027027027
             }
           },
           "common": {
@@ -3192,6 +3121,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -3228,6 +3161,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -3246,17 +3182,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 65,
+            "target_count": 73,
             "values": {
-              "c3_rmsd": 2.8284615384615384,
-              "rna_tm_score": 0.4629685538461539,
-              "heavy_atom_lddt": 0.6161938461538462,
-              "clashscore": 2.305476923076923
+              "c3_rmsd": 2.835616438356164,
+              "rna_tm_score": 0.46302898630136985,
+              "heavy_atom_lddt": 0.6160438356164384,
+              "clashscore": 2.352794520547945
             }
           }
         },
@@ -3270,6 +3207,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -3307,6 +3248,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -3325,17 +3269,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 66,
+            "target_count": 74,
             "values": {
-              "c3_rmsd": 2.628030303030303,
-              "rna_tm_score": 0.48029075757575757,
-              "heavy_atom_lddt": 0.6255454545454545,
-              "clashscore": 1.8389393939393939
+              "c3_rmsd": 2.639189189189189,
+              "rna_tm_score": 0.48099000000000003,
+              "heavy_atom_lddt": 0.6262432432432432,
+              "clashscore": 1.7798648648648647
             }
           },
           "common": {
@@ -3347,6 +3292,10 @@
               "12aa_1_1_A",
               "12ci_1_1_A",
               "12cj_1_1_A",
+              "22mt_1_1_A",
+              "22mw_1_1_A",
+              "22mx_1_1_A",
+              "22mz_1_1_A",
               "23jy_1_1_A",
               "23ka_1_1_A",
               "25sj_1_1_A",
@@ -3383,6 +3332,9 @@
               "9pdf_1_1_A",
               "9pdg_1_1_A",
               "9qtj_1_1_A",
+              "9qtk_1_2_B",
+              "9qtw_1_1_A",
+              "9qu0_1_2_B",
               "9qu6_1_1_A",
               "9qu6_1_2_B",
               "9s1d_1_1_A",
@@ -3401,17 +3353,18 @@
               "9x21_1_1_A",
               "9x6b_1_1_A",
               "9ydi_1_1_A",
+              "9yn7_1_1_A",
               "9yx9_1_1_A",
               "9yxa_1_1_A",
               "9z6i_1_1_A",
               "9zgq_1_1_A"
             ],
-            "target_count": 65,
+            "target_count": 73,
             "values": {
-              "c3_rmsd": 2.5424615384615383,
-              "rna_tm_score": 0.4840063076923077,
-              "heavy_atom_lddt": 0.6336461538461539,
-              "clashscore": 0.7224615384615385
+              "c3_rmsd": 2.563150684931507,
+              "rna_tm_score": 0.48430794520547943,
+              "heavy_atom_lddt": 0.6334657534246575,
+              "clashscore": 0.784931506849315
             }
           }
         }
@@ -3551,6 +3504,82 @@
       },
       "reference_url": "references/12cj_1_1_A.cif",
       "detail_url": "targets/12cj_1_1_A.json"
+    },
+    {
+      "target_id": "22mt_1_1_A",
+      "pdb_id": "22MT",
+      "length": 77,
+      "release_date": "2026-10-21",
+      "eligible": true,
+      "input_issue": null,
+      "assembly": {
+        "assembly_id": null,
+        "assembly_label": "ASU_chain",
+        "assembly_oligomeric_count": null,
+        "assembly_note": "Extracted asymmetric-unit RNA chain; not a biological monomer classification",
+        "label_asym_id": "A",
+        "source_rna_chain_count": null,
+        "source_rna_entity_count": null
+      },
+      "reference_url": "references/22mt_1_1_A.cif",
+      "detail_url": "targets/22mt_1_1_A.json"
+    },
+    {
+      "target_id": "22mw_1_1_A",
+      "pdb_id": "22MW",
+      "length": 76,
+      "release_date": "2026-10-21",
+      "eligible": true,
+      "input_issue": null,
+      "assembly": {
+        "assembly_id": null,
+        "assembly_label": "ASU_chain",
+        "assembly_oligomeric_count": null,
+        "assembly_note": "Extracted asymmetric-unit RNA chain; not a biological monomer classification",
+        "label_asym_id": "A",
+        "source_rna_chain_count": null,
+        "source_rna_entity_count": null
+      },
+      "reference_url": "references/22mw_1_1_A.cif",
+      "detail_url": "targets/22mw_1_1_A.json"
+    },
+    {
+      "target_id": "22mx_1_1_A",
+      "pdb_id": "22MX",
+      "length": 77,
+      "release_date": "2026-10-21",
+      "eligible": true,
+      "input_issue": null,
+      "assembly": {
+        "assembly_id": null,
+        "assembly_label": "ASU_chain",
+        "assembly_oligomeric_count": null,
+        "assembly_note": "Extracted asymmetric-unit RNA chain; not a biological monomer classification",
+        "label_asym_id": "A",
+        "source_rna_chain_count": null,
+        "source_rna_entity_count": null
+      },
+      "reference_url": "references/22mx_1_1_A.cif",
+      "detail_url": "targets/22mx_1_1_A.json"
+    },
+    {
+      "target_id": "22mz_1_1_A",
+      "pdb_id": "22MZ",
+      "length": 76,
+      "release_date": "2026-10-21",
+      "eligible": true,
+      "input_issue": null,
+      "assembly": {
+        "assembly_id": null,
+        "assembly_label": "ASU_chain",
+        "assembly_oligomeric_count": null,
+        "assembly_note": "Extracted asymmetric-unit RNA chain; not a biological monomer classification",
+        "label_asym_id": "A",
+        "source_rna_chain_count": null,
+        "source_rna_entity_count": null
+      },
+      "reference_url": "references/22mz_1_1_A.cif",
+      "detail_url": "targets/22mz_1_1_A.json"
     },
     {
       "target_id": "23jy_1_1_A",
@@ -4256,6 +4285,63 @@
       "detail_url": "targets/9qtj_1_1_A.json"
     },
     {
+      "target_id": "9qtk_1_2_B",
+      "pdb_id": "9QTK",
+      "length": 6,
+      "release_date": "2026-10-21",
+      "eligible": true,
+      "input_issue": null,
+      "assembly": {
+        "assembly_id": null,
+        "assembly_label": "ASU_chain",
+        "assembly_oligomeric_count": null,
+        "assembly_note": "Extracted asymmetric-unit RNA chain; not a biological monomer classification",
+        "label_asym_id": "B",
+        "source_rna_chain_count": null,
+        "source_rna_entity_count": null
+      },
+      "reference_url": "references/9qtk_1_2_B.cif",
+      "detail_url": "targets/9qtk_1_2_B.json"
+    },
+    {
+      "target_id": "9qtw_1_1_A",
+      "pdb_id": "9QTW",
+      "length": 396,
+      "release_date": "2026-10-21",
+      "eligible": true,
+      "input_issue": null,
+      "assembly": {
+        "assembly_id": null,
+        "assembly_label": "ASU_chain",
+        "assembly_oligomeric_count": null,
+        "assembly_note": "Extracted asymmetric-unit RNA chain; not a biological monomer classification",
+        "label_asym_id": "A",
+        "source_rna_chain_count": null,
+        "source_rna_entity_count": null
+      },
+      "reference_url": "references/9qtw_1_1_A.cif",
+      "detail_url": "targets/9qtw_1_1_A.json"
+    },
+    {
+      "target_id": "9qu0_1_2_B",
+      "pdb_id": "9QU0",
+      "length": 5,
+      "release_date": "2026-10-21",
+      "eligible": true,
+      "input_issue": null,
+      "assembly": {
+        "assembly_id": null,
+        "assembly_label": "ASU_chain",
+        "assembly_oligomeric_count": null,
+        "assembly_note": "Extracted asymmetric-unit RNA chain; not a biological monomer classification",
+        "label_asym_id": "B",
+        "source_rna_chain_count": null,
+        "source_rna_entity_count": null
+      },
+      "reference_url": "references/9qu0_1_2_B.cif",
+      "detail_url": "targets/9qu0_1_2_B.json"
+    },
+    {
       "target_id": "9qu6_1_1_A",
       "pdb_id": "9QU6",
       "length": 396,
@@ -4596,6 +4682,25 @@
       },
       "reference_url": "references/9ydi_1_1_A.cif",
       "detail_url": "targets/9ydi_1_1_A.json"
+    },
+    {
+      "target_id": "9yn7_1_1_A",
+      "pdb_id": "9YN7",
+      "length": 242,
+      "release_date": "2026-10-14",
+      "eligible": true,
+      "input_issue": null,
+      "assembly": {
+        "assembly_id": null,
+        "assembly_label": "ASU_chain",
+        "assembly_oligomeric_count": null,
+        "assembly_note": "Extracted asymmetric-unit RNA chain; not a biological monomer classification",
+        "label_asym_id": "A",
+        "source_rna_chain_count": null,
+        "source_rna_entity_count": null
+      },
+      "reference_url": "references/9yn7_1_1_A.cif",
+      "detail_url": "targets/9yn7_1_1_A.json"
     },
     {
       "target_id": "9yx9_1_1_A",

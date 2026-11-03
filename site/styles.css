@@ -20,6 +20,7 @@
  .coverage-note { margin:0; padding:10px 21px; border-bottom:1px solid var(--line); color:var(--ink-2); font-size:11px; }
  .news-title { font-size:22px; margin:0 0 18px; }
  .news-entry { padding:clamp(16px,3vw,32px); }
+ .news-entry + .news-entry { margin-top:24px; }
  .news-entry time { color:var(--brand); font:12px var(--mono); }
  .news-entry h3 { margin:10px 0 20px; font-size:clamp(19px,2vw,26px); line-height:1.4; }
  .news-entry p { color:var(--ink-2); line-height:1.85; max-width:950px; }

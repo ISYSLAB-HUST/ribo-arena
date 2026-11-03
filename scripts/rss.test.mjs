@@ -42,6 +42,25 @@ test("unchanged rebuilds keep GUIDs, publication dates, and feed bytes stable", 
   assert.equal(snapshotOf(reordered).id, current.id);
 });
 
+test("November update retains history and reports 8 added targets and the Boltz-2 rank change", () => {
+  const index = history.findIndex((snapshot) => snapshot.generated_at.startsWith("2026-10-30T"));
+  assert.ok(index > 0);
+  const snapshot = history[index];
+  assert.equal(snapshot.targets.length, 74);
+  assert.equal(snapshot.methods.reduce((sum, method) => sum + method.evaluated, 0), 3325);
+  assert.equal(snapshot.methods.find((method) => method.id === "rhofoldplus").coverage, 73);
+  const feed = buildRss(snapshot, history.slice(0, index + 1));
+  assert.equal((feed.match(/<item>/g) || []).length, 2);
+  assert.ok(feed.includes("74 RNA targets, 8 new targets"));
+  assert.ok(feed.includes("+360 structures"));
+  assert.match(feed, /Boltz-2: 0\.4550; rank 7 → 6/);
+  assert.match(feed, /RoseTTAFold3: 0\.4441; rank 6 → 7/);
+  const previous = new Set(history[index - 1].targets.map((target) => target.target_id));
+  const additions = snapshot.targets.filter((target) => !previous.has(target.target_id));
+  assert.equal(additions.length, 8);
+  additions.forEach((target) => assert.ok(feed.includes(target.target_id)));
+});
+
 test("future snapshots retain earlier entries and compare against the latest archive", () => {
   const future = structuredClone(raw);
   future.generated_at = new Date(Date.parse(history.at(-1).published_at || current.generated_at) + 7 * 86400000).toISOString();

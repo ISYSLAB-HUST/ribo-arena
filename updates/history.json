@@ -1006,5 +1006,566 @@
       }
     ],
     "published_at": "2026-10-12T00:00:00+08:00"
+  },
+  {
+    "id": "b695f3af5626f8678b725ec787e558d4a4a186e2d48a1e2d14d3a6185a027386",
+    "generated_at": "2026-10-30T09:35:55.183929+00:00",
+    "targets": [
+      {
+        "target_id": "10zt_1_1_A",
+        "pdb_id": "10ZT",
+        "length": 519,
+        "release_date": "2026-05-27"
+      },
+      {
+        "target_id": "10zu_1_1_A",
+        "pdb_id": "10ZU",
+        "length": 518,
+        "release_date": "2026-05-27"
+      },
+      {
+        "target_id": "11ag_1_1_A",
+        "pdb_id": "11AG",
+        "length": 518,
+        "release_date": "2026-05-27"
+      },
+      {
+        "target_id": "11eh_1_1_A",
+        "pdb_id": "11EH",
+        "length": 519,
+        "release_date": "2026-05-27"
+      },
+      {
+        "target_id": "12aa_1_1_A",
+        "pdb_id": "12AA",
+        "length": 13,
+        "release_date": "2026-10-07"
+      },
+      {
+        "target_id": "12ci_1_1_A",
+        "pdb_id": "12CI",
+        "length": 82,
+        "release_date": "2026-05-13"
+      },
+      {
+        "target_id": "12cj_1_1_A",
+        "pdb_id": "12CJ",
+        "length": 77,
+        "release_date": "2026-05-13"
+      },
+      {
+        "target_id": "22mt_1_1_A",
+        "pdb_id": "22MT",
+        "length": 77,
+        "release_date": "2026-10-21"
+      },
+      {
+        "target_id": "22mw_1_1_A",
+        "pdb_id": "22MW",
+        "length": 76,
+        "release_date": "2026-10-21"
+      },
+      {
+        "target_id": "22mx_1_1_A",
+        "pdb_id": "22MX",
+        "length": 77,
+        "release_date": "2026-10-21"
+      },
+      {
+        "target_id": "22mz_1_1_A",
+        "pdb_id": "22MZ",
+        "length": 76,
+        "release_date": "2026-10-21"
+      },
+      {
+        "target_id": "23jy_1_1_A",
+        "pdb_id": "23JY",
+        "length": 22,
+        "release_date": "2026-05-06"
+      },
+      {
+        "target_id": "23ka_1_1_A",
+        "pdb_id": "23KA",
+        "length": 35,
+        "release_date": "2026-05-06"
+      },
+      {
+        "target_id": "25sj_1_1_A",
+        "pdb_id": "25SJ",
+        "length": 8,
+        "release_date": "2026-04-29"
+      },
+      {
+        "target_id": "26hh_1_1_A",
+        "pdb_id": "26HH",
+        "length": 932,
+        "release_date": "2026-09-30"
+      },
+      {
+        "target_id": "36ll_1_1_A",
+        "pdb_id": "36LL",
+        "length": 16,
+        "release_date": "2026-07-01"
+      },
+      {
+        "target_id": "37cm_1_1_A",
+        "pdb_id": "37CM",
+        "length": 76,
+        "release_date": "2026-08-05"
+      },
+      {
+        "target_id": "37so_1_1_A",
+        "pdb_id": "37SO",
+        "length": 602,
+        "release_date": "2026-08-19"
+      },
+      {
+        "target_id": "38jc_1_1_A",
+        "pdb_id": "38JC",
+        "length": 194,
+        "release_date": "2026-09-09"
+      },
+      {
+        "target_id": "38jc_1_2_B",
+        "pdb_id": "38JC",
+        "length": 20,
+        "release_date": "2026-09-09"
+      },
+      {
+        "target_id": "38jd_1_3_C",
+        "pdb_id": "38JD",
+        "length": 42,
+        "release_date": "2026-09-09"
+      },
+      {
+        "target_id": "9dkg_1_1_A",
+        "pdb_id": "9DKG",
+        "length": 13,
+        "release_date": "2026-04-08"
+      },
+      {
+        "target_id": "9j9x_1_1_A",
+        "pdb_id": "9J9X",
+        "length": 382,
+        "release_date": "2026-03-04"
+      },
+      {
+        "target_id": "9k9g_1_1_A",
+        "pdb_id": "9K9G",
+        "length": 334,
+        "release_date": "2026-04-22"
+      },
+      {
+        "target_id": "9k9j_1_1_A",
+        "pdb_id": "9K9J",
+        "length": 251,
+        "release_date": "2026-04-22"
+      },
+      {
+        "target_id": "9k9k_1_1_A",
+        "pdb_id": "9K9K",
+        "length": 249,
+        "release_date": "2026-04-22"
+      },
+      {
+        "target_id": "9l8f_1_1_A",
+        "pdb_id": "9L8F",
+        "length": 57,
+        "release_date": "2026-07-01"
+      },
+      {
+        "target_id": "9m6b_1_1_D",
+        "pdb_id": "9M6B",
+        "length": 42,
+        "release_date": "2026-09-16"
+      },
+      {
+        "target_id": "9m6c_1_1_A",
+        "pdb_id": "9M6C",
+        "length": 32,
+        "release_date": "2026-09-23"
+      },
+      {
+        "target_id": "9n3i_1_1_A",
+        "pdb_id": "9N3I",
+        "length": 235,
+        "release_date": "2026-07-29"
+      },
+      {
+        "target_id": "9na1_1_1_A",
+        "pdb_id": "9NA1",
+        "length": 99,
+        "release_date": "2026-03-04"
+      },
+      {
+        "target_id": "9na7_1_1_A",
+        "pdb_id": "9NA7",
+        "length": 99,
+        "release_date": "2026-03-04"
+      },
+      {
+        "target_id": "9nak_1_1_A",
+        "pdb_id": "9NAK",
+        "length": 168,
+        "release_date": "2026-03-04"
+      },
+      {
+        "target_id": "9nap_1_1_A",
+        "pdb_id": "9NAP",
+        "length": 129,
+        "release_date": "2026-03-04"
+      },
+      {
+        "target_id": "9nas_1_1_A",
+        "pdb_id": "9NAS",
+        "length": 113,
+        "release_date": "2026-03-04"
+      },
+      {
+        "target_id": "9ndd_1_1_A",
+        "pdb_id": "9NDD",
+        "length": 160,
+        "release_date": "2026-03-04"
+      },
+      {
+        "target_id": "9ndx_1_1_A",
+        "pdb_id": "9NDX",
+        "length": 166,
+        "release_date": "2026-03-04"
+      },
+      {
+        "target_id": "9owj_1_2_B",
+        "pdb_id": "9OWJ",
+        "length": 92,
+        "release_date": "2026-05-20"
+      },
+      {
+        "target_id": "9owm_1_2_B",
+        "pdb_id": "9OWM",
+        "length": 75,
+        "release_date": "2026-05-20"
+      },
+      {
+        "target_id": "9own_1_2_B",
+        "pdb_id": "9OWN",
+        "length": 92,
+        "release_date": "2026-05-06"
+      },
+      {
+        "target_id": "9owq_1_1_A",
+        "pdb_id": "9OWQ",
+        "length": 417,
+        "release_date": "2026-05-06"
+      },
+      {
+        "target_id": "9owq_1_2_B",
+        "pdb_id": "9OWQ",
+        "length": 112,
+        "release_date": "2026-05-06"
+      },
+      {
+        "target_id": "9oy3_1_1_A",
+        "pdb_id": "9OY3",
+        "length": 417,
+        "release_date": "2026-05-20"
+      },
+      {
+        "target_id": "9oy4_1_1_A",
+        "pdb_id": "9OY4",
+        "length": 417,
+        "release_date": "2026-05-20"
+      },
+      {
+        "target_id": "9pde_1_1_A",
+        "pdb_id": "9PDE",
+        "length": 29,
+        "release_date": "2026-02-04"
+      },
+      {
+        "target_id": "9pdf_1_1_A",
+        "pdb_id": "9PDF",
+        "length": 29,
+        "release_date": "2026-02-04"
+      },
+      {
+        "target_id": "9pdg_1_1_A",
+        "pdb_id": "9PDG",
+        "length": 29,
+        "release_date": "2026-02-04"
+      },
+      {
+        "target_id": "9qtj_1_1_A",
+        "pdb_id": "9QTJ",
+        "length": 481,
+        "release_date": "2026-02-18"
+      },
+      {
+        "target_id": "9qtk_1_2_B",
+        "pdb_id": "9QTK",
+        "length": 6,
+        "release_date": "2026-10-21"
+      },
+      {
+        "target_id": "9qtw_1_1_A",
+        "pdb_id": "9QTW",
+        "length": 396,
+        "release_date": "2026-10-21"
+      },
+      {
+        "target_id": "9qu0_1_2_B",
+        "pdb_id": "9QU0",
+        "length": 5,
+        "release_date": "2026-10-21"
+      },
+      {
+        "target_id": "9qu6_1_1_A",
+        "pdb_id": "9QU6",
+        "length": 396,
+        "release_date": "2026-02-25"
+      },
+      {
+        "target_id": "9qu6_1_2_B",
+        "pdb_id": "9QU6",
+        "length": 5,
+        "release_date": "2026-02-25"
+      },
+      {
+        "target_id": "9s1d_1_1_A",
+        "pdb_id": "9S1D",
+        "length": 14,
+        "release_date": "2026-07-22"
+      },
+      {
+        "target_id": "9s1d_1_2_B",
+        "pdb_id": "9S1D",
+        "length": 24,
+        "release_date": "2026-07-22"
+      },
+      {
+        "target_id": "9s1d_1_3_C",
+        "pdb_id": "9S1D",
+        "length": 24,
+        "release_date": "2026-07-22"
+      },
+      {
+        "target_id": "9sy8_1_1_A",
+        "pdb_id": "9SY8",
+        "length": 14,
+        "release_date": "2026-06-24"
+      },
+      {
+        "target_id": "9syd_1_1_A",
+        "pdb_id": "9SYD",
+        "length": 14,
+        "release_date": "2026-06-24"
+      },
+      {
+        "target_id": "9tca_1_1_A",
+        "pdb_id": "9TCA",
+        "length": 5,
+        "release_date": "2026-02-11"
+      },
+      {
+        "target_id": "9tca_1_2_D",
+        "pdb_id": "9TCA",
+        "length": 10,
+        "release_date": "2026-02-11"
+      },
+      {
+        "target_id": "9uug_1_1_A",
+        "pdb_id": "9UUG",
+        "length": 59,
+        "release_date": "2026-06-10"
+      },
+      {
+        "target_id": "9v7o_1_1_A",
+        "pdb_id": "9V7O",
+        "length": 284,
+        "release_date": "2026-03-25"
+      },
+      {
+        "target_id": "9v7p_1_1_A",
+        "pdb_id": "9V7P",
+        "length": 207,
+        "release_date": "2026-03-25"
+      },
+      {
+        "target_id": "9v7q_1_1_A",
+        "pdb_id": "9V7Q",
+        "length": 203,
+        "release_date": "2026-03-25"
+      },
+      {
+        "target_id": "9vmz_1_1_A",
+        "pdb_id": "9VMZ",
+        "length": 49,
+        "release_date": "2026-07-01"
+      },
+      {
+        "target_id": "9vsn_1_1_A",
+        "pdb_id": "9VSN",
+        "length": 23,
+        "release_date": "2026-05-20"
+      },
+      {
+        "target_id": "9x21_1_1_A",
+        "pdb_id": "9X21",
+        "length": 381,
+        "release_date": "2026-10-07"
+      },
+      {
+        "target_id": "9x6b_1_1_A",
+        "pdb_id": "9X6B",
+        "length": 201,
+        "release_date": "2026-03-25"
+      },
+      {
+        "target_id": "9ydi_1_1_A",
+        "pdb_id": "9YDI",
+        "length": 12,
+        "release_date": "2026-08-05"
+      },
+      {
+        "target_id": "9yn7_1_1_A",
+        "pdb_id": "9YN7",
+        "length": 242,
+        "release_date": "2026-10-14"
+      },
+      {
+        "target_id": "9yx9_1_1_A",
+        "pdb_id": "9YX9",
+        "length": 124,
+        "release_date": "2026-09-02"
+      },
+      {
+        "target_id": "9yxa_1_1_A",
+        "pdb_id": "9YXA",
+        "length": 127,
+        "release_date": "2026-08-26"
+      },
+      {
+        "target_id": "9z6i_1_1_A",
+        "pdb_id": "9Z6I",
+        "length": 155,
+        "release_date": "2026-05-27"
+      },
+      {
+        "target_id": "9zgq_1_1_A",
+        "pdb_id": "9ZGQ",
+        "length": 417,
+        "release_date": "2026-05-13"
+      }
+    ],
+    "methods": [
+      {
+        "id": "alphafold3",
+        "name": "AlphaFold3",
+        "evaluated": 370,
+        "coverage": 74,
+        "metrics": {
+          "c3_rmsd": 2.91472972972973,
+          "rna_tm_score": 0.4801937837837838,
+          "heavy_atom_lddt": 0.6661972972972973,
+          "clashscore": 14.985891891891892
+        }
+      },
+      {
+        "id": "boltz2",
+        "name": "Boltz-2",
+        "evaluated": 370,
+        "coverage": 74,
+        "metrics": {
+          "c3_rmsd": 2.867864864864865,
+          "rna_tm_score": 0.4550295135135135,
+          "heavy_atom_lddt": 0.6474054054054054,
+          "clashscore": 19.145675675675676
+        }
+      },
+      {
+        "id": "MetaFold-RNA3d",
+        "name": "MetaFold-RNA3d",
+        "evaluated": 370,
+        "coverage": 74,
+        "metrics": {
+          "c3_rmsd": 2.3885945945945948,
+          "rna_tm_score": 0.5636203783783784,
+          "heavy_atom_lddt": 0.7366783783783784,
+          "clashscore": 9.79372972972973
+        }
+      },
+      {
+        "id": "nufold",
+        "name": "NuFold",
+        "evaluated": 370,
+        "coverage": 74,
+        "metrics": {
+          "c3_rmsd": 3.5824324324324324,
+          "rna_tm_score": 0.35473362162162164,
+          "heavy_atom_lddt": 0.4415108108108108,
+          "clashscore": 57.804162162162164
+        }
+      },
+      {
+        "id": "protenix_base_default_v1.0.0",
+        "name": "Protenix base default v1.0.0",
+        "evaluated": 370,
+        "coverage": 74,
+        "metrics": {
+          "c3_rmsd": 2.6869459459459457,
+          "rna_tm_score": 0.49358421621621623,
+          "heavy_atom_lddt": 0.6373540540540541,
+          "clashscore": 15.994810810810812
+        }
+      },
+      {
+        "id": "protenix-v2",
+        "name": "Protenix v2",
+        "evaluated": 370,
+        "coverage": 74,
+        "metrics": {
+          "c3_rmsd": 2.5537027027027026,
+          "rna_tm_score": 0.5080283513513514,
+          "heavy_atom_lddt": 0.6907972972972973,
+          "clashscore": 10.354945945945946
+        }
+      },
+      {
+        "id": "rhofoldplus",
+        "name": "RhoFold+",
+        "evaluated": 365,
+        "coverage": 73,
+        "metrics": {
+          "c3_rmsd": 3.498904109589041,
+          "rna_tm_score": 0.3364194794520548,
+          "heavy_atom_lddt": 0.4810109589041096,
+          "clashscore": 57.682
+        }
+      },
+      {
+        "id": "rosettafold3",
+        "name": "RoseTTAFold3",
+        "evaluated": 370,
+        "coverage": 74,
+        "metrics": {
+          "c3_rmsd": 2.9075945945945945,
+          "rna_tm_score": 0.4441397297297297,
+          "heavy_atom_lddt": 0.5677108108108108,
+          "clashscore": 31.30116216216216
+        }
+      },
+      {
+        "id": "trrosettarna2",
+        "name": "trRosettaRNA2",
+        "evaluated": 370,
+        "coverage": 74,
+        "metrics": {
+          "c3_rmsd": 2.9114594594594596,
+          "rna_tm_score": 0.45970005405405406,
+          "heavy_atom_lddt": 0.6089378378378378,
+          "clashscore": 3.5127027027027027
+        }
+      }
+    ],
+    "published_at": "2026-11-03T08:40:09.541Z"
   }
 ]

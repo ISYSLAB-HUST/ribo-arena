@@ -109,7 +109,7 @@
         </details>
 
         <section class="workspace" id="leaderboard-panel" data-panel-content="leaderboard">
-          <button class="news-teaser" id="news-teaser" data-i18n="newsTeaser">October update: 66 targets, 2,965 structures. See ranking changes →</button>
+          <button class="news-teaser" id="news-teaser" data-i18n="newsTeaser">Latest update: 74 targets, 3,325 structures. See ranking changes →</button>
           <div class="control-row">
             <div class="segmented" aria-label="Statistical view" data-i18n-aria="statsViewAria">
               <button data-view="mean" aria-pressed="true" data-i18n="meanPerformance">Mean performance</button>
@@ -244,6 +244,41 @@
         </section>
         <section class="workspace is-hidden" id="news-panel" data-panel-content="news" aria-labelledby="news-title">
           <h2 class="news-title" id="news-title" data-i18n="newsTitle">Data &amp; ranking updates</h2>
+          <article class="panel news-entry" id="update-2026-11-03">
+            <header><time datetime="2026-11-03">2026-11-03</time><h3 data-i18n="latestHeadline">Eight new targets bring the benchmark to 74 RNAs</h3></header>
+            <p data-i18n="latestSummary">Added 8 RNA targets (5–396 nt, released October 14 and October 21, 2026). The leaderboard still features 9 methods. Evaluated candidates increase from 2,965 to 3,325 (+360), and the target count rises from 66 to 74. The data snapshot was generated on October 30, 2026 and published to the website and RSS on November 3, 2026.</p>
+            <p data-i18n="latestRanking">By mean TM-score, MetaFold-RNA3d remains first (0.5603 → 0.5636) and Protenix v2 remains second. Boltz-2 moves from seventh to sixth (0.4378 → 0.4550), while RoseTTAFold3 moves from sixth to seventh (0.4381 → 0.4441); all other ranks are unchanged. Both methods have higher scores despite the change in relative rank. Changes on the expanded evaluation set do not imply model version updates or tested statistical significance.</p>
+            <div class="table-scroll"><table class="news-table" id="latest-ranking-table">
+              <caption data-i18n="latestBaseline">Ranking basis: 9 displayed methods, mean performance, descending TM-score. Comparison of the October 11, 2026 snapshot (66 targets) and the October 30, 2026 snapshot (74 targets).</caption>
+              <thead><tr><th scope="col" data-i18n="method">Method</th><th scope="col" data-i18n="newsPrevious">Previous rank</th><th scope="col" data-i18n="newsCurrent">New rank</th><th scope="col" data-i18n="newsScore">Mean TM-score (old → new)</th></tr></thead>
+              <tbody>
+<tr><th scope="row">MetaFold-RNA3d</th><td>1</td><td>1</td><td>0.5603 → 0.5636</td></tr>
+<tr><th scope="row">Protenix v2</th><td>2</td><td>2</td><td>0.5022 → 0.5080</td></tr>
+<tr><th scope="row">Protenix base default v1.0.0</th><td>3</td><td>3</td><td>0.4795 → 0.4936</td></tr>
+<tr><th scope="row">AlphaFold3</th><td>4</td><td>4</td><td>0.4782 → 0.4802</td></tr>
+<tr><th scope="row">trRosettaRNA2</th><td>5</td><td>5</td><td>0.4592 → 0.4597</td></tr>
+<tr><th scope="row">Boltz-2</th><td>7</td><td>6</td><td>0.4378 → 0.4550</td></tr>
+<tr><th scope="row">RoseTTAFold3</th><td>6</td><td>7</td><td>0.4381 → 0.4441</td></tr>
+<tr><th scope="row">NuFold</th><td>8</td><td>8</td><td>0.3512 → 0.3547</td></tr>
+<tr><th scope="row">RhoFold+</th><td>9</td><td>9</td><td>0.3286 → 0.3364</td></tr>
+              </tbody>
+            </table></div>
+            <div class="table-scroll"><table class="news-table" id="latest-target-table">
+              <caption data-i18n="latestTargets">New RNA targets in this update</caption>
+              <thead><tr><th scope="col" data-i18n="targetId">Target ID</th><th scope="col" data-i18n="targetLength">Length (nt)</th><th scope="col" data-i18n="targetRelease">PDB release date</th></tr></thead>
+              <tbody>
+<tr><th scope="row">22mt_1_1_A</th><td>77</td><td>2026-10-21</td></tr>
+<tr><th scope="row">22mw_1_1_A</th><td>76</td><td>2026-10-21</td></tr>
+<tr><th scope="row">22mx_1_1_A</th><td>77</td><td>2026-10-21</td></tr>
+<tr><th scope="row">22mz_1_1_A</th><td>76</td><td>2026-10-21</td></tr>
+<tr><th scope="row">9qtk_1_2_B</th><td>6</td><td>2026-10-21</td></tr>
+<tr><th scope="row">9qtw_1_1_A</th><td>396</td><td>2026-10-21</td></tr>
+<tr><th scope="row">9qu0_1_2_B</th><td>5</td><td>2026-10-21</td></tr>
+<tr><th scope="row">9yn7_1_1_A</th><td>242</td><td>2026-10-14</td></tr>
+              </tbody>
+            </table></div>
+            <p class="news-caveat" data-i18n="latestCoverage">All 9 displayed methods completed evaluation on the 8 new targets. RhoFold+ still lacks results for the earlier target 26hh_1_1_A, so its valid coverage is 73/74 versus 74/74 for the other methods; 73 targets are valid across all methods. The leaderboard aggregates each method's available targets. RhoFold+'s full-cohort mean time remains unavailable.</p>
+          </article>
           <article class="panel news-entry">
             <header><time datetime="2026-10-12">2026-10-12</time><h3 data-i18n="newsHeadline">Three new targets bring the benchmark to 66 RNAs</h3></header>
             <p data-i18n="newsSummary">Added 26hh_1_1_A (932 nt, released September 30), 9x21_1_1_A (381 nt, released October 7), and 12aa_1_1_A (13 nt, released October 7). The leaderboard still features 9 methods, with evaluated candidates increasing from 2,835 to 2,965 (+130). The data snapshot was generated on October 11, 2026.</p>
